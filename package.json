@@ -1,6 +1,6 @@
 {
   "name": "bbb-webrtc-sfu",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "start": "node server.js"
@@ -16,7 +16,8 @@
     "winston": "^2.4.2",
     "winston-daily-rotate-file": "^1.7.2",
     "ws": "^3.3.3",
-    "sip.js": "0.7.5"
+    "sip.js": "0.7.5",
+    "mcs-js": "mcs-js"
   },
   "optionalDependencies": {}
 }
