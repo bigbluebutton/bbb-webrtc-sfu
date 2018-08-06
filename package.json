@@ -17,7 +17,7 @@
     "winston-daily-rotate-file": "^1.7.2",
     "ws": "^3.3.3",
     "sip.js": "0.7.5",
-    "mcs-js": "mcs-js"
+    "mcs-js": "git+https://github.com/mconftec/mcs-js#mconf"
   },
   "optionalDependencies": {}
 }
