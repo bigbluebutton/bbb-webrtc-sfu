@@ -1,5 +1,6 @@
 kurentoUrl: "ws://HOST/kurento"
 kurentoIp: ""
+# used for Kurento<->FFmpeg briding on screenshare/flash
 localIpAddress: ""
 acceptSelfSignedCertificate: false
 redisHost : "127.0.0.1"
@@ -30,6 +31,11 @@ recordingMediaProfile: 'MKV_VIDEO_ONLY'
 recordingFormat: 'mkv'
 
 redisExpireTime: 1209600 # 14 days as per the akka keys
+
+# mcs-core entrypoint configured on nginx
+mcs-path: "/mcs"
+mcs-port: MCS_PORT
+mcs-addres: HOST
 
 freeswitch:
     ip: ''
