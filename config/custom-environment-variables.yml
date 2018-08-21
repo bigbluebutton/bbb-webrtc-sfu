@@ -1,6 +1,8 @@
 kurentoUrl: KURENTO_URL
 kurentoIp: KURENTO_IP
 redisHost: REDIS_HOST
+mcs-port: MCS_PORT
+mcs-address: MCS_HOST
 freeswitch:
     ip: FREESWITCH_IP
 log:
