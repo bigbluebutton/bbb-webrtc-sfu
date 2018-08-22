@@ -1,17 +1,16 @@
 FROM node:8
 
-ADD . /source
-RUN cp /source/config/default.example.yml /source/config/production.yml
+ADD . app
+
+WORKDIR app
 
 ENV NODE_ENV production
 
-RUN cd /source \
- && mv docker-entrypoint.sh /usr/local/bin/ \
+RUN cp config/default.example.yml config/production.yml \
  && npm install \
  && npm cache clear --force
 
-WORKDIR /source
-
 EXPOSE 3008
 
-CMD [ "docker-entrypoint.sh" ]
+ENTRYPOINT [ "./docker-entrypoint.sh" ]
+CMD [ "npm", "start" ]
