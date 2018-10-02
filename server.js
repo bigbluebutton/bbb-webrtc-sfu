@@ -17,7 +17,7 @@ const PM = new ProcessManager();
 
 PM.start();
 
-const CM = new ConnectionManager(PM.screenshareProcess, PM.videoProcess);
+const CM = new ConnectionManager(PM.screenshareProcess, PM.videoProcess, PM.streamProcess);
 
 let websocketManager = new WebsocketConnectionManager(server.getServerObject(), '/bbb-webrtc-sfu');
 
