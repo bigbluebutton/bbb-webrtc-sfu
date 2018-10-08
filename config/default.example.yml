@@ -19,6 +19,7 @@ to-akka: "to-akka-apps-redis-channel"
 from-akka: "from-akka-apps-redis-channel"
 to-stream: "to-stream-sfu"
 from-stream: "from-stream-sfu"
+to-html5: "to-html5-redis-channel"
 common-message-version: "2.x"
 webcam-force-h264: true
 webcam-preferred-h264-profile: "42e01f"
