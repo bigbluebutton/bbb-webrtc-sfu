@@ -3,7 +3,13 @@ kurentoIp: KURENTO_IP
 redisHost: REDIS_HOST
 mcs-port: MCS_PORT
 mcs-address: MCS_HOST
+
 freeswitch:
     ip: FREESWITCH_IP
 log:
     level: LOG_LEVEL
+
+bbb-stream:
+    image_name: STREAM_IMAGE_NAME
+    bigbluebutton_url: STREAM_BIGBLUEBUTTON_URL
+    bigbluebutton_secret: STREAM_BIGBLUEBUTTON_SECRET
