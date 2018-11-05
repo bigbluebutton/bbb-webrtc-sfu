@@ -1,7 +1,8 @@
-kurentoUrl: "ws://HOST/kurento"
-kurentoIp: ""
-# used for Kurento<->FFmpeg briding on screenshare/flash
-localIpAddress: ""
+kurento:
+  - ip: ""
+    url: ws://HOST/kurento
+video-transposing-ceiling: 50
+audio-transposing-ceiling: 100
 acceptSelfSignedCertificate: false
 redisHost : "127.0.0.1"
 redisPort : "6379"
