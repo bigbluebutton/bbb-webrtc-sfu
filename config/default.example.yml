@@ -3,6 +3,7 @@ kurento:
     url: ws://HOST/kurento
 video-transposing-ceiling: 50
 audio-transposing-ceiling: 100
+localIpAddress: ""
 acceptSelfSignedCertificate: false
 redisHost : "127.0.0.1"
 redisPort : "6379"
