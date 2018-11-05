@@ -1,5 +1,7 @@
-kurentoUrl: KURENTO_URL
-kurentoIp: KURENTO_IP
+kurento:
+  __name: KURENTO
+  __format: json
+
 redisHost: REDIS_HOST
 mcs-port: MCS_PORT
 mcs-address: MCS_HOST
