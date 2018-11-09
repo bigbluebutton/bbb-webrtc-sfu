@@ -1,6 +1,8 @@
-kurentoUrl: "ws://HOST/kurento"
-kurentoIp: ""
-# used for Kurento<->FFmpeg briding on screenshare/flash
+kurento:
+  - ip: ""
+    url: ws://HOST/kurento
+video-transposing-ceiling: 50
+audio-transposing-ceiling: 100
 localIpAddress: ""
 acceptSelfSignedCertificate: false
 redisHost : "127.0.0.1"
@@ -44,6 +46,7 @@ redisExpireTime: 1209600 # 14 days as per the akka keys
 mcs-path: "/mcs"
 mcs-port: MCS_PORT
 mcs-address: HOST
+mcs-ws-timeout: 15000
 
 freeswitch:
     ip: 'FREESWITCH_IP'
