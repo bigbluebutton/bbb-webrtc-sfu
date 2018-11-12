@@ -15,3 +15,6 @@ bbb-stream:
     image_name: STREAM_IMAGE_NAME
     bigbluebutton_url: STREAM_BIGBLUEBUTTON_URL
     bigbluebutton_secret: STREAM_BIGBLUEBUTTON_SECRET
+
+recordWebcams: RECORD_WEBCAMS
+recordScreenSharing: RECORD_SCREENSHARE
