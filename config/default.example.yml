@@ -59,5 +59,27 @@ log:
 
 bbb-stream:
   image_name: 'bbb-stream'
+  container_type: 'docker'
   bigbluebutton_url: 'BBBHOST'
   bigbluebutton_secret: 'BBBSECRET'
+
+  k8s:
+    namespace: "default"
+    template:
+      apiVersion: "batch/v1"
+      kind: "Job"
+      metadata:
+        name: "bbb-stream-"
+      spec:
+        template:
+          spec:
+            containers:
+            - name: "bbb-stream-firefox"
+              image: "gcr.io/PROJECT-ID/bbb-stream"
+              env:
+                - name: "LINK"
+                  value: ""
+                - name: "OUTPUT"
+                  value: ""
+            restartPolicy: "OnFailure"
+        backoffLimit: 0
