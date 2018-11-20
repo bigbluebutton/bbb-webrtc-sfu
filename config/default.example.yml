@@ -83,3 +83,9 @@ bbb-stream:
                   value: ""
             restartPolicy: "OnFailure"
         backoffLimit: 0
+
+processes:
+  - path: './lib/screenshare/ScreenshareProcess'
+  - path: './lib/video/VideoProcess.js'
+  - path: './lib/audio/AudioProcess.js'
+  - path: './lib/stream/StreamProcess.js'
