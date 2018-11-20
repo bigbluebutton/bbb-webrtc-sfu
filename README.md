@@ -1,2 +1,2 @@
 # bbb-webrtc-sfu
-Control server for WebRTC SFU
+Server for controlling a WebRTC selective forwarding unit (SFU) media server.
