@@ -44,8 +44,8 @@ redisExpireTime: 1209600 # 14 days as per the akka keys
 
 # mcs-core entrypoint configured on nginx
 mcs-path: "/mcs"
-mcs-port: MCS_PORT
-mcs-address: HOST
+mcs-port: 3010
+mcs-address: localhost
 mcs-ws-timeout: 15000
 
 freeswitch:
