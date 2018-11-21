@@ -1,0 +1,91 @@
+kurento:
+  - ip: ""
+    url: ws://HOST/kurento
+video-transposing-ceiling: 50
+audio-transposing-ceiling: 100
+localIpAddress: ""
+acceptSelfSignedCertificate: false
+redisHost : "127.0.0.1"
+redisPort : "6379"
+clientPort : "3008"
+minVideoPort: 30000
+maxVideoPort: 33000
+mediaFlowTimeoutDuration: 5000
+from-screenshare: "from-screenshare-sfu"
+to-screenshare: "to-screenshare-sfu"
+from-video: "from-video-sfu"
+to-video: "to-video-sfu"
+from-audio: "from-audio-sfu"
+to-audio: "to-audio-sfu"
+to-akka: "to-akka-apps-redis-channel"
+from-akka: "from-akka-apps-redis-channel"
+to-stream: "to-sfu-redis-channel"
+from-stream: "from-stream-sfu"
+to-html5: "to-html5-redis-channel"
+common-message-version: "2.x"
+webcam-force-h264: true
+webcam-preferred-h264-profile: "42e01f"
+# Target bitrate (kbps) for webcams. Value 0 leaves it unconstrained.
+webcam-target-bitrate: 300
+screenshare-force-h264: true
+screenshare-preferred-h264-profile: "42e01f"
+screenshareKeyframeInterval: 2
+# Target bitrate (kbps) for screenshare. Value 0 leaves it unconstrained.
+screenshare-target-bitrate: 0
+
+recordScreenSharing: true
+recordWebcams: true
+recordingBasePath: "file:///var/kurento"
+
+recordingMediaProfile: 'MKV_VIDEO_ONLY'
+recordingFormat: 'mkv'
+
+redisExpireTime: 1209600 # 14 days as per the akka keys
+
+# mcs-core entrypoint configured on nginx
+mcs-path: "/mcs"
+mcs-port: 3010
+mcs-address: localhost
+mcs-ws-timeout: 15000
+
+freeswitch:
+    ip: 'FREESWITCH_IP'
+    port: '5066'
+
+log:
+    filename: '/var/log/bbb-webrtc-sfu/bbb-webrtc-sfu.log'
+    level: 'verbose'
+
+
+bbb-stream:
+  image_name: 'bbb-stream'
+  container_type: 'docker'
+  bigbluebutton_url: 'BBBHOST'
+  bigbluebutton_secret: 'BBBSECRET'
+
+  k8s:
+    namespace: "default"
+    template:
+      apiVersion: "batch/v1"
+      kind: "Job"
+      metadata:
+        name: "bbb-stream-"
+      spec:
+        template:
+          spec:
+            containers:
+            - name: "bbb-stream-firefox"
+              image: "gcr.io/PROJECT-ID/bbb-stream"
+              env:
+                - name: "LINK"
+                  value: ""
+                - name: "OUTPUT"
+                  value: ""
+            restartPolicy: "OnFailure"
+        backoffLimit: 0
+
+processes:
+  - path: './lib/screenshare/ScreenshareProcess'
+  - path: './lib/video/VideoProcess.js'
+  - path: './lib/audio/AudioProcess.js'
+  - path: './lib/stream/StreamProcess.js'
