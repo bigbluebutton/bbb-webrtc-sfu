@@ -46,7 +46,7 @@ redisExpireTime: 1209600 # 14 days as per the akka keys
 mcs-path: "/mcs"
 mcs-port: 3010
 mcs-address: localhost
-mcs-ws-timeout: 15000
+mcs-ws-timeout: 30000
 
 freeswitch:
     ip: 'FREESWITCH_IP'
