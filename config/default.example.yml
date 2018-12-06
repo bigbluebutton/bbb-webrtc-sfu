@@ -23,15 +23,7 @@ to-stream: "to-sfu-redis-channel"
 from-stream: "from-stream-sfu"
 to-html5: "to-html5-redis-channel"
 common-message-version: "2.x"
-webcam-force-h264: true
-webcam-preferred-h264-profile: "42e01f"
-# Target bitrate (kbps) for webcams. Value 0 leaves it unconstrained.
-webcam-target-bitrate: 300
-screenshare-force-h264: true
-screenshare-preferred-h264-profile: "42e01f"
 screenshareKeyframeInterval: 2
-# Target bitrate (kbps) for screenshare. Value 0 leaves it unconstrained.
-screenshare-target-bitrate: 0
 
 recordScreenSharing: true
 recordWebcams: true
@@ -89,3 +81,21 @@ processes:
   - path: './lib/video/VideoProcess.js'
   - path: './lib/audio/AudioProcess.js'
   - path: './lib/stream/StreamProcess.js'
+
+conference-media-specs:
+  codec_video_main: "H264"
+  codec_video_content: "H264"
+  H264:
+    profile_level_id: "42e01f"
+    tias_main: "300000"
+    as_main: "300"
+    tias_content: "1500000"
+    as_content: "1500"
+    max_mbps: "4800"
+    max_fs: "396"
+    max_br: "768"
+  VP8:
+    tias_main: "300000"
+    as_main: "300"
+    tias_content: "1500000"
+    as_content: "1500"
