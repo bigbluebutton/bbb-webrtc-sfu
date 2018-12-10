@@ -83,6 +83,12 @@ processes:
   - path: './lib/audio/AudioProcess.js'
   - path: './lib/stream/StreamProcess.js'
 
+media-server-adapters:
+  - path: 'kurento/kurento.js'
+    name: 'Kurento'
+  - path: 'freeswitch/freeswitch.js'
+    name: 'Freeswitch'
+
 conference-media-specs:
   codec_video_main: "H264"
   codec_video_content: "H264"
