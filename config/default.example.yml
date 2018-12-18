@@ -94,6 +94,7 @@ conference-media-specs:
   codec_video_content: "H264"
   H264:
     profile_level_id: "42e01f"
+    packetization_mode: "0"
     tias_main: "300000"
     as_main: "300"
     tias_content: "1500000"
