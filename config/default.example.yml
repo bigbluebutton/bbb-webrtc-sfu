@@ -98,6 +98,7 @@ media-server-adapters:
 conference-media-specs:
   codec_video_main: "H264"
   codec_video_content: "H264"
+  codec_audio: "ANY"
   H264:
     profile_level_id: "42e01f"
     packetization_mode: "1"
@@ -117,3 +118,10 @@ conference-media-specs:
     as_main: "300"
     tias_content: "1500000"
     as_content: "1500"
+  OPUS:
+    useinbandfec: "0"
+    maxaveragebitrate: "30000"
+    maxplaybackrate: "48000"
+    ptime: "20"
+    minptime: "10"
+    maxptime: "40"
