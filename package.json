@@ -1,29 +1,28 @@
 {
   "name": "bbb-webrtc-sfu",
-  "version": "2.0.1",
+  "version": "2.2.1",
   "private": true,
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "@kubernetes/client-node": "^0.7.1",
-    "bbb-promise": "^1.1.0",
-    "config": "^1.30.0",
-    "google-auth-library": "^2.0.1",
-    "googleapis": "^35.0.0",
-    "js-yaml": "^3.11.0",
-    "kue": "^0.11.6",
+    "@kubernetes/client-node": "0.7.1",
+    "bbb-promise": "1.1.0",
+    "config": "1.30.0",
+    "google-auth-library": "2.0.1",
+    "googleapis": "35.0.0",
+    "js-yaml": "3.11.0",
+    "kue": "0.11.6",
     "kurento-client": "git+https://github.com/mconf/kurento-client-js.git#mconf",
     "mcs-js": "git+https://github.com/mconftec/mcs-js.git#mconf",
-    "moment": "^2.22.1",
-    "node-docker-api": "^1.1.22",
-    "readable-id": "^1.0.0",
-    "redis": "^2.8.0",
-    "sdp-transform": "^2.4.1",
+    "node-docker-api": "1.1.22",
+    "readable-id": "1.0.0",
+    "redis": "2.8.0",
+    "sdp-transform": "2.4.1",
     "sip.js": "0.7.5",
-    "winston": "^2.4.2",
-    "winston-daily-rotate-file": "^1.7.2",
-    "ws": "^3.3.3"
+    "winston": "2.4.2",
+    "winston-daily-rotate-file": "1.7.2",
+    "ws": "3.3.3"
   },
   "optionalDependencies": {}
 }

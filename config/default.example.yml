@@ -10,7 +10,7 @@ redisPort : "6379"
 clientPort : "3008"
 minVideoPort: 30000
 maxVideoPort: 33000
-mediaFlowTimeoutDuration: 5000
+mediaFlowTimeoutDuration: 15000
 from-screenshare: "from-screenshare-sfu"
 to-screenshare: "to-screenshare-sfu"
 from-video: "from-video-sfu"
@@ -23,15 +23,7 @@ to-stream: "to-sfu-redis-channel"
 from-stream: "from-stream-sfu"
 to-html5: "to-html5-redis-channel"
 common-message-version: "2.x"
-webcam-force-h264: true
-webcam-preferred-h264-profile: "42e01f"
-# Target bitrate (kbps) for webcams. Value 0 leaves it unconstrained.
-webcam-target-bitrate: 300
-screenshare-force-h264: true
-screenshare-preferred-h264-profile: "42e01f"
 screenshareKeyframeInterval: 2
-# Target bitrate (kbps) for screenshare. Value 0 leaves it unconstrained.
-screenshare-target-bitrate: 0
 
 recordScreenSharing: true
 recordWebcams: true
@@ -44,9 +36,9 @@ redisExpireTime: 1209600 # 14 days as per the akka keys
 
 # mcs-core entrypoint configured on nginx
 mcs-path: "/mcs"
-mcs-port: MCS_PORT
-mcs-address: HOST
-mcs-ws-timeout: 15000
+mcs-port: 3010
+mcs-address: localhost
+mcs-ws-timeout: 30000
 
 freeswitch:
     ip: 'FREESWITCH_IP'
@@ -83,3 +75,41 @@ bbb-stream:
                   value: ""
             restartPolicy: "OnFailure"
         backoffLimit: 0
+
+processes:
+  - path: './lib/mcs-core/process.js'
+  - path: './lib/screenshare/ScreenshareProcess'
+  - path: './lib/video/VideoProcess.js'
+  - path: './lib/audio/AudioProcess.js'
+  - path: './lib/stream/StreamProcess.js'
+
+media-server-adapters:
+  - path: 'kurento/kurento.js'
+    name: 'Kurento'
+  - path: 'freeswitch/freeswitch.js'
+    name: 'Freeswitch'
+
+# Codec values (_video_main, _video_content): it'll force the specified codec. Put the 'ANY' value
+# to prevent forcing a specific codec. If you wanna add other codecs (e.g.: VP9)
+# add it to the list with its specifiers. If the codec isn't in the list,
+# it'll default to the values in VP8, but still force the entered codec.
+# _video_main refers to webcam/main video content, _video_content refers to
+# screenshare/content:slides streams.
+conference-media-specs:
+  codec_video_main: "H264"
+  codec_video_content: "H264"
+  H264:
+    profile_level_id: "42e01f"
+    packetization_mode: "0"
+    tias_main: "300000"
+    as_main: "300"
+    tias_content: "1500000"
+    as_content: "1500"
+    max_mbps: "4800"
+    max_fs: "396"
+    max_br: "768"
+  VP8:
+    tias_main: "300000"
+    as_main: "300"
+    tias_content: "1500000"
+    as_content: "1500"
