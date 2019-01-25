@@ -1,9 +1,9 @@
 kurento:
-  - ip: ""
-    url: ws://HOST/kurento
+  - ip: "143.54.83.248"
+    url: ws://143.54.83.248:8888/kurento
 video-transposing-ceiling: 50
 audio-transposing-ceiling: 100
-localIpAddress: ""
+localIpAddress: "143.54.83.248"
 acceptSelfSignedCertificate: false
 redisHost : "127.0.0.1"
 redisPort : "6379"
@@ -41,14 +41,14 @@ mcs-address: localhost
 mcs-ws-timeout: 30000
 
 freeswitch:
-    ip: 'FREESWITCH_IP'
+    ip: '143.54.83.248'
     port: '5066'
-    esl_ip: 'ESL_IP'
-    esl_port: 'ESL_PORT'
+    esl_ip: 'localhost'
+    esl_port: '8021'
 
 log:
     filename: '/var/log/bbb-webrtc-sfu/bbb-webrtc-sfu.log'
-    level: 'verbose'
+    level: 'trace'
 
 
 bbb-stream:
