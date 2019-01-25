@@ -43,6 +43,8 @@ mcs-ws-timeout: 30000
 freeswitch:
     ip: 'FREESWITCH_IP'
     port: '5066'
+    esl_ip: 'ESL_IP'
+    esl_port: 'ESL_PORT'
 
 log:
     filename: '/var/log/bbb-webrtc-sfu/bbb-webrtc-sfu.log'
