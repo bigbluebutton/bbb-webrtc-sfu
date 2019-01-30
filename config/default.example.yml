@@ -5,89 +5,83 @@ video-transposing-ceiling: 50
 audio-transposing-ceiling: 100
 localIpAddress: ""
 acceptSelfSignedCertificate: false
-redisHost : "127.0.0.1"
-redisPort : "6379"
-clientPort : "3008"
+redisHost: 127.0.0.1
+redisPort: "6379"
+clientPort: "3008"
 minVideoPort: 30000
 maxVideoPort: 33000
 mediaFlowTimeoutDuration: 15000
-from-screenshare: "from-screenshare-sfu"
-to-screenshare: "to-screenshare-sfu"
-from-video: "from-video-sfu"
-to-video: "to-video-sfu"
-from-audio: "from-audio-sfu"
-to-audio: "to-audio-sfu"
-to-akka: "to-akka-apps-redis-channel"
-from-akka: "from-akka-apps-redis-channel"
-to-stream: "to-sfu-redis-channel"
-from-stream: "from-stream-sfu"
-to-html5: "to-html5-redis-channel"
-common-message-version: "2.x"
+from-screenshare: from-screenshare-sfu
+to-screenshare: to-screenshare-sfu
+from-video: from-video-sfu
+to-video: to-video-sfu
+from-audio: from-audio-sfu
+to-audio: to-audio-sfu
+to-akka: to-akka-apps-redis-channel
+from-akka: from-akka-apps-redis-channel
+to-stream: to-sfu-redis-channel
+from-stream: from-stream-sfu
+to-html5: to-html5-redis-channel
+common-message-version: 2.x
 screenshareKeyframeInterval: 2
 
 recordScreenSharing: true
 recordWebcams: true
-recordingBasePath: "file:///var/kurento"
+recordingBasePath: file:///var/kurento
 
-recordingMediaProfile: 'MKV_VIDEO_ONLY'
-recordingFormat: 'mkv'
-
+recordingMediaProfile: MKV_VIDEO_ONLY
+recordingFormat: mkv
 redisExpireTime: 1209600 # 14 days as per the akka keys
 
 # mcs-core entrypoint configured on nginx
-mcs-path: "/mcs"
+mcs-path: /mcs
 mcs-port: 3010
 mcs-address: localhost
 mcs-ws-timeout: 30000
-
 freeswitch:
-    ip: 'FREESWITCH_IP'
-    port: '5066'
-
+  ip: "FREESWITCH_IP"
+  port: "5066"
+  esl_ip: "ESL_IP"
+  esl_port: "ESL_PORT"
 log:
-    filename: '/var/log/bbb-webrtc-sfu/bbb-webrtc-sfu.log'
-    level: 'verbose'
-
-
+  filename: /var/log/bbb-webrtc-sfu/bbb-webrtc-sfu.log
+  level: verbose
 bbb-stream:
-  image_name: 'bbb-stream'
-  container_type: 'docker'
-  bigbluebutton_url: 'BBBHOST'
-  bigbluebutton_secret: 'BBBSECRET'
-
+  image_name: bbb-stream
+  container_type: docker
+  bigbluebutton_url: BBBHOST
+  bigbluebutton_secret: BBBSECRET
   k8s:
-    namespace: "default"
+    namespace: default
     template:
-      apiVersion: "batch/v1"
-      kind: "Job"
+      apiVersion: batch/v1
+      kind: Job
       metadata:
-        name: "bbb-stream-"
+        name: bbb-stream-
       spec:
         template:
           spec:
             containers:
-            - name: "bbb-stream-firefox"
-              image: "gcr.io/PROJECT-ID/bbb-stream"
+            - name: bbb-stream-firefox
+              image: gcr.io/PROJECT-ID/bbb-stream
               env:
-                - name: "LINK"
-                  value: ""
-                - name: "OUTPUT"
-                  value: ""
-            restartPolicy: "OnFailure"
+              - name: LINK
+                value: ""
+              - name: OUTPUT
+                value: ""
+            restartPolicy: OnFailure
         backoffLimit: 0
-
 processes:
-  - path: './lib/mcs-core/process.js'
-  - path: './lib/screenshare/ScreenshareProcess'
-  - path: './lib/video/VideoProcess.js'
-  - path: './lib/audio/AudioProcess.js'
-  - path: './lib/stream/StreamProcess.js'
-
+- path: ./lib/mcs-core/process.js
+- path: ./lib/screenshare/ScreenshareProcess
+- path: ./lib/video/VideoProcess.js
+- path: ./lib/audio/AudioProcess.js
+- path: ./lib/stream/StreamProcess.js
 media-server-adapters:
-  - path: 'kurento/kurento.js'
-    name: 'Kurento'
-  - path: 'freeswitch/freeswitch.js'
-    name: 'Freeswitch'
+- path: kurento/kurento.js
+  name: Kurento
+- path: freeswitch/freeswitch.js
+  name: Freeswitch
 
 # Codec values (_video_main, _video_content): it'll force the specified codec. Put the 'ANY' value
 # to prevent forcing a specific codec. If you wanna add other codecs (e.g.: VP9)
@@ -96,8 +90,8 @@ media-server-adapters:
 # _video_main refers to webcam/main video content, _video_content refers to
 # screenshare/content:slides streams.
 conference-media-specs:
-  codec_video_main: "H264"
-  codec_video_content: "H264"
+  codec_video_main: H264
+  codec_video_content: H264
   codec_audio: "ANY"
   H264:
     profile_level_id: "42e01f"
@@ -125,3 +119,4 @@ conference-media-specs:
     ptime: "20"
     minptime: "10"
     maxptime: "40"
+
