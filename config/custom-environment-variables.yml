@@ -22,3 +22,7 @@ bbb-stream:
 
 recordWebcams: RECORD_WEBCAMS
 recordScreenSharing: RECORD_SCREENSHARE
+
+processes:
+  __name: SFU_PROCESSES
+  __format: json

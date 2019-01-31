@@ -79,7 +79,6 @@ processes:
 - path: ./lib/screenshare/ScreenshareProcess
 - path: ./lib/video/VideoProcess.js
 - path: ./lib/audio/AudioProcess.js
-- path: ./lib/stream/StreamProcess.js
 media-server-adapters:
 - path: kurento/kurento.js
   name: Kurento
