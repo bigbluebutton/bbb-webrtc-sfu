@@ -15,7 +15,7 @@
     "js-yaml": "3.11.0",
     "kue": "0.11.6",
     "kurento-client": "git+https://github.com/mconf/kurento-client-js.git#mconf",
-    "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.3-dev",
+    "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.4-dev",
     "node-docker-api": "1.1.22",
     "readable-id": "1.0.0",
     "redis": "2.8.0",
