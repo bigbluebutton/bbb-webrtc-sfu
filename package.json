@@ -1,6 +1,6 @@
 {
   "name": "bbb-webrtc-sfu",
-  "version": "2.2.2",
+  "version": "2.2.4",
   "private": true,
   "scripts": {
     "start": "node server.js"
@@ -10,6 +10,8 @@
     "bbb-promise": "1.1.0",
     "config": "1.30.0",
     "esl": "9.0.1",
+    "google-auth-library": "2.0.1",
+    "googleapis": "35.0.0",
     "js-yaml": "3.11.0",
     "kue": "0.11.6",
     "kurento-client": "git+https://github.com/mconf/kurento-client-js.git#mconf",

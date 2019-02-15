@@ -51,6 +51,9 @@ bbb-stream:
   container_type: docker
   bigbluebutton_url: BBBHOST
   bigbluebutton_secret: BBBSECRET
+  bot_join_options:
+    userdata-html5autoswaplayout: false
+    userdata-html5hidepresentation: false
   k8s:
     namespace: default
     template:
@@ -76,7 +79,6 @@ processes:
 - path: ./lib/screenshare/ScreenshareProcess
 - path: ./lib/video/VideoProcess.js
 - path: ./lib/audio/AudioProcess.js
-- path: ./lib/stream/StreamProcess.js
 media-server-adapters:
 - path: kurento/kurento.js
   name: Kurento
