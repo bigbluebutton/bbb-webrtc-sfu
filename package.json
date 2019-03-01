@@ -1,6 +1,6 @@
 {
   "name": "bbb-webrtc-sfu",
-  "version": "2.3.0-dev.1",
+  "version": "2.3.0",
   "private": true,
   "scripts": {
     "start": "node server.js"
@@ -14,7 +14,7 @@
     "googleapis": "35.0.0",
     "js-yaml": "3.11.0",
     "kurento-client": "git+https://github.com/mconf/kurento-client-js.git#mconf",
-    "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.5-dev",
+    "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.5",
     "node-docker-api": "1.1.22",
     "readable-id": "1.0.0",
     "redis": "2.8.0",
