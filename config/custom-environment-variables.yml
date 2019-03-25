@@ -19,6 +19,7 @@ bbb-stream:
     bigbluebutton_url: STREAM_BIGBLUEBUTTON_URL
     bigbluebutton_secret: STREAM_BIGBLUEBUTTON_SECRET
     container_type: STREAM_CONTAINER_TYPE
+    bot_name: STREAM_BOT_NAME
 
 recordWebcams: RECORD_WEBCAMS
 recordScreenSharing: RECORD_SCREENSHARE
