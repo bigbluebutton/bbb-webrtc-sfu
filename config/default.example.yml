@@ -51,6 +51,7 @@ bbb-stream:
   container_type: docker
   bigbluebutton_url: BBBHOST
   bigbluebutton_secret: BBBSECRET
+  bot_name: BBBBOTNAME
   bot_join_options:
     userdata-html5autoswaplayout: false
     userdata-html5hidepresentation: false
@@ -97,7 +98,7 @@ conference-media-specs:
   codec_audio: "ANY"
   H264:
     profile_level_id: "42e01f"
-    packetization_mode: "1"
+    packetization_mode: "0"
     level_asymmetry_allowed: "0"
     tias_main: "300000"
     as_main: "300"
