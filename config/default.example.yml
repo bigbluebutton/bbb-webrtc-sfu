@@ -92,7 +92,7 @@ media-server-adapters:
 # _video_main refers to webcam/main video content, _video_content refers to
 # screenshare/content:slides streams.
 conference-media-specs:
-  codec_video_main: H264
+  codec_video_main: VP8
   codec_video_content: H264
   codec_audio: "ANY"
   H264:
