@@ -80,11 +80,16 @@ processes:
 - path: ./lib/screenshare/ScreenshareProcess
 - path: ./lib/video/VideoProcess.js
 - path: ./lib/audio/AudioProcess.js
+# media-server-adapters: path could refer to a npm module
 media-server-adapters:
 - path: kurento/kurento.js
   name: Kurento
 - path: freeswitch/freeswitch.js
   name: Freeswitch
+# strategies: path could refer to a npm module
+strategies:
+- path: ./voice-switching-handler.js
+  name: VOICE_SWITCHING
 
 # Codec values (_video_main, _video_content): it'll force the specified codec. Put the 'ANY' value
 # to prevent forcing a specific codec. If you wanna add other codecs (e.g.: VP9)
