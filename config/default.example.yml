@@ -23,7 +23,7 @@ to-stream: to-sfu-redis-channel
 from-stream: from-stream-sfu
 to-html5: to-html5-redis-channel
 common-message-version: 2.x
-screenshareKeyframeInterval: 2
+screenshareKeyframeInterval: 0
 
 recordScreenSharing: true
 recordWebcams: true
