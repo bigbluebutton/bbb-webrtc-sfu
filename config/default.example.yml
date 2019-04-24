@@ -94,7 +94,7 @@ media-server-adapters:
 # screenshare/content:slides streams.
 conference-media-specs:
   codec_video_main: VP8
-  codec_video_content: H264
+  codec_video_content: VP8
   codec_audio: "ANY"
   H264:
     profile_level_id: "42e01f"
