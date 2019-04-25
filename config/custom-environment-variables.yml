@@ -21,6 +21,13 @@ bbb-stream:
     container_type: STREAM_CONTAINER_TYPE
     bot_name: STREAM_BOT_NAME
 
+rnp:
+  oauth2:
+    client_id: VIDEO_RNP_CLIENT_ID
+    client_secret: VIDEO_RNP_CLIENT_SECRET
+    redirect_uri: VIDEO_RNP_REDIRECT_URI
+    host_ip: VIDEO_RNP_HOST_IP
+
 recordWebcams: RECORD_WEBCAMS
 recordScreenSharing: RECORD_SCREENSHARE
 
