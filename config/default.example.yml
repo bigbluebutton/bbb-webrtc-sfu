@@ -82,6 +82,7 @@ rnp:
     client_secret: client_secret
     redirect_uri: redirect_uri
     host_ip: 0.0.0.0
+    base_url: videornpurl
 
 processes:
 - path: ./lib/mcs-core/process.js
