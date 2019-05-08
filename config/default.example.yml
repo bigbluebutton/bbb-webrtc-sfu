@@ -30,8 +30,8 @@ recordScreenSharing: true
 recordWebcams: true
 recordingBasePath: file:///var/kurento
 
-recordingMediaProfile: MKV_VIDEO_ONLY
-recordingFormat: mkv
+recordingMediaProfile: WEBM_VIDEO_ONLY
+recordingFormat: webm
 redisExpireTime: 1209600 # 14 days as per the akka keys
 
 # mcs-core entrypoint configured on nginx
