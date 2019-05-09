@@ -1,6 +1,13 @@
 kurento:
   - ip: ""
     url: ws://HOST/kurento
+    # mediaProfile: main|audio|content)
+
+# balancing-strategy: can be either ROUND_ROBIN or MEDIA_TYPE. The MEDIA_TYPE only
+# works properly if you annotated the configured kurento instances in the
+# 'kurento' config parameter with a mediaType field (main|audio|content) which
+# will specify what will each server handle. Default is ROUND_ROBIN
+balancing-strategy: ROUND_ROBIN
 video-transposing-ceiling: 50
 audio-transposing-ceiling: 100
 localIpAddress: ""
