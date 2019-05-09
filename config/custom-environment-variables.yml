@@ -27,6 +27,7 @@ rnp:
     client_secret: VIDEO_RNP_CLIENT_SECRET
     redirect_uri: VIDEO_RNP_REDIRECT_URI
     host_ip: VIDEO_RNP_HOST_IP
+    base_url: VIDEO_RNP_BASE_URL
 
 recordWebcams: RECORD_WEBCAMS
 recordScreenSharing: RECORD_SCREENSHARE
