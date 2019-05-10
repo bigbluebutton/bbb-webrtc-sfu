@@ -1,7 +1,7 @@
 kurento:
   - ip: ""
     url: ws://HOST/kurento
-    # mediaProfile: main|audio|content)
+    # mediaType: (main|audio|content)
 
 # balancing-strategy: can be either ROUND_ROBIN or MEDIA_TYPE. The MEDIA_TYPE only
 # works properly if you annotated the configured kurento instances in the
