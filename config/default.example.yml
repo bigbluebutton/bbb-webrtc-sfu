@@ -55,6 +55,10 @@ bbb-stream:
   bot_join_options:
     userdata-html5autoswaplayout: false
     userdata-html5hidepresentation: false
+  gop:
+    rnp: 5
+    youtube: 12
+    rtmp: 12
   k8s:
     namespace: default
     template:
@@ -72,6 +76,10 @@ bbb-stream:
               - name: LINK
                 value: ""
               - name: OUTPUT
+                value: ""
+              - name: "RTMP"
+                value: "rtmp"
+              - name: "GOP"
                 value: ""
             restartPolicy: OnFailure
         backoffLimit: 0
