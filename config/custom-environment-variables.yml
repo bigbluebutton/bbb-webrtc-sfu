@@ -35,3 +35,7 @@ recordScreenSharing: RECORD_SCREENSHARE
 processes:
   __name: SFU_PROCESSES
   __format: json
+
+conference-media-specs:
+  codec_video_main: CODEC_VIDEO_MAIN
+  codec_video_content: CODEC_VIDEO_CONTENT
