@@ -6,7 +6,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "@kubernetes/client-node": "0.7.1",
+    "@kubernetes/client-node": "^0.8.2",
     "bbb-promise": "1.1.0",
     "config": "1.30.0",
     "esl": "9.0.1",
