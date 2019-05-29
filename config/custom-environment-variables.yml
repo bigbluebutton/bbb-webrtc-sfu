@@ -21,9 +21,21 @@ bbb-stream:
     container_type: STREAM_CONTAINER_TYPE
     bot_name: STREAM_BOT_NAME
 
+rnp:
+  oauth2:
+    client_id: VIDEO_RNP_CLIENT_ID
+    client_secret: VIDEO_RNP_CLIENT_SECRET
+    redirect_uri: VIDEO_RNP_REDIRECT_URI
+    host_ip: VIDEO_RNP_HOST_IP
+    base_url: VIDEO_RNP_BASE_URL
+
 recordWebcams: RECORD_WEBCAMS
 recordScreenSharing: RECORD_SCREENSHARE
 
 processes:
   __name: SFU_PROCESSES
   __format: json
+
+conference-media-specs:
+  codec_video_main: CODEC_VIDEO_MAIN
+  codec_video_content: CODEC_VIDEO_CONTENT
