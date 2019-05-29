@@ -12,7 +12,7 @@
     "esl": "9.0.1",
     "google-auth-library": "2.0.1",
     "googleapis": "35.0.0",
-    "js-yaml": "3.11.0",
+    "js-yaml": "3.13.1",
     "kurento-client": "git+https://github.com/mconf/kurento-client-js.git#mconf",
     "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.5",
     "node-docker-api": "1.1.22",
