@@ -7,6 +7,8 @@ localIpAddress: ""
 acceptSelfSignedCertificate: false
 redisHost: 127.0.0.1
 redisPort: "6379"
+# Uncomment to set a password if Redis requires auth.
+# redisPassword: foobared
 clientPort: "3008"
 minVideoPort: 30000
 maxVideoPort: 33000
@@ -30,8 +32,8 @@ recordScreenSharing: true
 recordWebcams: true
 recordingBasePath: file:///var/kurento
 
-recordingMediaProfile: MKV_VIDEO_ONLY
-recordingFormat: mkv
+recordingMediaProfile: WEBM_VIDEO_ONLY
+recordingFormat: webm
 redisExpireTime: 1209600 # 14 days as per the akka keys
 
 # mcs-core entrypoint configured on nginx
