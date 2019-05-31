@@ -14,7 +14,7 @@
     "googleapis": "35.0.0",
     "js-yaml": "3.13.1",
     "kurento-client": "git+https://github.com/mconf/kurento-client-js.git#mconf",
-    "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.6-dev",
+    "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.7-dev",
     "modesl": "1.2.0",
     "node-docker-api": "1.1.22",
     "readable-id": "1.0.0",
