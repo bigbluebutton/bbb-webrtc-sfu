@@ -3,6 +3,9 @@ kurento:
   __format: json
 
 redisHost: REDIS_HOST
+redisPort: REDIS_PORT
+redisPassword: REDIS_PASSWORD
+
 mcs-port: MCS_PORT
 mcs-address: MCS_HOST
 
