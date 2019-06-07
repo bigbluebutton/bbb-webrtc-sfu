@@ -3,6 +3,9 @@ kurento:
   __format: json
 
 redisHost: REDIS_HOST
+redisPort: REDIS_PORT
+redisPassword: REDIS_PASSWORD
+
 mcs-port: MCS_PORT
 mcs-address: MCS_HOST
 
@@ -19,6 +22,7 @@ bbb-stream:
     bigbluebutton_url: STREAM_BIGBLUEBUTTON_URL
     bigbluebutton_secret: STREAM_BIGBLUEBUTTON_SECRET
     container_type: STREAM_CONTAINER_TYPE
+    bot_name: STREAM_BOT_NAME
 
 recordWebcams: RECORD_WEBCAMS
 recordScreenSharing: RECORD_SCREENSHARE
@@ -28,3 +32,7 @@ recordingFormat: RECORDING_FORMAT
 processes:
   __name: SFU_PROCESSES
   __format: json
+
+conference-media-specs:
+  codec_video_main: CODEC_VIDEO_MAIN
+  codec_video_content: CODEC_VIDEO_CONTENT
