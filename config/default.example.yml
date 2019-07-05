@@ -1,6 +1,13 @@
 kurento:
   - ip: ""
     url: ws://HOST/kurento
+    # mediaType: (main|audio|content)
+
+# balancing-strategy: can be either ROUND_ROBIN or MEDIA_TYPE. The MEDIA_TYPE only
+# works properly if you annotated the configured kurento instances in the
+# 'kurento' config parameter with a mediaType field (main|audio|content) which
+# will specify what will each server handle. Default is ROUND_ROBIN
+balancing-strategy: ROUND_ROBIN
 video-transposing-ceiling: 50
 audio-transposing-ceiling: 100
 localIpAddress: ""
@@ -46,9 +53,12 @@ freeswitch:
   port: "5066"
   esl_ip: "ESL_IP"
   esl_port: "ESL_PORT"
+# maxFiles: number of old log files to keep track of. Logs are rotated daily,
+# so maxFiles = amount of days to keep of logs
 log:
   filename: /var/log/bbb-webrtc-sfu/bbb-webrtc-sfu.log
   level: verbose
+  maxFiles: 14
 bbb-stream:
   image_name: bbb-stream
   container_type: docker
@@ -58,6 +68,10 @@ bbb-stream:
   bot_join_options:
     userdata-html5autoswaplayout: false
     userdata-html5hidepresentation: false
+  gop:
+    rnp: 5
+    youtube: 12
+    rtmp: 12
   k8s:
     namespace: default
     template:
@@ -76,18 +90,36 @@ bbb-stream:
                 value: ""
               - name: OUTPUT
                 value: ""
+              - name: "RTMP"
+                value: "rtmp"
+              - name: "GOP"
+                value: ""
             restartPolicy: OnFailure
         backoffLimit: 0
+
+rnp:
+  oauth2:
+    client_id: client_id
+    client_secret: client_secret
+    redirect_uri: redirect_uri
+    host_ip: 0.0.0.0
+    base_url: videornpurl
+
 processes:
 - path: ./lib/mcs-core/process.js
 - path: ./lib/screenshare/ScreenshareProcess
 - path: ./lib/video/VideoProcess.js
 - path: ./lib/audio/AudioProcess.js
+# media-server-adapters: path could refer to a npm module
 media-server-adapters:
 - path: kurento/kurento.js
   name: Kurento
 - path: freeswitch/freeswitch.js
   name: Freeswitch
+# strategies: path could refer to a npm module
+strategies:
+  #- path: ./voice-switching-handler.js
+  # name: VOICE_SWITCHING
 
 # Codec values (_video_main, _video_content): it'll force the specified codec. Put the 'ANY' value
 # to prevent forcing a specific codec. If you wanna add other codecs (e.g.: VP9)

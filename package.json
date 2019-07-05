@@ -1,28 +1,30 @@
 {
   "name": "bbb-webrtc-sfu",
-  "version": "2.3.10",
+  "version": "2.4.0",
   "private": true,
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "cd node_modules/sip.js/src/Grammar && mkdir -p dist && pegjs --extra-options-file peg.json src/Grammar.pegjs dist/Grammar.js"
   },
   "dependencies": {
     "@kubernetes/client-node": "^0.8.2",
     "bbb-promise": "1.1.0",
     "config": "1.30.0",
-    "esl": "9.0.1",
     "google-auth-library": "2.0.1",
     "googleapis": "35.0.0",
     "js-yaml": "3.13.1",
     "kurento-client": "git+https://github.com/mconf/kurento-client-js.git#mconf",
-    "mcs-js": "git+https://github.com/mconf/mcs-js#v0.0.7",
+    "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.8",
+    "modesl": "1.2.0",
     "node-docker-api": "1.1.22",
     "readable-id": "1.0.0",
     "redis": "2.8.0",
     "sdp-transform": "2.4.1",
-    "sip.js": "0.7.5",
+    "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.4",
     "winston": "2.4.2",
     "winston-daily-rotate-file": "1.7.2",
-    "ws": "3.3.3"
+    "ws": "3.3.3",
+    "pegjs": "0.8.0"
   },
   "optionalDependencies": {}
 }
