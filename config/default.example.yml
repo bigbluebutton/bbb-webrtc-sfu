@@ -2,7 +2,9 @@ kurento:
   - ip: ""
     url: ws://HOST/kurento
     # mediaType: (main|audio|content)
-
+# Number of attemps of connecting to the configured kurento instances the first
+# time. Infinity means it tries forever until it's able to connect. Default is 10.
+kurentoStartupRetries: 10
 # balancing-strategy: can be either ROUND_ROBIN or MEDIA_TYPE. The MEDIA_TYPE only
 # works properly if you annotated the configured kurento instances in the
 # 'kurento' config parameter with a mediaType field (main|audio|content) which
