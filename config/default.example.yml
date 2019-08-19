@@ -161,4 +161,8 @@ conference-media-specs:
     ptime: "20"
     minptime: "10"
     maxptime: "40"
-
+kurentoRembParams:
+  rembOnConnect: 500
+  upLosses: 25
+  decrementFactor: 0.85
+  thresholdFactor: 0.9
