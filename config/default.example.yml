@@ -166,3 +166,8 @@ kurentoRembParams:
   upLosses: 12
   decrementFactor: 0.5
   thresholdFactor: 0.8
+# Optional configuration. List of VALID IPs to be used to define valid outbound ICE candidates.
+# This is a short-term optimization to reduce the number of candidate sent to
+# the client by filtering out anything that isn't in this list
+kurentoAllowedCandidateIps:
+  #- <ipv4|ipv6>
