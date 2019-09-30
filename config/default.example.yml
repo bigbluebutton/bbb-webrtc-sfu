@@ -55,8 +55,8 @@ mcs-ws-timeout: 30000
 freeswitch:
   ip: "FREESWITCH_IP"
   port: "5066"
-  esl_ip: "ESL_IP"
-  esl_port: "ESL_PORT"
+  esl_ip: localhost
+  esl_port: 8021
 # maxFiles: number of old log files to keep track of. Logs are rotated daily,
 # so maxFiles = amount of days to keep of logs
 log:
