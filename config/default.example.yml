@@ -166,8 +166,22 @@ kurentoRembParams:
   upLosses: 12
   decrementFactor: 0.5
   thresholdFactor: 0.8
-# Optional configuration. List of VALID IPs to be used to define valid outbound ICE candidates.
-# This is a short-term optimization to reduce the number of candidate sent to
+# kurentoAllowedCandidateIps: optional configuration. List of VALID IPs to be used 
+# to define valid outbound ICE candidates.
+# This is a short-term optimization to reduce the number of candidates sent to
 # the client by filtering out anything that isn't in this list
 kurentoAllowedCandidateIps:
   #- <ipv4|ipv6>
+
+# mediaThresholds: mandatory configuration. Establishes type-agnostic media thresholds 
+# that when hit will make the server refuse to negotiate new medias. 
+# Any attemps to inject medias past the thresholds will return an error with code 
+# 2002 and message MEDIA_SERVER_NO_RESOURCES.
+# The threshold priority order is global -> perRoom -> perUser. Value 0 means unlimited
+# (default). An optional API parameter may be sent on pub/sub calls (ignoreThresholds)
+# to make the media ignore the configured thresholds. This is used here for recording
+# and audio medias.
+mediaThresholds:
+  global: 0
+  perRoom: 0
+  perUser: 0
