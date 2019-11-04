@@ -17,14 +17,14 @@
     "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.8",
     "modesl": "1.2.0",
     "node-docker-api": "1.1.22",
+    "pegjs": "0.8.0",
     "readable-id": "1.0.0",
     "redis": "2.8.0",
-    "sdp-transform": "2.4.1",
+    "sdp-transform": "2.13.0",
     "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.4",
     "winston": "2.4.2",
     "winston-daily-rotate-file": "1.7.2",
-    "ws": "3.3.3",
-    "pegjs": "0.8.0"
+    "ws": "3.3.3"
   },
   "optionalDependencies": {}
 }
