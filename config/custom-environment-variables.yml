@@ -52,3 +52,5 @@ screenshareSubscriberSpecSlave: SCREENSHARE_SUBSCRIBER_SLAVE
 kurentoAllowedCandidateIps:
   __name: KURENTO_ALLOWED_CANDIDATE_IPS
   __format: json
+
+addTimestampToAkkaMessages: AKKA_MSG_TIMESTAMP
