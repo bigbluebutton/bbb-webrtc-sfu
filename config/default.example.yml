@@ -171,3 +171,5 @@ kurentoRembParams:
 # the client by filtering out anything that isn't in this list
 kurentoAllowedCandidateIps:
   #- <ipv4|ipv6>
+# Whether to append a timestamp to akka-app's message envelopes
+addTimestampToAkkaMessages: true
