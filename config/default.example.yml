@@ -186,3 +186,5 @@ mediaThresholds:
   global: 0
   perRoom: 0
   perUser: 0
+# Whether to append a timestamp to akka-app's message envelopes
+addTimestampToAkkaMessages: true
