@@ -73,6 +73,8 @@ bbb-stream:
   bot_join_options:
     userdata-html5autoswaplayout: false
     userdata-html5hidepresentation: false
+    bot: true
+    joinViaHtml5: true
   gop:
     rnp: 5
     youtube: 12
