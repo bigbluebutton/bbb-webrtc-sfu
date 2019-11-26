@@ -133,16 +133,29 @@ strategies:
   #- path: ./voice-switching-handler.js
   # name: VOICE_SWITCHING
 
-# Codec values (_video_main, _video_content): it'll force the specified codec. Put the 'ANY' value
-# to prevent forcing a specific codec. If you wanna add other codecs (e.g.: VP9)
+# Codec values (codec_video_main, codec_video_content, codec_audio):
+# it'll force the specified codec.
+# Put the 'ANY' value to prevent forcing a specific codec without the _priority options.
+# For the 'ANY' option, there's a trio of optional configuration where you are
+# able to specify the priority codec to force in a lenient way (codec_*_priority).
+# If codec_*_priority is undefined or not found in the media description,
+# no specific codec will be forced (base ANY behaviour).
+# If the priority codec is found in the media description, any codec
+# that doesn't match it will be filtered out (ie it will act as if the priority
+# codec was forced).
+# If you wanna add other codecs (e.g.: VP9)
 # add it to the list with its specifiers. If the codec isn't in the list,
-# it'll default to the values in VP8, but still force the entered codec.
-# _video_main refers to webcam/main video content, _video_content refers to
+# it'll default to the specifier values in codec_*_priority OR VP8,
+# but still force the entered codec option.
+# P.S.: _video_main refers to webcam/main video content, _video_content refers to
 # screenshare/content:slides streams.
 conference-media-specs:
   codec_video_main: VP8
+  codec_video_main_priority: VP8
   codec_video_content: VP8
-  codec_audio: "ANY"
+  codec_video_content_priority: VP8
+  codec_audio: ANY
+  codec_audio_priority: OPUS
   H264:
     profile_level_id: "42e01f"
     packetization_mode: "0"
