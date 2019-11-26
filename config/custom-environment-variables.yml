@@ -10,7 +10,9 @@ mcs-port: MCS_PORT
 mcs-address: MCS_HOST
 
 freeswitch:
-    ip: FREESWITCH_IP
+    ip: FREESWITCH_CONN_IP
+    sip_ip: FREESWITCH_SIP_IP
+    port: FREESWITCH_SIP_PORT
     esl_ip: ESL_IP
     esl_port: ESL_PORT
     handleExternalConnections: FS_HANDLE_EXT_CONN
@@ -49,7 +51,9 @@ processes:
 
 conference-media-specs:
   codec_video_main: CODEC_VIDEO_MAIN
+  codec_video_main_priority: CODEC_VIDEO_MAIN_PRIO
   codec_video_content: CODEC_VIDEO_CONTENT
+  codec_video_content_priority: CODEC_VIDEO_CONTENT_PRIO
 
 videoSubscriberSpecSlave: VIDEO_SUBSCRIBER_SLAVE
 screenshareSubscriberSpecSlave: SCREENSHARE_SUBSCRIBER_SLAVE
