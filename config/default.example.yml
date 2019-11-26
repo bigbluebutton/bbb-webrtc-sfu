@@ -57,9 +57,10 @@ mcs-port: 3010
 mcs-address: localhost
 mcs-ws-timeout: 30000
 freeswitch:
-  ip: "FREESWITCH_IP"
-  port: "5066"
-  esl_ip: localhost
+  ip: 127.0.0.1
+  sip_ip: 127.0.0.1
+  port: 5066
+  esl_ip: 127.0.0.1
   esl_port: 8021
   handleExternalConnections: false
 # maxFiles: number of old log files to keep track of. Logs are rotated daily,

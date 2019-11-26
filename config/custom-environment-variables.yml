@@ -10,7 +10,9 @@ mcs-port: MCS_PORT
 mcs-address: MCS_HOST
 
 freeswitch:
-    ip: FREESWITCH_IP
+    ip: FREESWITCH_CONN_IP
+    sip_ip: FREESWITCH_SIP_IP
+    port: FREESWITCH_SIP_PORT
     esl_ip: ESL_IP
     esl_port: ESL_PORT
     handleExternalConnections: FS_HANDLE_EXT_CONN
