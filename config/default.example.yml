@@ -193,7 +193,6 @@ kurentoRembParams:
 # the client by filtering out anything that isn't in this list
 kurentoAllowedCandidateIps:
   #- <ipv4|ipv6>
-
 # mediaThresholds: mandatory configuration. Establishes type-agnostic media thresholds
 # that when hit will make the server refuse to negotiate new medias.
 # Any attemps to inject medias past the thresholds will return an error with code
