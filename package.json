@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@kubernetes/client-node": "^0.8.2",
-    "bbb-promise": "git+https://github.com/lfzawacki/bbb-promise#bbb-webrtc-sfu",
+    "bbb-promise": "1.2.0",
     "config": "1.30.0",
     "google-auth-library": "^5.2.0",
     "googleapis": "^43.0.0",
