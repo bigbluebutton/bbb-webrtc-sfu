@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:12
 
 ADD . app
 
@@ -7,7 +7,7 @@ WORKDIR app
 ENV NODE_ENV production
 
 RUN cp config/default.example.yml config/production.yml \
- && npm install \
+ && npm install --unsafe-perm \
  && npm cache clear --force
 
 EXPOSE 3008
