@@ -10,19 +10,27 @@ mcs-port: MCS_PORT
 mcs-address: MCS_HOST
 
 freeswitch:
-    ip: FREESWITCH_IP
+    ip: FREESWITCH_CONN_IP
+    sip_ip: FREESWITCH_SIP_IP
+    port: FREESWITCH_SIP_PORT
     esl_ip: ESL_IP
     esl_port: ESL_PORT
+    handleExternalConnections: FS_HANDLE_EXT_CONN
 
 log:
     level: LOG_LEVEL
+    filename: LOG_FILENAME
+    maxFiles: LOG_MAX_FILES
 
 bbb-stream:
-    image_name: STREAM_IMAGE_NAME
-    bigbluebutton_url: STREAM_BIGBLUEBUTTON_URL
-    bigbluebutton_secret: STREAM_BIGBLUEBUTTON_SECRET
-    container_type: STREAM_CONTAINER_TYPE
-    bot_name: STREAM_BOT_NAME
+  image_name: STREAM_IMAGE_NAME
+  bigbluebutton_url: STREAM_BIGBLUEBUTTON_URL
+  bigbluebutton_secret: STREAM_BIGBLUEBUTTON_SECRET
+  container_type: STREAM_CONTAINER_TYPE
+  bot_name: STREAM_BOT_NAME
+  bot_join_options:
+    __name: BOT_JOIN_OPTS
+    __format: json
 
 rnp:
   oauth2:
@@ -43,7 +51,9 @@ processes:
 
 conference-media-specs:
   codec_video_main: CODEC_VIDEO_MAIN
+  codec_video_main_priority: CODEC_VIDEO_MAIN_PRIO
   codec_video_content: CODEC_VIDEO_CONTENT
+  codec_video_content_priority: CODEC_VIDEO_CONTENT_PRIO
 
 videoSubscriberSpecSlave: VIDEO_SUBSCRIBER_SLAVE
 screenshareSubscriberSpecSlave: SCREENSHARE_SUBSCRIBER_SLAVE
