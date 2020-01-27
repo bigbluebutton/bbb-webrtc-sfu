@@ -16,6 +16,9 @@ freeswitch:
     esl_ip: ESL_IP
     esl_port: ESL_PORT
     handleExternalConnections: FS_HANDLE_EXT_CONN
+    ipClassMappings:
+      __name: FREESWITCH_IP_MAPPINGS
+      __format: json
 
 log:
     level: LOG_LEVEL
