@@ -15,7 +15,7 @@
     "js-yaml": "3.13.1",
     "kurento-client": "git+https://github.com/Kurento/kurento-client-js.git#6.12.0",
     "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.9",
-    "modesl": "1.2.0",
+    "modesl": "1.2.1",
     "node-docker-api": "1.1.22",
     "pegjs": "0.8.0",
     "readable-id": "1.0.0",
