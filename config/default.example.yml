@@ -176,7 +176,7 @@ conference-media-specs:
     tias_content: "1500000"
     as_content: "1500"
   OPUS:
-    useinbandfec: "0"
+    useinbandfec: "1"
     maxaveragebitrate: "30000"
     maxplaybackrate: "48000"
     ptime: "20"
