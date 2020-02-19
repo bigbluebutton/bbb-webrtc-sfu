@@ -12,6 +12,7 @@
     "config": "1.30.0",
     "google-auth-library": "^5.2.0",
     "googleapis": "^43.0.0",
+    "ipaddr.js": "1.9.1",
     "js-yaml": "3.13.1",
     "kurento-client": "git+https://github.com/Kurento/kurento-client-js.git#6.12.0",
     "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.9",
@@ -21,7 +22,7 @@
     "readable-id": "1.0.0",
     "redis": "2.8.0",
     "sdp-transform": "2.13.0",
-    "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.4",
+    "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.10",
     "winston": "2.4.2",
     "winston-daily-rotate-file": "1.7.2",
     "ws": "3.3.3"

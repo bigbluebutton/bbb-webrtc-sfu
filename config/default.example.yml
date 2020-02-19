@@ -2,6 +2,10 @@ kurento:
   - ip: ""
     url: ws://127.0.0.1:8888/kurento
     # mediaType: (main|audio|content)
+    ipClassMappings:
+      local:
+      private:
+      public:
     options:
       failAfter: 5
       request_timeout: 30000
@@ -63,6 +67,10 @@ freeswitch:
   esl_ip: 127.0.0.1
   esl_port: 8021
   handleExternalConnections: false
+  ipClassMappings:
+    local:
+    private:
+    public:
 # maxFiles: number of old log files to keep track of. Logs are rotated daily,
 # so maxFiles = amount of days to keep of logs
 log:
