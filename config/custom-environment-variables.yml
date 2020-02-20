@@ -15,7 +15,9 @@ freeswitch:
     port: FREESWITCH_SIP_PORT
     esl_ip: ESL_IP
     esl_port: ESL_PORT
-    handleExternalConnections: FS_HANDLE_EXT_CONN
+    handleExternalConnections:
+      __name: FS_HANDLE_EXT_CONN
+      __format: json
     ipClassMappings:
       __name: FREESWITCH_IP_MAPPINGS
       __format: json
@@ -43,8 +45,12 @@ rnp:
     host_ip: VIDEO_RNP_HOST_IP
     base_url: VIDEO_RNP_BASE_URL
 
-recordWebcams: RECORD_WEBCAMS
-recordScreenSharing: RECORD_SCREENSHARE
+recordWebcams:
+  __name: RECORD_WEBCAMS
+  __format: json
+recordScreenSharing:
+  __name: RECORD_SCREENSHARE
+  __format: json
 recordingMediaProfile: RECORDING_MEDIA_PROFILE
 recordingFormat: RECORDING_FORMAT
 
@@ -58,11 +64,17 @@ conference-media-specs:
   codec_video_content: CODEC_VIDEO_CONTENT
   codec_video_content_priority: CODEC_VIDEO_CONTENT_PRIO
 
-videoSubscriberSpecSlave: VIDEO_SUBSCRIBER_SLAVE
-screenshareSubscriberSpecSlave: SCREENSHARE_SUBSCRIBER_SLAVE
+videoSubscriberSpecSlave:
+  __name: VIDEO_SUBSCRIBER_SLAVE
+  __format: json
+screenshareSubscriberSpecSlave:
+  __name: SCREENSHARE_SUBSCRIBER_SLAVE
+  __format: json
 
 kurentoAllowedCandidateIps:
   __name: KURENTO_ALLOWED_CANDIDATE_IPS
   __format: json
 
-addTimestampToAkkaMessages: AKKA_MSG_TIMESTAMP
+addTimestampToAkkaMessages:
+  __name: AKKA_MSG_TIMESTAMP
+  __format: json
