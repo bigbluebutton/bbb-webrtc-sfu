@@ -25,7 +25,6 @@ freeswitch:
 log:
     level: LOG_LEVEL
     filename: LOG_FILENAME
-    maxFiles: LOG_MAX_FILES
 
 bbb-stream:
   image_name: STREAM_IMAGE_NAME
