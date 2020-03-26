@@ -27,6 +27,7 @@ redisPort: "6379"
 # Uncomment to set a password if Redis requires auth.
 # redisPassword: foobared
 clientPort: "3008"
+clientHost: 0.0.0.0
 minVideoPort: 30000
 maxVideoPort: 33000
 mediaFlowTimeoutDuration: 15000
