@@ -2,6 +2,10 @@ kurento:
   - ip: ""
     url: ws://127.0.0.1:8888/kurento
     # mediaType: (main|audio|content)
+    ipClassMappings:
+      local:
+      private:
+      public:
     options:
       failAfter: 5
       request_timeout: 30000
@@ -26,6 +30,7 @@ clientPort: "3008"
 minVideoPort: 30000
 maxVideoPort: 33000
 mediaFlowTimeoutDuration: 15000
+mediaStateTimeoutDuration: 30000
 from-screenshare: from-screenshare-sfu
 to-screenshare: to-screenshare-sfu
 from-video: from-video-sfu
@@ -63,12 +68,13 @@ freeswitch:
   esl_ip: 127.0.0.1
   esl_port: 8021
   handleExternalConnections: false
-# maxFiles: number of old log files to keep track of. Logs are rotated daily,
-# so maxFiles = amount of days to keep of logs
+  ipClassMappings:
+    local:
+    private:
+    public:
 log:
   filename: /var/log/bbb-webrtc-sfu/bbb-webrtc-sfu.log
   level: verbose
-  maxFiles: 14
 bbb-stream:
   image_name: bbb-stream
   container_type: docker
@@ -158,8 +164,8 @@ conference-media-specs:
   codec_audio_priority: OPUS
   H264:
     profile_level_id: "42e01f"
-    packetization_mode: "0"
-    level_asymmetry_allowed: "0"
+    packetization_mode: "1"
+    level_asymmetry_allowed: "1"
     tias_main: "300000"
     as_main: "300"
     tias_content: "1500000"
@@ -176,7 +182,7 @@ conference-media-specs:
     tias_content: "1500000"
     as_content: "1500"
   OPUS:
-    useinbandfec: "0"
+    useinbandfec: "1"
     maxaveragebitrate: "30000"
     maxplaybackrate: "48000"
     ptime: "20"

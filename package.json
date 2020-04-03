@@ -1,6 +1,6 @@
 {
   "name": "bbb-webrtc-sfu",
-  "version": "2.4.6",
+  "version": "2.4.13",
   "private": true,
   "scripts": {
     "start": "node server.js",
@@ -12,18 +12,18 @@
     "config": "1.30.0",
     "google-auth-library": "^5.2.0",
     "googleapis": "^43.0.0",
+    "ipaddr.js": "1.9.1",
     "js-yaml": "3.13.1",
-    "kurento-client": "git+https://github.com/Kurento/kurento-client-js.git#6.11.0",
-    "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.8",
-    "modesl": "1.2.0",
+    "kurento-client": "git+https://github.com/Kurento/kurento-client-js.git#6.13.0",
+    "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.9",
+    "modesl": "1.2.1",
     "node-docker-api": "1.1.22",
     "pegjs": "0.8.0",
     "readable-id": "1.0.0",
     "redis": "2.8.0",
     "sdp-transform": "2.13.0",
-    "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.4",
+    "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.10",
     "winston": "2.4.2",
-    "winston-daily-rotate-file": "1.7.2",
     "ws": "3.3.3"
   },
   "optionalDependencies": {}
