@@ -6,8 +6,11 @@ redisHost: REDIS_HOST
 redisPort: REDIS_PORT
 redisPassword: REDIS_PASSWORD
 
+clientHost: CLIENT_HOST
+
 mcs-port: MCS_PORT
-mcs-address: MCS_HOST
+mcs-host: MCS_HOST
+mcs-address: MCS_ADDRESS
 
 freeswitch:
     ip: FREESWITCH_CONN_IP
