@@ -27,6 +27,7 @@ redisPort: "6379"
 # Uncomment to set a password if Redis requires auth.
 # redisPassword: foobared
 clientPort: "3008"
+clientHost: 127.0.0.1
 minVideoPort: 30000
 maxVideoPort: 33000
 mediaFlowTimeoutDuration: 15000
@@ -59,6 +60,7 @@ redisExpireTime: 1209600 # 14 days as per the akka keys
 # mcs-core entrypoint configured on nginx
 mcs-path: /mcs
 mcs-port: 3010
+mcs-host: 127.0.0.1
 mcs-address: localhost
 mcs-ws-timeout: 30000
 freeswitch:
