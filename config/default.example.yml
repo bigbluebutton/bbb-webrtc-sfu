@@ -32,6 +32,7 @@ minVideoPort: 30000
 maxVideoPort: 33000
 mediaFlowTimeoutDuration: 15000
 mediaStateTimeoutDuration: 30000
+requestQueueTimeout: 15000
 from-screenshare: from-screenshare-sfu
 to-screenshare: to-screenshare-sfu
 from-video: from-video-sfu
