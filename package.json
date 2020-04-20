@@ -1,6 +1,6 @@
 {
   "name": "bbb-webrtc-sfu",
-  "version": "2.4.14",
+  "version": "2.4.15-beta.0",
   "private": true,
   "scripts": {
     "start": "node server.js",
@@ -24,7 +24,8 @@
     "sdp-transform": "2.13.0",
     "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.10",
     "winston": "2.4.2",
-    "ws": "3.3.3"
+    "ws": "3.3.3",
+    "queue": "6.0.1"
   },
   "optionalDependencies": {}
 }
