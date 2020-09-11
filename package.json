@@ -1,23 +1,18 @@
 {
   "name": "bbb-webrtc-sfu",
-  "version": "2.4.16",
+  "version": "2.4.17",
   "private": true,
   "scripts": {
     "start": "node server.js",
     "postinstall": "cd node_modules/sip.js/src/Grammar && mkdir -p dist && pegjs --extra-options-file peg.json src/Grammar.pegjs dist/Grammar.js"
   },
   "dependencies": {
-    "@kubernetes/client-node": "^0.8.2",
-    "bbb-promise": "1.2.0",
     "config": "1.30.0",
-    "google-auth-library": "^5.2.0",
-    "googleapis": "^43.0.0",
     "ipaddr.js": "1.9.1",
     "js-yaml": "3.13.1",
     "kurento-client": "git+https://github.com/Kurento/kurento-client-js.git#6.13.0",
     "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.9",
     "modesl": "1.2.1",
-    "node-docker-api": "1.1.22",
     "pegjs": "0.8.0",
     "readable-id": "1.0.0",
     "redis": "2.8.0",
