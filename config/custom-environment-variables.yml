@@ -2,6 +2,9 @@ kurento:
   __name: KURENTO
   __format: json
 
+# Values: ROUND_ROBIN or MEDIA_TYPE
+balancing-strategy: BALANCING_STRATEGY
+
 redisHost: REDIS_HOST
 redisPort: REDIS_PORT
 redisPassword: REDIS_PASSWORD

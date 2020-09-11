@@ -40,8 +40,6 @@ from-audio: from-audio-sfu
 to-audio: to-audio-sfu
 to-akka: to-akka-apps-redis-channel
 from-akka: from-akka-apps-redis-channel
-to-stream: to-sfu-redis-channel
-from-stream: from-stream-sfu
 to-html5: to-html5-redis-channel
 common-message-version: 2.x
 screenshareKeyframeInterval: 0
@@ -77,54 +75,6 @@ freeswitch:
 log:
   filename: /var/log/bbb-webrtc-sfu/bbb-webrtc-sfu.log
   level: verbose
-bbb-stream:
-  image_name: bbb-stream
-  container_type: docker
-  bigbluebutton_url: BBBHOST
-  bigbluebutton_secret: BBBSECRET
-  bot_name: BBBBOTNAME
-  bot_join_options:
-    userdata-html5autoswaplayout: false
-    userdata-html5hidepresentation: false
-    bot: true
-    joinViaHtml5: true
-  gop:
-    rnp: 5
-    youtube: 12
-    rtmp: 12
-  k8s:
-    namespace: default
-    template:
-      apiVersion: batch/v1
-      kind: Job
-      metadata:
-        name: bbb-stream-
-      spec:
-        template:
-          spec:
-            containers:
-            - name: bbb-stream-firefox
-              image: gcr.io/PROJECT-ID/bbb-stream
-              env:
-              - name: LINK
-                value: ""
-              - name: OUTPUT
-                value: ""
-              - name: "RTMP"
-                value: "rtmp"
-              - name: "GOP"
-                value: ""
-            restartPolicy: OnFailure
-        backoffLimit: 0
-
-rnp:
-  oauth2:
-    client_id: client_id
-    client_secret: client_secret
-    redirect_uri: redirect_uri
-    host_ip: 0.0.0.0
-    base_url: videornpurl
-
 processes:
 - path: ./lib/mcs-core/process.js
 - path: ./lib/screenshare/ScreenshareProcess
