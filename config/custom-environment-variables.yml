@@ -2,6 +2,9 @@ kurento:
   __name: KURENTO
   __format: json
 
+# Values: ROUND_ROBIN or MEDIA_TYPE
+balancing-strategy: BALANCING_STRATEGY
+
 redisHost: REDIS_HOST
 redisPort: REDIS_PORT
 redisPassword: REDIS_PASSWORD
@@ -76,6 +79,11 @@ screenshareSubscriberSpecSlave:
 kurentoAllowedCandidateIps:
   __name: KURENTO_ALLOWED_CANDIDATE_IPS
   __format: json
+
+mediaThresholds:
+  global: GLOBAL_MEDIA_THRESHOLD
+  perRoom: ROOM_MEDIA_THRESHOLD
+  perUser: USER_MEDIA_THRESHOLD
 
 addTimestampToAkkaMessages:
   __name: AKKA_MSG_TIMESTAMP
