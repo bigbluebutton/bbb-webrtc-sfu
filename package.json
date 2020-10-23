@@ -18,8 +18,8 @@
     "redis": "2.8.0",
     "sdp-transform": "2.13.0",
     "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.10",
-    "winston": "2.4.2",
-    "ws": "3.3.3",
+    "winston": "2.4.5",
+    "ws": "7.3.1",
     "queue": "6.0.1"
   },
   "optionalDependencies": {}
