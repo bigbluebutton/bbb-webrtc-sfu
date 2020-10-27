@@ -45,6 +45,7 @@ common-message-version: 2.x
 screenshareKeyframeInterval: 0
 screenshareEnableFlashRTPBridge: false
 screenshareSubscriberSpecSlave: false
+screensharePlayStartEnabled: false
 videoSubscriberSpecSlave: false
 
 recordScreenSharing: true
