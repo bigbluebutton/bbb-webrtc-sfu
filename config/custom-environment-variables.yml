@@ -75,6 +75,9 @@ videoSubscriberSpecSlave:
 screenshareSubscriberSpecSlave:
   __name: SCREENSHARE_SUBSCRIBER_SLAVE
   __format: json
+screensharePlayStartEnabled:
+  __name: SCREENSHARE_PLAY_START_ENABLED
+  __format: json
 
 kurentoAllowedCandidateIps:
   __name: KURENTO_ALLOWED_CANDIDATE_IPS
