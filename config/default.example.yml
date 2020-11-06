@@ -47,6 +47,7 @@ screenshareKeyframeInterval: 0
 screenshareEnableFlashRTPBridge: false
 screenshareSubscriberSpecSlave: false
 screensharePlayStartEnabled: false
+screenshareServerSideAkkaBroadcast: true
 videoSubscriberSpecSlave: false
 
 recordScreenSharing: true
