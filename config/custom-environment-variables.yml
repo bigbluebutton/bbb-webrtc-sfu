@@ -86,6 +86,10 @@ kurentoAllowedCandidateIps:
   __name: KURENTO_ALLOWED_CANDIDATE_IPS
   __format: json
 
+kurentoAllowMDNSCandidates:
+  __name: KURENTO_ALLOW_MDNS
+  __format: json
+
 mediaThresholds:
   global: GLOBAL_MEDIA_THRESHOLD
   perRoom: ROOM_MEDIA_THRESHOLD
