@@ -13,6 +13,8 @@ kurento:
 # Number of attemps of connecting to the configured kurento instances the first
 # time. Infinity means it tries forever until it's able to connect. Default is Infinity.
 kurentoStartupRetries: Infinity
+# Whether to allow Kurento to process mDNS ICE candidates
+kurentoAllowMDNSCandidates: true
 # balancing-strategy: can be either ROUND_ROBIN or MEDIA_TYPE. The MEDIA_TYPE only
 # works properly if you annotated the configured kurento instances in the
 # 'kurento' config parameter with a mediaType field (main|audio|content) which
@@ -46,6 +48,7 @@ screenshareKeyframeInterval: 0
 screenshareEnableFlashRTPBridge: false
 screenshareSubscriberSpecSlave: false
 screensharePlayStartEnabled: false
+screenshareServerSideAkkaBroadcast: true
 videoSubscriberSpecSlave: false
 
 recordScreenSharing: true
