@@ -78,9 +78,16 @@ screenshareSubscriberSpecSlave:
 screensharePlayStartEnabled:
   __name: SCREENSHARE_PLAY_START_ENABLED
   __format: json
+screenshareServerSideAkkaBroadcast:
+  __name: SCREENSHARE_SERVER_AKKA_BROADCAST
+  __format: json
 
 kurentoAllowedCandidateIps:
   __name: KURENTO_ALLOWED_CANDIDATE_IPS
+  __format: json
+
+kurentoAllowMDNSCandidates:
+  __name: KURENTO_ALLOW_MDNS
   __format: json
 
 mediaThresholds:
