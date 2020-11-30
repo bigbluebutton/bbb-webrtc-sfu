@@ -96,7 +96,3 @@ mediaThresholds:
   global: GLOBAL_MEDIA_THRESHOLD
   perRoom: ROOM_MEDIA_THRESHOLD
   perUser: USER_MEDIA_THRESHOLD
-
-addTimestampToAkkaMessages:
-  __name: AKKA_MSG_TIMESTAMP
-  __format: json

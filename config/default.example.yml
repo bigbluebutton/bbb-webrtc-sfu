@@ -158,8 +158,6 @@ mediaThresholds:
   global: 0
   perRoom: 0
   perUser: 0
-# Whether to append a timestamp to akka-app's message envelopes
-addTimestampToAkkaMessages: true
 # Whether to allow duplicate externalUserId's on join. If allowed, join requests with
 # a externalUserId specified in the optional parameters will associate the new connection
 # with a pre-existing user (if it exists), or create a new one.
