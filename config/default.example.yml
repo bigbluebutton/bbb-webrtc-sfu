@@ -69,7 +69,8 @@ freeswitch:
     public:
 log:
   filename: /var/log/bbb-webrtc-sfu/bbb-webrtc-sfu.log
-  level: verbose
+  level: info
+  stdout: true
 processes:
 - path: ./lib/mcs-core/process.js
 - path: ./lib/screenshare/ScreenshareProcess
