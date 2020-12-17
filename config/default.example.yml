@@ -71,11 +71,40 @@ log:
   filename: /var/log/bbb-webrtc-sfu/bbb-webrtc-sfu.log
   level: info
   stdout: true
-processes:
+modules:
 - path: ./lib/mcs-core/process.js
-- path: ./lib/screenshare/ScreenshareProcess
+  name: core
+  dedicated: true
+  # IPC can be either native|redis right now. Defaults to native
+  ipc:
+    mode: native
+    options:
+      # inboundChannel: to-mcs-core
+      # outboundChannel: from-mcs-core
+- path: ./lib/screenshare/ScreenshareProcess.js
+  name: screenshare
+  dedicated: true
+  ipc:
+    mode: native
+    options:
+      # inboundChannel: to-sfu-screenshare
+      # outboundChannel: from-sfu-screenshare
 - path: ./lib/video/VideoProcess.js
+  name: video
+  dedicated: true
+  ipc:
+    mode: native
+    options:
+      # inboundChannel: to-sfu-video
+      # outboundChannel: from-sfu-video
 - path: ./lib/audio/AudioProcess.js
+  name: audio
+  dedicated: true
+  ipc:
+    mode: native
+    options:
+      # inboundChannel: to-sfu-audio
+      # outboundChannel: from-sfu-audio
 # media-server-adapters: path could refer to a npm module
 media-server-adapters:
 - path: kurento/kurento.js

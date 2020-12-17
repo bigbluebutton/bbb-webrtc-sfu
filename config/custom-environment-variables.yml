@@ -62,8 +62,8 @@ recordScreenSharing:
 recordingMediaProfile: RECORDING_MEDIA_PROFILE
 recordingFormat: RECORDING_FORMAT
 
-processes:
-  __name: SFU_PROCESSES
+modules:
+  __name: SFU_MODULES
   __format: json
 
 conference-media-specs:
