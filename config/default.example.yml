@@ -15,6 +15,9 @@ kurento:
 kurentoStartupRetries: Infinity
 # Whether to allow Kurento to process mDNS ICE candidates
 kurentoAllowMDNSCandidates: true
+# Whether to track KMS's ICE state changes for every peer.
+# Disabled by default for now until we trace the perf. impact of it
+kurentoTrackIceStateChanges: false
 # balancing-strategy: can be either ROUND_ROBIN or MEDIA_TYPE. The MEDIA_TYPE only
 # works properly if you annotated the configured kurento instances in the
 # 'kurento' config parameter with a mediaType field (main|audio|content) which
