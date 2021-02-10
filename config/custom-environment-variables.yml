@@ -29,8 +29,11 @@ freeswitch:
       __format: json
 
 log:
-    level: LOG_LEVEL
-    filename: LOG_FILENAME
+  level: LOG_LEVEL
+  filename: LOG_FILENAME
+  stdout:
+    __name: LOG_STDOUT_ENABLED
+    __format: json
 
 bbb-stream:
   image_name: STREAM_IMAGE_NAME
@@ -88,6 +91,10 @@ kurentoAllowedCandidateIps:
 
 kurentoAllowMDNSCandidates:
   __name: KURENTO_ALLOW_MDNS
+  __format: json
+
+kurentoTrackIceStateChanges:
+  __name: KURENTO_TRACK_ICE_STATE_CHANGES
   __format: json
 
 mediaThresholds:
