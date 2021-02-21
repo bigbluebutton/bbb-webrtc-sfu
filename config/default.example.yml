@@ -14,7 +14,7 @@ kurento:
 # time. Infinity means it tries forever until it's able to connect. Default is Infinity.
 kurentoStartupRetries: Infinity
 # Whether to allow Kurento to process mDNS ICE candidates
-kurentoAllowMDNSCandidates: true
+kurentoAllowMDNSCandidates: false
 # Whether to track KMS's ICE state changes for every peer.
 # Disabled by default for now until we trace the perf. impact of it
 kurentoTrackIceStateChanges: false
