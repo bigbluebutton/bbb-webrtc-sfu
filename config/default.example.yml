@@ -14,7 +14,10 @@ kurento:
 # time. Infinity means it tries forever until it's able to connect. Default is Infinity.
 kurentoStartupRetries: Infinity
 # Whether to allow Kurento to process mDNS ICE candidates
-kurentoAllowMDNSCandidates: true
+kurentoAllowMDNSCandidates: false
+# Whether to track KMS's ICE state changes for every peer.
+# Disabled by default for now until we trace the perf. impact of it
+kurentoTrackIceStateChanges: false
 # balancing-strategy: can be either ROUND_ROBIN or MEDIA_TYPE. The MEDIA_TYPE only
 # works properly if you annotated the configured kurento instances in the
 # 'kurento' config parameter with a mediaType field (main|audio|content) which
@@ -78,7 +81,8 @@ freeswitch:
     public:
 log:
   filename: /var/log/bbb-webrtc-sfu/bbb-webrtc-sfu.log
-  level: verbose
+  level: info
+  stdout: true
 processes:
 - path: ./lib/mcs-core/process.js
 - path: ./lib/screenshare/ScreenshareProcess
