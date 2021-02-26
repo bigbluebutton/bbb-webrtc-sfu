@@ -12,5 +12,4 @@ RUN cp config/default.example.yml config/production.yml \
 
 EXPOSE 3008
 
-ENTRYPOINT [ "./docker-entrypoint.sh" ]
 CMD [ "npm", "start" ]
