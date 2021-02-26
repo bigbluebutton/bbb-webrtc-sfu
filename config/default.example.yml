@@ -25,7 +25,6 @@ kurentoTrackIceStateChanges: false
 balancing-strategy: ROUND_ROBIN
 video-transposing-ceiling: 50
 audio-transposing-ceiling: 100
-localIpAddress: ""
 acceptSelfSignedCertificate: false
 redisHost: 127.0.0.1
 redisPort: "6379"
@@ -38,8 +37,6 @@ maxVideoPort: 33000
 mediaFlowTimeoutDuration: 15000
 mediaStateTimeoutDuration: 30000
 requestQueueTimeout: 15000
-screenshareKeyframeInterval: 0
-screenshareEnableFlashRTPBridge: false
 screenshareSubscriberSpecSlave: false
 screensharePlayStartEnabled: false
 screenshareServerSideAkkaBroadcast: true
