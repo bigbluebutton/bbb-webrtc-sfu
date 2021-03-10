@@ -181,3 +181,5 @@ addTimestampToAkkaMessages: true
 # cleared from the system when a leave call for it is sent OR it has the autoLeave
 # optional parameter set to true and all of its medias were cleared
 allowDuplicateExtUserId: true
+ejectOnUserLeft: true
+permissionProbes: true

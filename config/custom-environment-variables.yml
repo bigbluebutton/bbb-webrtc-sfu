@@ -105,3 +105,11 @@ mediaThresholds:
 addTimestampToAkkaMessages:
   __name: AKKA_MSG_TIMESTAMP
   __format: json
+
+ejectOnUserLeft:
+  __name: EJECT_ON_USER_LEFT
+  __format: json
+
+permissionProbes:
+  __name: PERMISSION_PROBES
+  __format: json
