@@ -38,7 +38,7 @@ requestQueueTimeout: 15000
 screenshareKeyframeInterval: 0
 screenshareEnableFlashRTPBridge: false
 screenshareSubscriberSpecSlave: false
-screensharePlayStartEnabled: false
+screensharePlayStartEnabled: true
 screenshareServerSideAkkaBroadcast: true
 videoSubscriberSpecSlave: false
 
