@@ -1,6 +1,6 @@
 {
   "name": "bbb-webrtc-sfu",
-  "version": "2.5.0-alpha.2",
+  "version": "2.5.0-alpha.3",
   "private": true,
   "scripts": {
     "start": "node server.js",
@@ -20,7 +20,8 @@
     "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.10",
     "winston": "2.4.5",
     "ws": "7.3.1",
-    "queue": "6.0.1"
+    "queue": "6.0.1",
+    "uuid": "8.3.1"
   },
   "optionalDependencies": {}
 }

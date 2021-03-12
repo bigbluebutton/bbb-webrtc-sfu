@@ -35,20 +35,10 @@ maxVideoPort: 33000
 mediaFlowTimeoutDuration: 15000
 mediaStateTimeoutDuration: 30000
 requestQueueTimeout: 15000
-from-screenshare: from-screenshare-sfu
-to-screenshare: to-screenshare-sfu
-from-video: from-video-sfu
-to-video: to-video-sfu
-from-audio: from-audio-sfu
-to-audio: to-audio-sfu
-to-akka: to-akka-apps-redis-channel
-from-akka: from-akka-apps-redis-channel
-to-html5: to-html5-redis-channel
-common-message-version: 2.x
 screenshareKeyframeInterval: 0
 screenshareEnableFlashRTPBridge: false
 screenshareSubscriberSpecSlave: false
-screensharePlayStartEnabled: false
+screensharePlayStartEnabled: true
 screenshareServerSideAkkaBroadcast: true
 videoSubscriberSpecSlave: false
 
@@ -79,7 +69,8 @@ freeswitch:
     public:
 log:
   filename: /var/log/bbb-webrtc-sfu/bbb-webrtc-sfu.log
-  level: verbose
+  level: info
+  stdout: true
 processes:
 - path: ./lib/mcs-core/process.js
 - path: ./lib/screenshare/ScreenshareProcess
@@ -168,8 +159,6 @@ mediaThresholds:
   global: 0
   perRoom: 0
   perUser: 0
-# Whether to append a timestamp to akka-app's message envelopes
-addTimestampToAkkaMessages: true
 # Whether to allow duplicate externalUserId's on join. If allowed, join requests with
 # a externalUserId specified in the optional parameters will associate the new connection
 # with a pre-existing user (if it exists), or create a new one.
