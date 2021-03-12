@@ -1,29 +1,19 @@
-/*
- * Lucas Fialho Zawacki
- * Paulo Renato Lanzarin
- * (C) Copyright 2017 Bigbluebutton
- *
- */
-
 'use strict';
 
-const ConnectionManager = require('./lib/connection-manager/ConnectionManager');
-const HttpServer = require('./lib/connection-manager/HttpServer');
-const server = new HttpServer();
-const WebsocketConnectionManager = require('./lib/connection-manager/WebsocketConnectionManager');
-const Logger = require('./lib/utils/Logger');
-const ProcessManager = require('./lib/ProcessManager.js');
-const PM = new ProcessManager();
+const HttpServer = require('./lib/connection-manager/HttpServer.js');
+const WebsocketConnectionManager = require('./lib/connection-manager/WebsocketConnectionManager.js');
+const ConnectionManager = require('./lib/connection-manager/ConnectionManager.js');
+const SFUModuleManager = require('./lib/sfu-module-manager.js');
+const Logger = require('./lib/utils/Logger.js');
 
-PM.start();
+const HTTPServer = new HttpServer();
+const WSManager = new WebsocketConnectionManager(HTTPServer.getServerObject(), '/bbb-webrtc-sfu');
+const CM = new ConnectionManager();
 
-const CM = new ConnectionManager(PM.screenshareProcess, PM.videoProcess, PM.streamProcess);
-
-let websocketManager = new WebsocketConnectionManager(server.getServerObject(), '/bbb-webrtc-sfu');
-
-CM.setHttpServer(server);
-CM.addAdapter(websocketManager);
-
+SFUModuleManager.start();
+CM.setupModuleRouting(SFUModuleManager.modules);
+CM.setHttpServer(HTTPServer);
+CM.addAdapter(WSManager);
 CM.listen(() => {
   Logger.info("[MainProcess] Server started");
 });
