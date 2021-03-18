@@ -103,3 +103,11 @@ mediaThresholds:
   global: GLOBAL_MEDIA_THRESHOLD
   perRoom: ROOM_MEDIA_THRESHOLD
   perUser: USER_MEDIA_THRESHOLD
+
+ejectOnUserLeft:
+  __name: EJECT_ON_USER_LEFT
+  __format: json
+
+permissionProbes:
+  __name: PERMISSION_PROBES
+  __format: json
