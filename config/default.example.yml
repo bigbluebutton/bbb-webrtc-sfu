@@ -41,6 +41,9 @@ screenshareSubscriberSpecSlave: false
 screensharePlayStartEnabled: true
 screenshareServerSideAkkaBroadcast: true
 videoSubscriberSpecSlave: false
+videoMediaServer: Kurento
+screenshareMediaServer: Kurento
+audioMediaServer: Kurento
 
 recordScreenSharing: true
 recordWebcams: true

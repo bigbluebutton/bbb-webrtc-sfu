@@ -111,3 +111,7 @@ ejectOnUserLeft:
 permissionProbes:
   __name: PERMISSION_PROBES
   __format: json
+
+videoMediaServer: VIDEO_MEDIA_SERVER
+screenshareMediaServer: SCREENSHARE_MEDIA_SERVER
+audioMediaServer: AUDIO_MEDIA_SERVER
