@@ -14,7 +14,10 @@ kurento:
 # time. Infinity means it tries forever until it's able to connect. Default is Infinity.
 kurentoStartupRetries: Infinity
 # Whether to allow Kurento to process mDNS ICE candidates
-kurentoAllowMDNSCandidates: true
+kurentoAllowMDNSCandidates: false
+# Whether to track KMS's ICE state changes for every peer.
+# Disabled by default for now until we trace the perf. impact of it
+kurentoTrackIceStateChanges: false
 # balancing-strategy: can be either ROUND_ROBIN or MEDIA_TYPE. The MEDIA_TYPE only
 # works properly if you annotated the configured kurento instances in the
 # 'kurento' config parameter with a mediaType field (main|audio|content) which
@@ -22,7 +25,6 @@ kurentoAllowMDNSCandidates: true
 balancing-strategy: ROUND_ROBIN
 video-transposing-ceiling: 50
 audio-transposing-ceiling: 100
-localIpAddress: ""
 acceptSelfSignedCertificate: false
 redisHost: 127.0.0.1
 redisPort: "6379"
@@ -35,12 +37,13 @@ maxVideoPort: 33000
 mediaFlowTimeoutDuration: 15000
 mediaStateTimeoutDuration: 30000
 requestQueueTimeout: 15000
-screenshareKeyframeInterval: 0
-screenshareEnableFlashRTPBridge: false
 screenshareSubscriberSpecSlave: false
 screensharePlayStartEnabled: true
 screenshareServerSideAkkaBroadcast: true
 videoSubscriberSpecSlave: false
+videoMediaServer: Kurento
+screenshareMediaServer: Kurento
+audioMediaServer: Kurento
 
 recordScreenSharing: true
 recordWebcams: true
@@ -71,11 +74,40 @@ log:
   filename: /var/log/bbb-webrtc-sfu/bbb-webrtc-sfu.log
   level: info
   stdout: true
-processes:
+modules:
 - path: ./lib/mcs-core/process.js
-- path: ./lib/screenshare/ScreenshareProcess
+  name: core
+  dedicated: true
+  # IPC can be either native|redis right now. Defaults to native
+  ipc:
+    mode: native
+    options:
+      # inboundChannel: to-mcs-core
+      # outboundChannel: from-mcs-core
+- path: ./lib/screenshare/ScreenshareProcess.js
+  name: screenshare
+  dedicated: true
+  ipc:
+    mode: native
+    options:
+      # inboundChannel: to-sfu-screenshare
+      # outboundChannel: from-sfu-screenshare
 - path: ./lib/video/VideoProcess.js
+  name: video
+  dedicated: true
+  ipc:
+    mode: native
+    options:
+      # inboundChannel: to-sfu-video
+      # outboundChannel: from-sfu-video
 - path: ./lib/audio/AudioProcess.js
+  name: audio
+  dedicated: true
+  ipc:
+    mode: native
+    options:
+      # inboundChannel: to-sfu-audio
+      # outboundChannel: from-sfu-audio
 # media-server-adapters: path could refer to a npm module
 media-server-adapters:
 - path: kurento/kurento.js
@@ -167,3 +199,5 @@ mediaThresholds:
 # cleared from the system when a leave call for it is sent OR it has the autoLeave
 # optional parameter set to true and all of its medias were cleared
 allowDuplicateExtUserId: true
+ejectOnUserLeft: true
+permissionProbes: true

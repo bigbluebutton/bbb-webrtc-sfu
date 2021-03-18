@@ -1,27 +1,30 @@
 {
   "name": "bbb-webrtc-sfu",
-  "version": "2.5.0-alpha.3",
+  "version": "2.5.0-alpha.4",
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "postinstall": "cd node_modules/sip.js/src/Grammar && mkdir -p dist && pegjs --extra-options-file peg.json src/Grammar.pegjs dist/Grammar.js"
+    "postinstall": "cd node_modules/sip.js/src/Grammar && mkdir -p dist && pegjs --extra-options-file peg.json src/Grammar.pegjs dist/Grammar.js",
+    "test": "jest"
   },
   "dependencies": {
-    "config": "1.30.0",
+    "config": "3.3.6",
     "ipaddr.js": "1.9.1",
     "js-yaml": "3.13.1",
     "kurento-client": "git+https://github.com/Kurento/kurento-client-js.git#6.15.0",
     "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.9",
     "modesl": "1.2.1",
     "pegjs": "0.8.0",
+    "queue": "6.0.1",
     "readable-id": "1.0.0",
     "redis": "2.8.0",
     "sdp-transform": "2.13.0",
     "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.10",
+    "uuid": "8.3.1",
     "winston": "2.4.5",
-    "ws": "7.3.1",
-    "queue": "6.0.1",
-    "uuid": "8.3.1"
+    "ws": "7.3.1"
   },
-  "optionalDependencies": {}
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
 }
