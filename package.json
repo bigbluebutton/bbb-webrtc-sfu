@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
+    "nodemon-start": "node_modules/nodemon/bin/nodemon.js server.js",
     "postinstall": "cd node_modules/sip.js/src/Grammar && mkdir -p dist && pegjs --extra-options-file peg.json src/Grammar.pegjs dist/Grammar.js",
     "test": "jest"
   },
