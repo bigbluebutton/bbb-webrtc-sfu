@@ -1,6 +1,6 @@
 {
   "name": "bbb-webrtc-sfu",
-  "version": "2.5.0-beta.1",
+  "version": "2.5.0-beta.2",
   "private": true,
   "scripts": {
     "start": "node server.js",
