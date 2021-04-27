@@ -32,8 +32,6 @@ redisPort: "6379"
 # redisPassword: foobared
 clientPort: "3008"
 clientHost: 127.0.0.1
-minVideoPort: 30000
-maxVideoPort: 33000
 mediaFlowTimeoutDuration: 30000
 mediaStateTimeoutDuration: 30000
 requestQueueTimeout: 30000
