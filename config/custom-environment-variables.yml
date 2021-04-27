@@ -21,6 +21,7 @@ freeswitch:
     port: FREESWITCH_SIP_PORT
     esl_ip: ESL_IP
     esl_port: ESL_PORT
+    esl_password: ESL_PASSWORD
     handleExternalConnections:
       __name: FS_HANDLE_EXT_CONN
       __format: json
