@@ -12,7 +12,7 @@
     "ipaddr.js": "1.9.1",
     "js-yaml": "3.13.1",
     "kurento-client": "git+https://github.com/Kurento/kurento-client-js.git#6.15.0",
-    "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.9",
+    "mcs-js": "git+https://github.com/mconftec/mcs-js.git#v0.0.10",
     "modesl": "1.2.1",
     "pegjs": "0.8.0",
     "queue": "6.0.1",
