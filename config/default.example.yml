@@ -199,3 +199,14 @@ mediaThresholds:
 allowDuplicateExtUserId: true
 ejectOnUserLeft: true
 permissionProbes: true
+
+# Direct Prometheus instrumentation. Currently operating only over mcs-core.
+# EXPERIMENTAL, so disabled by default.
+prometheus:
+  enabled: false
+  # Scrape route host
+  host: localhost
+  # Scrape route port
+  port: 3014
+  # Whether default metrics for Node.js processes should be exported
+  collectDefaultMetrics: false
