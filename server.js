@@ -11,6 +11,7 @@ const HTTP_SERVER_HOST = config.has('clientHost') ? config.get('clientHost') : '
 const HTTP_SERVER_PORT = config.get('clientPort');
 
 const HTTPServer = new HttpServer(HTTP_SERVER_HOST, HTTP_SERVER_PORT);
+HTTPServer.start();
 const WSManager = new WebsocketConnectionManager(HTTPServer.getServerObject(), '/bbb-webrtc-sfu');
 const CM = new ConnectionManager();
 
