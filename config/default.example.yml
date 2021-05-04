@@ -208,5 +208,7 @@ prometheus:
   host: localhost
   # Scrape route port
   port: 3014
+  # Metrics endpoint path
+  path: '/metrics'
   # Whether default metrics for Node.js processes should be exported
   collectDefaultMetrics: false

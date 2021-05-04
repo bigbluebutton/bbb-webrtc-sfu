@@ -103,4 +103,5 @@ prometheus:
   enabled: MCS_PROM_ENABLED
   host: MCS_PROM_HOST
   port: MCS_PROM_PORT
+  path: MCS_PROM_PATH
   collectDefaultMetrics: MCS_PROM_DEFAULT_MTS
