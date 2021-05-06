@@ -39,17 +39,29 @@ screenshareSubscriberSpecSlave: false
 screensharePlayStartEnabled: true
 screenshareServerSideAkkaBroadcast: true
 videoSubscriberSpecSlave: false
+
+# Following three configurations: see media-server-adapters config
+# to get a list of implemented adapters. The configuration values
+# here are the adapter's name of choice
 videoMediaServer: Kurento
 screenshareMediaServer: Kurento
 audioMediaServer: Kurento
 
+# Whether to record screen raw files
 recordScreenSharing: true
+# Whether to record camera raw files
 recordWebcams: true
+# Base path where recording raw files will be stored
 recordingBasePath: file:///var/kurento
-
+# The base recording profile for video and screen sharing
+# WEBM_VIDEO_ONLY|WEBM_AUDIO_ONLY|WEBM_FULL
 recordingMediaProfile: WEBM_VIDEO_ONLY
+# The base recording container format.
+# webm|mp4
 recordingFormat: webm
-redisExpireTime: 1209600 # 14 days as per the akka keys
+# Recording event keys expiry time in Redis
+# 14 days is the default
+redisExpireTime: 1209600
 
 # mcs-core entrypoint configured on nginx
 mcs-path: /mcs
@@ -112,6 +124,7 @@ media-server-adapters:
   name: Kurento
 - path: freeswitch/freeswitch.js
   name: Freeswitch
+
 # strategies: path could refer to a npm module
 strategies:
   #- path: ./voice-switching-handler.js
@@ -199,3 +212,16 @@ mediaThresholds:
 allowDuplicateExtUserId: true
 ejectOnUserLeft: true
 permissionProbes: true
+
+# Direct Prometheus instrumentation. Currently operating only over mcs-core.
+# EXPERIMENTAL, so disabled by default.
+prometheus:
+  enabled: false
+  # Scrape route host
+  host: localhost
+  # Scrape route port
+  port: 3014
+  # Metrics endpoint path
+  path: '/metrics'
+  # Whether default metrics for Node.js processes should be exported
+  collectDefaultMetrics: false
