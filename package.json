@@ -5,8 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "nodemon-start": "node_modules/nodemon/bin/nodemon.js server.js",
-    "postinstall": "cd node_modules/sip.js/src/Grammar && mkdir -p dist && pegjs --extra-options-file peg.json src/Grammar.pegjs dist/Grammar.js",
-    "test": "jest"
+    "postinstall": "cd node_modules/sip.js/src/Grammar && mkdir -p dist && pegjs --extra-options-file peg.json src/Grammar.pegjs dist/Grammar.js"
   },
   "dependencies": {
     "config": "3.3.6",
@@ -26,7 +25,5 @@
     "winston": "2.4.5",
     "ws": "7.3.1"
   },
-  "devDependencies": {
-    "jest": "^26.6.3"
-  }
+  "devDependencies": {}
 }
