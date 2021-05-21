@@ -20,5 +20,5 @@ CM.setupModuleRouting(SFUModuleManager.modules);
 CM.setHttpServer(HTTPServer);
 CM.addAdapter(WSManager);
 CM.listen(() => {
-  Logger.info("[MainProcess] Server started");
+  Logger.info("[bbb-webrtc-sfu] API transport: up");
 });
