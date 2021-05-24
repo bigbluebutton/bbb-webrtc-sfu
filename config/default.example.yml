@@ -184,6 +184,8 @@ kurentoRembParams:
   upLosses: 12
   decrementFactor: 0.5
   thresholdFactor: 0.8
+# Munges/removes the SDP REMB rtcp-fb support attribute (ie tries to disable REMB)
+kurentoRemoveRembRtcpFb: false
 # kurentoAllowedCandidateIps: optional configuration. List of VALID IPs to be used
 # to define valid outbound ICE candidates.
 # This is a short-term optimization to reduce the number of candidates sent to

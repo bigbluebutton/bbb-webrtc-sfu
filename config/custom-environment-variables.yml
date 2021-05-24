@@ -82,6 +82,10 @@ kurentoTrackIceStateChanges:
   __name: KURENTO_TRACK_ICE_STATE_CHANGES
   __format: json
 
+kurentoRemoveRembRtcpFb:
+  __name: KURENTO_REMOVE_REMB_RTCPFB
+  __format: json
+
 mediaThresholds:
   global: GLOBAL_MEDIA_THRESHOLD
   perRoom: ROOM_MEDIA_THRESHOLD
