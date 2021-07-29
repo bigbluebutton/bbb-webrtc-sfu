@@ -1,13 +1,34 @@
 {
   "name": "bbb-webrtc-sfu",
   "version": "2.6.0-dev",
-  "private": true,
-  "scripts": {
-    "start": "node server.js",
-    "nodemon-start": "node_modules/nodemon/bin/nodemon.js server.js",
-    "postinstall": "cd node_modules/sip.js/src/Grammar && mkdir -p dist && pegjs --extra-options-file peg.json src/Grammar.pegjs dist/Grammar.js"
+  "main": "build/server.js",
+  "engines": {
+    "node": ">=12"
   },
+  "scripts": {
+    "start": "node build/server.js",
+    "nodemon-start": "node_modules/nodemon/bin/nodemon.js server.js",
+    "postinstall": "cd node_modules/sip.js/src/Grammar && mkdir -p dist && pegjs --extra-options-file peg.json src/Grammar.pegjs dist/Grammar.js",
+    "build": "tsc --project ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigbluebutton/bbb-webrtc-sfu.git"
+  },
+  "keywords": [
+    "BigBlueButton",
+    "bbb-webrtc-sfu",
+    "BBB"
+  ],
+  "author": "Paulo Lanzarin",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/bigbluebutton/bbb-webrtc-sfu/issues"
+  },
+  "homepage": "https://github.com/bigbluebutton/bbb-webrtc-sfu#README",
   "dependencies": {
+    "bbb-sfu-baseplate": "git+https://github.com/prlanzarin/bbb-sfu-baseplate.git#develop",
     "config": "3.3.6",
     "ipaddr.js": "1.9.1",
     "js-yaml": "3.13.1",
@@ -25,5 +46,10 @@
     "winston": "2.4.5",
     "ws": "7.4.6"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/config": "0.0.39",
+    "@types/node": "^16.4.6",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  }
 }

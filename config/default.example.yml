@@ -85,7 +85,7 @@ log:
   level: info
   stdout: true
 modules:
-- path: ./lib/mcs-core/process.js
+- path: ./build/mcs-core/process.js
   name: core
   dedicated: true
   # IPC can be either native|redis right now. Defaults to native
@@ -94,7 +94,7 @@ modules:
     options:
       # inboundChannel: to-mcs-core
       # outboundChannel: from-mcs-core
-- path: ./lib/screenshare/ScreenshareProcess.js
+- path: ./build/screenshare/ScreenshareProcess.js
   name: screenshare
   dedicated: true
   ipc:
@@ -102,7 +102,7 @@ modules:
     options:
       # inboundChannel: to-sfu-screenshare
       # outboundChannel: from-sfu-screenshare
-- path: ./lib/video/VideoProcess.js
+- path: ./build/video/VideoProcess.js
   name: video
   dedicated: true
   ipc:
@@ -110,7 +110,7 @@ modules:
     options:
       # inboundChannel: to-sfu-video
       # outboundChannel: from-sfu-video
-- path: ./lib/audio/AudioProcess.js
+- path: ./build/audio/AudioProcess.js
   name: audio
   dedicated: true
   ipc:

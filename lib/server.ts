@@ -1,11 +1,12 @@
 'use strict';
 
-const config = require('config');
-const HttpServer = require('./lib/connection-manager/HttpServer.js');
-const WebsocketConnectionManager = require('./lib/connection-manager/WebsocketConnectionManager.js');
-const ConnectionManager = require('./lib/connection-manager/ConnectionManager.js');
-const SFUModuleManager = require('./lib/sfu-module-manager.js');
-const Logger = require('./lib/utils/Logger.js');
+import config from 'config';
+import { Logger } from './utils/Logger';
+
+const HttpServer = require('./connection-manager/HttpServer.js');
+const WebsocketConnectionManager = require('./connection-manager/WebsocketConnectionManager.js');
+const ConnectionManager = require('./connection-manager/ConnectionManager.js');
+const SFUModuleManager = require('./sfu-module-manager.js');
 
 const HTTP_SERVER_HOST = config.has('clientHost') ? config.get('clientHost') : '127.0.0.1';
 const HTTP_SERVER_PORT = config.get('clientPort');
