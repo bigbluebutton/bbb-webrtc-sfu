@@ -25,5 +25,9 @@
     "winston": "2.4.5",
     "ws": "7.4.6"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "mediasoup": "3.7.19",
+    "mediasoup-client": "3.6.36"
+  },
+  "optionalDependencies": {}
 }
