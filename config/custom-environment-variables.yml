@@ -109,3 +109,19 @@ prometheus:
   port: MCS_PROM_PORT
   path: MCS_PROM_PATH
   collectDefaultMetrics: MCS_PROM_DEFAULT_MTS
+
+mediasoup:
+  workers: MS_WORKERS
+  worker:
+    rtcMinPort: MS_RTC_MIN
+    rtcMaxPort: MS_RTC_MAX
+    dtlsCertificateFile: MS_DTLS_CERT
+    dtlsPrivateKeyFile: MS_DTLS_KEY
+  webrtc:
+    listenIps:
+      __name: MS_WEBRTC_LISTEN_IPS
+      __format: json
+  plainRtp:
+    listenIp:
+      __name: MS_RTP_LISTEN_IP
+      __format: json
