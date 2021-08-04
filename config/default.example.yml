@@ -124,6 +124,8 @@ media-server-adapters:
   name: Kurento
 - path: freeswitch/freeswitch.js
   name: Freeswitch
+- path: mediasoup/mediasoup-adapter.js
+  name: mediasoup
 
 # strategies: path could refer to a npm module
 strategies:
