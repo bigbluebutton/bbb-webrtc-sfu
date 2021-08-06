@@ -9,7 +9,7 @@ WORKDIR app
 
 ENV NODE_ENV development
 
-RUN cp config/default.example.yml config/production.yml \
+RUN cp config/default.example.yml config/default.yml \
  && npm install --unsafe-perm \
  && npm cache clear --force
 
