@@ -113,8 +113,12 @@ prometheus:
 mediasoup:
   workers: MS_WORKERS
   worker:
-    rtcMinPort: MS_RTC_MIN
-    rtcMaxPort: MS_RTC_MAX
+    rtcMinPort:
+      __name: MS_RTC_MIN
+      __format: json
+    rtcMaxPort:
+      __name: MS_RTC_MAX
+      __format: json
     dtlsCertificateFile: MS_DTLS_CERT
     dtlsPrivateKeyFile: MS_DTLS_KEY
   webrtc:
