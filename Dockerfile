@@ -1,15 +1,14 @@
-FROM node:14
+FROM node:14-alpine
 
-RUN apt-get update && apt-get install git
-RUN apt-get install make python g++
+RUN apk update && apk add git
 
 ADD . app
 
 WORKDIR app
 
-ENV NODE_ENV development
+ENV NODE_ENV production
 
-RUN cp config/default.example.yml config/default.yml \
+RUN cp config/default.example.yml config/production.yml \
  && npm install --unsafe-perm \
  && npm cache clear --force
 
