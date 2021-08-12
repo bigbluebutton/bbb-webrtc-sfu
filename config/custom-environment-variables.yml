@@ -104,8 +104,12 @@ screenshareMediaServer: SCREENSHARE_MEDIA_SERVER
 audioMediaServer: AUDIO_MEDIA_SERVER
 
 prometheus:
-  enabled: MCS_PROM_ENABLED
+  enabled:
+    __name: MCS_PROM_ENABLED
+    __format: json
+  collectDefaultMetrics:
+    __name: MCS_PROM_DEFAULT_MTS
+    __format: json
   host: MCS_PROM_HOST
   port: MCS_PROM_PORT
   path: MCS_PROM_PATH
-  collectDefaultMetrics: MCS_PROM_DEFAULT_MTS
