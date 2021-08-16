@@ -106,6 +106,7 @@ media-server-adapters:
 videoMediaServer: VIDEO_MEDIA_SERVER
 screenshareMediaServer: SCREENSHARE_MEDIA_SERVER
 audioMediaServer: AUDIO_MEDIA_SERVER
+listenOnlyGlobalAudioMode: GLOBAL_AUDIO_MODE
 
 prometheus:
   enabled:

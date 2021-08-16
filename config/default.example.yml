@@ -46,6 +46,11 @@ videoSubscriberSpecSlave: false
 videoMediaServer: Kurento
 screenshareMediaServer: Kurento
 audioMediaServer: Kurento
+# RTP|WebRTC. Dictates how the FS <-> [audioMediaServer] bridge is established:
+# via plain RTP or via a WebRTC-backed RTP stream
+# WebRTC should be used for environments where the bridge is between external
+# servers AND when mediasoup is being used
+listenOnlyGlobalAudioMode: 'RTP'
 
 # Whether to record screen raw files
 recordScreenSharing: true
