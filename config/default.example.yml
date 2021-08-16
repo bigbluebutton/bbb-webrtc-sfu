@@ -258,18 +258,36 @@ mediasoup:
     mediaCodecs:
       - kind: "audio"
         mimeType: "audio/opus"
-        payloadType: 111
         preferredPayloadType: 111
         clockRate: 48000
         channels: 2
         parameters:
           minptime: 10
           useinbandfec: 1
+        rtcpFeedback:
+          - type: "transport-cc"
+      - kind: "audio"
+        mimeType: "audio/telephone-event"
+        preferredPayloadType: 101
+        clockRate: 8000
+      - kind: "audio"
+        mimeType: "audio/PCMU"
+        preferredPayloadType: 0
+        clockRate: 8000
+        rtcpFeedback:
+          - type: "transport-cc"
+      - kind: 'audio'
+        mimeType: 'audio/ISAC'
+        clockRate: 32000
+        preferredPayloadType: 103
+        rtcpFeedback:
+          - type: "transport-cc"
       - kind: "video"
         mimeType: "video/VP8"
         preferredPayloadType: 96
         clockRate: 90000
         rtcpFeedback:
+          - type: "transport-cc"
           - type: "goog-remb"
           - type: "ccm"
             parameter: "fir"
