@@ -26,9 +26,10 @@
     "ws": "7.4.6"
   },
   "devDependencies": {
-    "mediasoup": "^3.7.19",
-    "mediasoup-client": "^3.6.36",
-    "bbb-sfurec-adapter": "git+https://github.com/mconf/bbb-sfurec-adapter.git"
+    "bbb-sfurec-adapter": "git+https://github.com/mconf/bbb-sfurec-adapter.git",
+    "mediasoup": "^3.8.3",
+    "mediasoup-client": "^3.6.37",
+    "nodemon": "^2.0.12"
   },
   "optionalDependencies": {}
 }
