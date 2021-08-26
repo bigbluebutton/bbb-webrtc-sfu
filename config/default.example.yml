@@ -234,7 +234,6 @@ prometheus:
   collectDefaultMetrics: false
 
 mediasoup:
-  debug: "mediasoup*"
   workers: "auto"
   worker:
     # "debug", "warn", "error", "none"
