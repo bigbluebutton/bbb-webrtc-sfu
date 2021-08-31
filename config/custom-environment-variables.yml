@@ -14,6 +14,7 @@ clientHost: CLIENT_HOST
 mcs-port: MCS_PORT
 mcs-host: MCS_HOST
 mcs-address: MCS_ADDRESS
+mcsUserEjectionTimer: MCS_USER_EJECTION_TIMER
 
 freeswitch:
     ip: FREESWITCH_CONN_IP
