@@ -87,6 +87,10 @@ kurentoRemoveRembRtcpFb:
   __name: KURENTO_REMOVE_REMB_RTCPFB
   __format: json
 
+kurentoAllowMediaTypeMix:
+  __name: KURENTO_ALLOW_MEDIATYPE_MIX
+  __format: json
+
 mediaThresholds:
   global: GLOBAL_MEDIA_THRESHOLD
   perRoom: ROOM_MEDIA_THRESHOLD

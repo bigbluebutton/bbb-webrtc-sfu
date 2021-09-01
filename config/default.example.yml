@@ -23,6 +23,8 @@ kurentoTrackIceStateChanges: false
 # 'kurento' config parameter with a mediaType field (main|audio|content) which
 # will specify what will each server handle. Default is ROUND_ROBIN
 balancing-strategy: ROUND_ROBIN
+# Allow media offloading to Kurento instances with mismatched media types
+kurentoAllowMediaTypeMix: true
 video-transposing-ceiling: 50
 audio-transposing-ceiling: 100
 acceptSelfSignedCertificate: false
