@@ -40,6 +40,7 @@ requestQueueTimeout: 30000
 screenshareSubscriberSpecSlave: false
 screensharePlayStartEnabled: true
 screenshareServerSideAkkaBroadcast: true
+listenOnlyIgnoreMediaThresholds: true
 videoSubscriberSpecSlave: false
 
 # Following three configurations: see media-server-adapters config

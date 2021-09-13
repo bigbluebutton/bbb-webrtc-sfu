@@ -113,6 +113,10 @@ screenshareMediaServer: SCREENSHARE_MEDIA_SERVER
 audioMediaServer: AUDIO_MEDIA_SERVER
 listenOnlyGlobalAudioMode: GLOBAL_AUDIO_MODE
 
+listenOnlyIgnoreMediaThresholds:
+  __name: LISTENONLY_IGNORE_MEDIA_THRESHOLDS
+  __format: json
+
 prometheus:
   enabled:
     __name: MCS_PROM_ENABLED
