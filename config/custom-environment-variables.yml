@@ -117,6 +117,10 @@ listenOnlyIgnoreMediaThresholds:
   __name: LISTENONLY_IGNORE_MEDIA_THRESHOLDS
   __format: json
 
+videoIgnoreMediaThresholds:
+  __name: VIDEO_IGNORE_MEDIA_THRESHOLDS
+  __format: json
+
 prometheus:
   enabled:
     __name: MCS_PROM_ENABLED

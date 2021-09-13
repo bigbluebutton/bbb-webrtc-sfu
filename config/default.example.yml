@@ -41,6 +41,7 @@ screenshareSubscriberSpecSlave: false
 screensharePlayStartEnabled: true
 screenshareServerSideAkkaBroadcast: true
 listenOnlyIgnoreMediaThresholds: true
+videoIgnoreMediaThresholds: false
 videoSubscriberSpecSlave: false
 
 # Following three configurations: see media-server-adapters config
