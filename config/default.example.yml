@@ -40,6 +40,7 @@ requestQueueTimeout: 30000
 screenshareSubscriberSpecSlave: false
 screensharePlayStartEnabled: true
 screenshareServerSideAkkaBroadcast: true
+screenshareIgnoreMediaThresholds: false
 listenOnlyIgnoreMediaThresholds: true
 videoIgnoreMediaThresholds: false
 videoSubscriberSpecSlave: false

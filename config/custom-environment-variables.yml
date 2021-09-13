@@ -121,6 +121,10 @@ videoIgnoreMediaThresholds:
   __name: VIDEO_IGNORE_MEDIA_THRESHOLDS
   __format: json
 
+screenshareIgnoreMediaThresholds:
+  __name: SCREENSHARE_IGNORE_MEDIA_THRESHOLDS
+  __format: json
+
 prometheus:
   enabled:
     __name: MCS_PROM_ENABLED
