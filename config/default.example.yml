@@ -332,7 +332,7 @@ mediasoup:
     # False probably doesn't work yet in the adapter
     rtcpMux: true
     # Port inference through COMEDIA
-    comedia: false
+    comedia: true
   webRtcHeaderExts:
     - uri: 'urn:ietf:params:rtp-hdrext:toffset'
       id: 1
