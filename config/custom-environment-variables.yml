@@ -155,3 +155,6 @@ mediasoup:
     listenIp:
       __name: MS_RTP_LISTEN_IP
       __format: json
+    comedia:
+      __name: MS_COMEDIA
+      __format: json
