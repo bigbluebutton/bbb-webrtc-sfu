@@ -256,8 +256,8 @@ mediasoup:
       - "rtp"
       - "rtx"
       - "srtp"
-    rtcMinPort: 8000
-    rtcMaxPort: 11959
+    rtcMinPort: 24577
+    rtcMaxPort: 32768
     #dtlsCertificateFile:
     #dtlsPrivateKeyFile:
   router:
