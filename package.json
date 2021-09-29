@@ -23,12 +23,12 @@
     "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.12",
     "uuid": "8.3.1",
     "winston": "2.4.5",
-    "ws": "7.4.6"
+    "ws": "7.4.6",
+    "mediasoup": "^3.8.4",
+    "mediasoup-client": "^3.6.41"
   },
   "devDependencies": {
     "bbb-sfurec-adapter": "git+https://github.com/mconf/bbb-sfurec-adapter.git",
-    "mediasoup": "^3.8.4",
-    "mediasoup-client": "^3.6.41",
     "nodemon": "^2.0.12"
   },
   "optionalDependencies": {}
