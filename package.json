@@ -28,7 +28,7 @@
     "mediasoup-client": "^3.6.41"
   },
   "devDependencies": {
-    "bbb-sfurec-adapter": "git+https://github.com/mconf/bbb-sfurec-adapter.git",
+    "bbb-sfurec-adapter": "git+https://github.com/mconf/bbb-sfurec-adapter.git#v1.0.x",
     "nodemon": "^2.0.12"
   },
   "optionalDependencies": {}
