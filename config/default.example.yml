@@ -358,3 +358,16 @@ mediasoup:
       id: 10
     - uri: 'urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id'
       id: 11
+  recorder:
+    ffmpeg:
+      # UDP, internal only. Doesn't need to be open in the firewall, but should
+      # be a dedicated range.
+      recMinPort: 50000
+      recMaxPort: 51000
+      inputOptions:
+        - "-protocol_whitelist file,rtp,udp"
+        - "-probesize 1000000"
+        - "-analyzeduration 1000000"
+      outputOptions:
+        - '-f webm'
+        - '-flags +global_header'
