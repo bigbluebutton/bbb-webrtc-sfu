@@ -1,7 +1,11 @@
-FROM node:14
+FROM node:14-bullseye-slim
 
-RUN apt-get update && apt-get install git
-RUN apt-get install make python g++
+RUN apt-get update && apt-get -y install \
+  git \
+  make \
+  python \
+  g++ \
+  ffmpeg
 
 ADD . app
 
