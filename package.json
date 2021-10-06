@@ -25,10 +25,10 @@
     "winston": "2.4.5",
     "ws": "7.4.6",
     "mediasoup": "^3.8.4",
-    "mediasoup-client": "^3.6.41"
+    "mediasoup-client": "^3.6.41",
+    "bbb-sfurec-adapter": "git+https://github.com/mconf/bbb-sfurec-adapter.git#v1.0.x"
   },
   "devDependencies": {
-    "bbb-sfurec-adapter": "git+https://github.com/mconf/bbb-sfurec-adapter.git#v1.0.x",
     "nodemon": "^2.0.12"
   },
   "optionalDependencies": {}
