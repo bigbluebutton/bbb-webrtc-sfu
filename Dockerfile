@@ -1,6 +1,7 @@
-FROM node:14-alpine
+FROM node:14
 
-RUN apk update && apk add git
+RUN apt-get update && apt-get install git
+RUN apt-get install make python g++
 
 ADD . app
 
