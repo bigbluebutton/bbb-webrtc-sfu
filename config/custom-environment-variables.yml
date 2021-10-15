@@ -158,3 +158,22 @@ mediasoup:
     comedia:
       __name: MS_COMEDIA
       __format: json
+  recorder:
+    ffmpeg:
+      prestartIntraframeInterval:
+        __name: FFMPEG_PRESTART_INTRAFRAME_INTERVAL
+        __format: json
+      periodicIntraframeInterval:
+        __name: FFMPEG_PERIODIC_INTRAFRAME_INTERVAL
+        __format: json
+      estimateInitialTimestamp:
+        __name: FFMPEG_ESTIMATE_INI_TS
+        __format: json
+      recMinPort: REC_MIN_PORT
+      recMaxPort: REC_MAX_PORT
+      inputOptions:
+        __name: FFMPEG_INPUT_OPTS
+        __format: json
+      outputOptions:
+        __name: FFMPEG_OUTPUT_OPTS
+        __format: json
