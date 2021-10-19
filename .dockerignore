@@ -1,4 +1,28 @@
+## Docker itself
 .dockerignore
+Dockerfile
+
+## git
 .git
 .gitignore
-Dockerfile
+
+## Node.js, npm et al
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules/
+
+## Log files
+*.log
+
+## cpp
+*.o
+*.a
+*.slo
+*.lo
+*.o
+*.obj
+
+## vim
+**/.*.sw[po]
+*~
