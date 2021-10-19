@@ -3,7 +3,7 @@ FROM node:14-bullseye-slim
 RUN apt-get update && apt-get -y install \
   git \
   make \
-  python \
+  python3-pip \
   g++ \
   ffmpeg
 
