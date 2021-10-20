@@ -62,7 +62,13 @@ recordScreenSharing: true
 # Whether to record camera raw files
 recordWebcams: true
 # Base path where recording raw files will be stored
+# WARNING => THE FOLLOWING PARROT CEASED TO BE
 recordingBasePath: /var/kurento
+# Which adapter should be used to record live streams.
+# Possible values: 'native'|<adapter_name>|undefined
+# 'native' means whatever adapter the source media is using. Failover in case of
+# undefined is 'native'.
+recordingAdapter: Kurento
 # The base recording profile for video and screen sharing
 # WEBM_VIDEO_ONLY|WEBM_AUDIO_ONLY|WEBM_FULL
 recordingMediaProfile: WEBM_VIDEO_ONLY

@@ -45,6 +45,7 @@ recordScreenSharing:
   __format: json
 recordingMediaProfile: RECORDING_MEDIA_PROFILE
 recordingFormat: RECORDING_FORMAT
+recordingAdapter: RECORDING_ADAPTER
 
 modules:
   __name: SFU_MODULES
