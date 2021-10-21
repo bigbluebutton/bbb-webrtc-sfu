@@ -46,6 +46,9 @@ recordScreenSharing:
 recordingMediaProfile: RECORDING_MEDIA_PROFILE
 recordingFormat: RECORDING_FORMAT
 recordingAdapter: RECORDING_ADAPTER
+recordingGenerateTsOnRecEvt:
+  __name: REC_TS_EXPERIMENTAL_EVT
+  __format: json
 
 modules:
   __name: SFU_MODULES
