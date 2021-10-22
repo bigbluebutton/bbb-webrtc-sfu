@@ -48,6 +48,7 @@ videoSubscriberSpecSlave: false
 # Following three configurations: see media-server-adapters config
 # to get a list of implemented adapters. The configuration values
 # here are the adapter's name of choice
+listenOnlyMediaServer: Kurento
 videoMediaServer: Kurento
 screenshareMediaServer: Kurento
 audioMediaServer: Kurento
@@ -129,7 +130,7 @@ modules:
     options:
       # inboundChannel: to-sfu-video
       # outboundChannel: from-sfu-video
-- path: ./lib/audio/AudioProcess.js
+- path: ./lib/listen-only/listen-only-process.js
   name: audio
   dedicated: true
   ipc:

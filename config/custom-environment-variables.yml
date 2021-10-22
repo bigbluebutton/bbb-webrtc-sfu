@@ -112,6 +112,7 @@ media-server-adapters:
   __name: MEDIA_SERVER_ADAPTERS
   __format: json
 
+listenOnlyMediaServer: LISTENONLY_MEDIA_SERVER
 videoMediaServer: VIDEO_MEDIA_SERVER
 screenshareMediaServer: SCREENSHARE_MEDIA_SERVER
 audioMediaServer: AUDIO_MEDIA_SERVER
