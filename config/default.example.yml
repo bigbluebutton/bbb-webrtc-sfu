@@ -142,14 +142,14 @@ modules:
     options:
       # inboundChannel: to-sfu-audio
       # outboundChannel: from-sfu-audio
-- path: ./lib/audio/FullAudioProcess.js
-  name: fullaudio
-  dedicated: true
-  ipc:
-    mode: native
-    options:
-      # inboundChannel: to-sfu-audio
-      # outboundChannel: from-sfu-audio
+#- path: ./lib/audio/FullAudioProcess.js
+#  name: fullaudio
+#  dedicated: true
+#  ipc:
+#    mode: native
+#    options:
+#      # inboundChannel: to-sfu-audio
+#      # outboundChannel: from-sfu-audio
 # media-server-adapters: path could refer to a npm module
 media-server-adapters:
 - path: kurento/kurento.js
