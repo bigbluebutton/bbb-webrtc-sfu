@@ -70,6 +70,9 @@ recordingBasePath: /var/kurento
 # 'native' means whatever adapter the source media is using. Failover in case of
 # undefined is 'native'.
 recordingAdapter: Kurento
+# Whether to generate timestamps when Recording event is fired (if false,
+# the flowing event is used)
+recordingGenerateTsOnRecEvt: true
 # The base recording profile for video and screen sharing
 # WEBM_VIDEO_ONLY|WEBM_AUDIO_ONLY|WEBM_FULL
 recordingMediaProfile: WEBM_VIDEO_ONLY
