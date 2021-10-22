@@ -52,6 +52,7 @@ listenOnlyMediaServer: Kurento
 videoMediaServer: Kurento
 screenshareMediaServer: Kurento
 audioMediaServer: Kurento
+fullAudioMediaServer: Kurento
 # RTP|WebRTC. Dictates how the FS <-> [audioMediaServer] bridge is established:
 # via plain RTP or via a WebRTC-backed RTP stream
 # WebRTC should be used for environments where the bridge is between external
@@ -135,6 +136,14 @@ modules:
       # outboundChannel: from-sfu-video
 - path: ./lib/listen-only/listen-only-process.js
   name: audio
+  dedicated: true
+  ipc:
+    mode: native
+    options:
+      # inboundChannel: to-sfu-audio
+      # outboundChannel: from-sfu-audio
+- path: ./lib/audio/FullAudioProcess.js
+  name: fullaudio
   dedicated: true
   ipc:
     mode: native
