@@ -82,7 +82,11 @@ mcs_request_errors_total{method="<method_name>"=errorCode:"<error_code>"}
 
 ### Adapter: mediasoup
 
-The mediasoup adapter exposes a few metrics on its own. Their format is shown here:
+The mediasoup adapter exposes a few metrics on its own.
+
+Workers' resource usage metrics are _optionally_ exposed. They can be enabled via
+the `promExportWorkerResourceUsage` flag or `MS_WORKER_RESOURCE_USAGE`
+environment variable (both are Booleans). Default is `false`.
 
 ```
 # HELP mcs_mediasoup_workers Active mediasoup workers
@@ -105,4 +109,43 @@ mediasoup_producers{type="simple|simulcast|svc",kind="audio|video",transport_typ
 # TYPE mcs_mediasoup_consumers gauge
 mediasoup_consumers{type="simple|simulcast|svc",kind="audio|video",transport_type="PlainTransport|WebRtcTransport|PipeTransport|DirectTransport"} 0
 
+# HELP mediasoup_worker_ru_idrss_total Integral unshared data size of all mediasoup workers (libuv)
+# TYPE mediasoup_worker_ru_idrss_total gauge
+mediasoup_worker_ru_idrss_total 0
+
+# HELP mediasoup_worker_ru_isrss_total Integral unshared stack size of all mediasoup workers (libuv)
+# TYPE mediasoup_worker_ru_isrss_total gauge
+mediasoup_worker_ru_isrss_total 0
+
+# HELP mediasoup_worker_ru_ixrss_total Integral shared memory size of all mediasoup workers (libuv)
+# TYPE mediasoup_worker_ru_ixrss_total gauge
+mediasoup_worker_ru_ixrss_total 0
+
+# HELP mediasoup_worker_ru_maxrss_total Maximum resident set size of all mediasoup workers (libuv)
+# TYPE mediasoup_worker_ru_maxrss_total gauge
+mediasoup_worker_ru_maxrss_total 0
+
+# HELP mediasoup_worker_ru_msgrcv_total IPC messages received by all mediasoup workers (libuv)
+# TYPE mediasoup_worker_ru_msgrcv_total counter
+mediasoup_worker_ru_msgrcv_total 0
+
+# HELP mediasoup_worker_ru_msgsnd_total IPC messages sent by all mediasoup workers (libuv)
+# TYPE mediasoup_worker_ru_msgsnd_total counter
+mediasoup_worker_ru_msgsnd_total 0
+
+# HELP mediasoup_worker_ru_nivcsw_total Involuntary context switches of all mediasoup workers (libuv)
+# TYPE mediasoup_worker_ru_nivcsw_total counter
+mediasoup_worker_ru_nivcsw_total 0
+
+# HELP mediasoup_worker_ru_nvcsw_total Voluntary context switches of all mediasoup workers (libuv)
+# TYPE mediasoup_worker_ru_nvcsw_total counter
+mediasoup_worker_ru_nvcsw_total 0
+
+# HELP mediasoup_worker_ru_stime_total System CPU time used by all mediasoup workers (libuv)
+# TYPE mediasoup_worker_ru_stime_total counter
+mediasoup_worker_ru_stime_total 0
+
+# HELP mediasoup_worker_ru_utime_total User CPU time used by all mediasoup workers (libuv)
+# TYPE mediasoup_worker_ru_utime_total counter
+mediasoup_worker_ru_utime_total 0
 ```

@@ -281,6 +281,7 @@ mediasoup:
     rtcMaxPort: 32768
     #dtlsCertificateFile:
     #dtlsPrivateKeyFile:
+  promExportWorkerResourceUsage: false
   router:
     # TODO fetch from conference-media-specs
     mediaCodecs:
