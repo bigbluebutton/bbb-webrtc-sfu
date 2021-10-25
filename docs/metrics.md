@@ -45,7 +45,7 @@ prometheus:
   port: MCS_PROM_PORT
   path: MCS_PROM_PATH
   collectDefaultMetrics: MCS_PROM_DEFAULT_MTS
-``` 
+```
 
 ## Exposed metrics: mcs-core
 
@@ -87,22 +87,22 @@ The mediasoup adapter exposes a few metrics on its own. Their format is shown he
 ```
 # HELP mcs_mediasoup_workers Active mediasoup workers
 # TYPE mcs_mediasoup_workers gauge
-mcs_mediasoup_workers 0
+mediasoup_workers 0
 
 # HELP mcs_mediasoup_routers Active mediasoup routers
 # TYPE mcs_mediasoup_routers gauge
-mcs_mediasoup_routers 0
+mediasoup_routers 0
 
 # HELP mcs_mediasoup_transports Number of active mediasoup transports
 # TYPE mcs_mediasoup_transports gauge
-mcs_mediasoup_transports{type="PlainTransport|WebRtcTransport|PipeTransport|DirectTransport"} 0
+mediasoup_transports{type="PlainTransport|WebRtcTransport|PipeTransport|DirectTransport"} 0
 
 # HELP mcs_mediasoup_producers Number of active mediasoup producers
 # TYPE mcs_mediasoup_producers gauge
-mcs_mediasoup_producers{type="simple|simulcast|svc",kind="audio|video",transport_type="PlainTransport|WebRtcTransport|PipeTransport|DirectTransport"} 0
+mediasoup_producers{type="simple|simulcast|svc",kind="audio|video",transport_type="PlainTransport|WebRtcTransport|PipeTransport|DirectTransport"} 0
 
 # HELP mcs_mediasoup_consumers Number of active mediasoup consumers
 # TYPE mcs_mediasoup_consumers gauge
-mcs_mediasoup_consumers{type="simple|simulcast|svc",kind="audio|video",transport_type="PlainTransport|WebRtcTransport|PipeTransport|DirectTransport"} 0
+mediasoup_consumers{type="simple|simulcast|svc",kind="audio|video",transport_type="PlainTransport|WebRtcTransport|PipeTransport|DirectTransport"} 0
 
 ```
