@@ -85,7 +85,7 @@ mcs_request_errors_total{method="<method_name>"=errorCode:"<error_code>"}
 The mediasoup adapter exposes a few metrics on its own.
 
 Workers' resource usage metrics are _optionally_ exposed. They can be enabled via
-the `promExportWorkerResourceUsage` flag or `MS_WORKER_RESOURCE_USAGE`
+the `mediasoup.promExportWorkerResourceUsage` flag or `MS_WORKER_RESOURCE_USAGE`
 environment variable (both are Booleans). Default is `false`.
 
 ```
