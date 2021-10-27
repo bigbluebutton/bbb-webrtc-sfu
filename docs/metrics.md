@@ -109,6 +109,10 @@ mediasoup_producers{type="simple|simulcast|svc",kind="audio|video",transport_typ
 # TYPE mcs_mediasoup_consumers gauge
 mediasoup_consumers{type="simple|simulcast|svc",kind="audio|video",transport_type="PlainTransport|WebRtcTransport|PipeTransport|DirectTransport"} 0
 
+# HELP mediasoup_worker_crashes Detected mediasoup worker crashes
+# TYPE mediasoup_worker_crashes counter
+mediasoup_worker_crashes 0
+
 # HELP mediasoup_worker_ru_idrss_total Integral unshared data size of all mediasoup workers (libuv)
 # TYPE mediasoup_worker_ru_idrss_total gauge
 mediasoup_worker_ru_idrss_total 0
