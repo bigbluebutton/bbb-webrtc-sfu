@@ -113,6 +113,14 @@ mediasoup_consumers{type="simple|simulcast|svc",kind="audio|video",transport_typ
 # TYPE mediasoup_worker_crashes counter
 mediasoup_worker_crashes 0
 
+# HELP mediasoup_transport_dtls_errors mediasoup DTLS failures
+# TYPE mediasoup_transport_dtls_errors counter
+mediasoup_transport_dtls_errors 0
+
+# HELP mediasoup_transport_ice_errors mediasoup ICE failures
+# TYPE mediasoup_transport_ice_errors counter
+mediasoup_transport_ice_errors 0
+
 # HELP mediasoup_worker_ru_idrss_total Integral unshared data size of all mediasoup workers (libuv)
 # TYPE mediasoup_worker_ru_idrss_total gauge
 mediasoup_worker_ru_idrss_total 0
