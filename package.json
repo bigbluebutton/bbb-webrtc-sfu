@@ -18,18 +18,18 @@
     "prom-client": "13.1.0",
     "queue": "6.0.1",
     "readable-id": "1.0.0",
-    "redis": "^3.1.2",
+    "redis": "3.1.2",
     "sdp-transform": "2.13.0",
     "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.12",
     "uuid": "8.3.1",
     "winston": "2.4.5",
     "ws": "7.4.6",
-    "mediasoup": "^3.9.0",
-    "mediasoup-client": "^3.6.41",
+    "mediasoup": "3.9.1",
+    "mediasoup-client": "3.6.43",
     "bbb-sfurec-adapter": "git+https://github.com/mconf/bbb-sfurec-adapter.git#v1.0.0-dev.6"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "2.0.14"
   },
   "optionalDependencies": {}
 }
