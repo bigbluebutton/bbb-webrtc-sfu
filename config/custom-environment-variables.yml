@@ -153,6 +153,9 @@ mediasoup:
       __format: json
     dtlsCertificateFile: MS_DTLS_CERT
     dtlsPrivateKeyFile: MS_DTLS_KEY
+  promExportWorkerResourceUsage:
+    __name: MS_WORKER_RESOURCE_USAGE
+    __format: json
   webrtc:
     listenIps:
       __name: MS_WEBRTC_LISTEN_IPS
