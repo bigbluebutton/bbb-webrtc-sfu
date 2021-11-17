@@ -266,7 +266,7 @@ mediasoup:
   workers: "auto"
   worker:
     # "debug", "warn", "error", "none"
-    logLevel: "debug"
+    logLevel: "error"
     # + svc, simulcast, srtp, ...
     logTags:
       - "bwe"
