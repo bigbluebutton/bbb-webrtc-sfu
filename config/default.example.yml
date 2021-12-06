@@ -34,6 +34,9 @@ redisPort: "6379"
 # redisPassword: foobared
 clientPort: "3008"
 clientHost: 127.0.0.1
+# Whether RPCs and WS conns should be rejected/shutdown on user info header
+# anomalies
+wsStrictHeaderParsing: true
 mediaFlowTimeoutDuration: 30000
 mediaStateTimeoutDuration: 30000
 requestQueueTimeout: 30000
