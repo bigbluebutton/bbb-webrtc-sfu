@@ -56,6 +56,7 @@ videoMediaServer: Kurento
 screenshareMediaServer: Kurento
 audioMediaServer: Kurento
 fullAudioMediaServer: Kurento
+fullAudioProxyActiveDirection: true
 # RTP|WebRTC. Dictates how the FS <-> [audioMediaServer] bridge is established:
 # via plain RTP or via a WebRTC-backed RTP stream
 # WebRTC should be used for environments where the bridge is between external

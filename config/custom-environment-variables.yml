@@ -121,6 +121,9 @@ screenshareMediaServer: SCREENSHARE_MEDIA_SERVER
 audioMediaServer: AUDIO_MEDIA_SERVER
 fullAudioMediaServer: FULL_AUDIO_MEDIA_SERVER
 listenOnlyGlobalAudioMode: GLOBAL_AUDIO_MODE
+fullAudioProxyActiveDirection:
+  __name: FULL_AUDIO_ACTIVE_DIRECTION
+  __format: json
 
 listenOnlyIgnoreMediaThresholds:
   __name: LISTENONLY_IGNORE_MEDIA_THRESHOLDS
