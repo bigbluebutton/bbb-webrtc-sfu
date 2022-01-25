@@ -19,7 +19,6 @@
     "pegjs": "0.8.0",
     "prom-client": "13.1.0",
     "queue": "6.0.1",
-    "readable-id": "1.0.0",
     "redis": "3.1.2",
     "sdp-transform": "2.13.0",
     "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.12",
