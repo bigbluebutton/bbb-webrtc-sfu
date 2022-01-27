@@ -10,25 +10,24 @@
     "postinstall": "cd node_modules/sip.js/src/Grammar && mkdir -p dist && pegjs --extra-options-file peg.json src/Grammar.pegjs dist/Grammar.js"
   },
   "dependencies": {
+    "bbb-sfurec-adapter": "git+https://github.com/mconf/bbb-sfurec-adapter.git#v1.0.0-dev.6",
     "config": "3.3.6",
     "ipaddr.js": "1.9.1",
     "js-yaml": "3.13.1",
     "kurento-client": "6.16.0",
-    "mcs-js": "git+https://github.com/mconf/mcs-js.git#v0.0.11",
+    "mcs-js": "git+https://github.com/mconf/mcs-js.git#v0.0.13",
+    "mediasoup": "3.9.2",
+    "mediasoup-client": "3.6.43",
     "modesl": "1.2.1",
     "pegjs": "0.8.0",
     "prom-client": "13.1.0",
     "queue": "6.0.1",
-    "readable-id": "1.0.0",
     "redis": "3.1.2",
     "sdp-transform": "2.13.0",
     "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.12",
     "uuid": "8.3.1",
     "winston": "2.4.5",
-    "ws": "7.4.6",
-    "mediasoup": "3.9.2",
-    "mediasoup-client": "3.6.43",
-    "bbb-sfurec-adapter": "git+https://github.com/mconf/bbb-sfurec-adapter.git#v1.0.0-dev.6"
+    "ws": "7.4.6"
   },
   "devDependencies": {
     "eslint": "^8.2.0",
