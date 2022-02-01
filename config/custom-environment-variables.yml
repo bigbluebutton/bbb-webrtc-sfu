@@ -118,7 +118,6 @@ media-server-adapters:
 listenOnlyMediaServer: LISTENONLY_MEDIA_SERVER
 videoMediaServer: VIDEO_MEDIA_SERVER
 screenshareMediaServer: SCREENSHARE_MEDIA_SERVER
-audioMediaServer: AUDIO_MEDIA_SERVER
 fullAudioMediaServer: FULL_AUDIO_MEDIA_SERVER
 listenOnlyGlobalAudioMode: GLOBAL_AUDIO_MODE
 fullAudioProxyActiveDirection:

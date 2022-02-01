@@ -51,11 +51,10 @@ videoSubscriberSpecSlave: false
 # Following three configurations: see media-server-adapters config
 # to get a list of implemented adapters. The configuration values
 # here are the adapter's name of choice
-listenOnlyMediaServer: Kurento
-videoMediaServer: Kurento
-screenshareMediaServer: Kurento
-audioMediaServer: Kurento
-fullAudioMediaServer: Kurento
+listenOnlyMediaServer: mediasoup
+videoMediaServer: mediasoup
+screenshareMediaServer: mediasoup
+fullAudioMediaServer: mediasoup
 fullAudioProxyActiveDirection: true
 # RTP|WebRTC. Dictates how the FS <-> [audioMediaServer] bridge is established:
 # via plain RTP or via a WebRTC-backed RTP stream
