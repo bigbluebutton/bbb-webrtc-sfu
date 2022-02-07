@@ -2,9 +2,9 @@
 
 const config = require('config');
 const HttpServer = require('./lib/common/http-server.js');
-const WebsocketConnectionManager = require('./lib/connection-manager/WebsocketConnectionManager.js');
-const ConnectionManager = require('./lib/connection-manager/ConnectionManager.js');
-const SFUModuleManager = require('./lib/sfu-module-manager.js');
+const WebsocketConnectionManager = require('./lib/main/ws-connection-manager.js');
+const ConnectionManager = require('./lib/main/connection-manager.js');
+const SFUModuleManager = require('./lib/main/sfu-module-manager.js');
 const Logger = require('./lib/utils/Logger.js');
 
 const HTTP_SERVER_HOST = config.has('clientHost') ? config.get('clientHost') : '127.0.0.1';
