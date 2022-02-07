@@ -1,7 +1,7 @@
 'use strict';
 
 const config = require('config');
-const HttpServer = require('./lib/connection-manager/HttpServer.js');
+const HttpServer = require('./lib/common/http-server.js');
 const WebsocketConnectionManager = require('./lib/connection-manager/WebsocketConnectionManager.js');
 const ConnectionManager = require('./lib/connection-manager/ConnectionManager.js');
 const SFUModuleManager = require('./lib/sfu-module-manager.js');
