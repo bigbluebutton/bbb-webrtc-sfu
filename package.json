@@ -36,5 +36,9 @@
   "devDependencies": {
     "eslint": "^8.2.0",
     "nodemon": "2.0.14"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.6",
+    "utf-8-validate": "^5.0.8"
   }
 }
