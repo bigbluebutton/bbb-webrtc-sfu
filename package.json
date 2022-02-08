@@ -24,7 +24,7 @@
     "queue": "6.0.1",
     "redis": "3.1.2",
     "sdp-transform": "2.13.0",
-    "sip.js": "git+https://github.com/mconf/sip.js.git#n8-test",
+    "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.13",
     "uuid": "8.3.1",
     "winston": "2.4.5",
     "ws": "7.4.6"
