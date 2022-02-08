@@ -37,6 +37,11 @@ clientHost: 127.0.0.1
 # Whether RPCs and WS conns should be rejected/shutdown on user info header
 # anomalies
 wsStrictHeaderParsing: true
+# wsServerOptions: see https://github.com/websockets/ws/blob/HEAD/doc/ws.md#new-websocketserveroptions-callback).
+# It's a passthrough mapping of all config literal (strings, booleans, numbers).
+wsServerOptions:
+  maxPayload: 51200
+
 mediaFlowTimeoutDuration: 30000
 mediaStateTimeoutDuration: 30000
 requestQueueTimeout: 30000
