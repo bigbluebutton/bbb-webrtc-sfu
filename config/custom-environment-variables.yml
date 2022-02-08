@@ -146,6 +146,13 @@ prometheus:
   host: MCS_PROM_HOST
   port: MCS_PROM_PORT
   path: MCS_PROM_PATH
+  main:
+    host: MAIN_PROM_HOST
+    port: MAIN_PROM_PORT
+    path: MAIN_PROM_PATH
+    collectDefaultMetrics:
+      __name: MAIN_PROM_DEFAULT_MTS
+      __format: json
 
 mediasoup:
   workers: MS_WORKERS

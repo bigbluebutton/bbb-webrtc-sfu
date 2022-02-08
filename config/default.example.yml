@@ -252,18 +252,20 @@ allowDuplicateExtUserId: true
 ejectOnUserLeft: true
 permissionProbes: true
 
-# Direct Prometheus instrumentation. Currently operating only over mcs-core.
-# EXPERIMENTAL, so disabled by default.
+# Direct Prometheus instrumentation. EXPERIMENTAL, so disabled by default.
 prometheus:
   enabled: false
-  # Scrape route host
+  # mcs-core specific metrics, top level of prometheus dictionary for now
   host: localhost
-  # Scrape route port
   port: 3014
-  # Metrics endpoint path
   path: '/metrics'
-  # Whether default metrics for Node.js processes should be exported
   collectDefaultMetrics: false
+  # Main process metrics endpoint (main == websocket entrypoint, module manager)
+  main:
+    host: localhost
+    port: 3016
+    path: '/metrics'
+    collectDefaultMetrics: false
 
 mediasoup:
   workers: "auto"

@@ -12,12 +12,11 @@ Prometheus instrumentation is **disabled by default**. There are two ways to ena
 
 In a regular BigBlueButton installation, an override config file can be used in `/etc/bigbluebutton/bbb-webrtc-sfu/production.yml`. There, one can alter the [default configuration](https://github.com/bigbluebutton/bbb-webrtc-sfu/blob/5e5b91a9f77be8971069fe661570d9cb423a2bb5/config/default.example.yml#L216-L227) as they wish.
 
-For example: exposing metrics on HTTP endpoint `http://localhost:3014/metrics` (with Node.js metrics disabled) would look like this:
+For example: exposing mcs-core metrics on HTTP endpoint `http://localhost:3014/metrics` (with Node.js metrics disabled) would look like this:
 
 ```
 
-# Direct Prometheus instrumentation. Currently operating only over mcs-core.
-# EXPERIMENTAL, so disabled by default.
+# Direct Prometheus instrumentation. EXPERIMENTAL, so disabled by default.
 prometheus:
   # Whether to enabled the metrics endpoint
   enabled: true
@@ -45,6 +44,48 @@ prometheus:
   port: MCS_PROM_PORT
   path: MCS_PROM_PATH
   collectDefaultMetrics: MCS_PROM_DEFAULT_MTS
+  main:
+    host: MAIN_PROM_HOST
+    port: MAIN_PROM_PORT
+    path: MAIN_PROM_PATH
+    collectDefaultMetrics: MAIN_PROM_DEFAULT_MTS
+```
+
+## Exposed metrics: main process
+
+The main process instrumentation can be enabled via the prometheus.main configuration object. Its metrics are exposed on a *separate* HTTP endpoint (path, host and port are configurable).
+
+Check the aforementioned environment variables or the inline comments in default.example.yml to get directions on to enable this.
+
+The custom metric set exposed by the main process is:
+
+```
+# HELP sfu_websockets Number of active WebSocket connections
+# TYPE sfu_websockets gauge
+sfu_websockets 0
+
+# HELP sfu_websocket_in_messages Total inbound WebSocket requisitions
+# TYPE sfu_websocket_in_messages counter
+sfu_websocket_in_messages 0
+
+# HELP sfu_websocket_out_messages Total outbound WebSocket requisitions
+# TYPE sfu_websocket_out_messages counter
+sfu_websocket_out_messages 0
+
+# HELP sfu_websocket_errors Total WebSocket failures
+# TYPE sfu_websocket_errors counter
+
+# HELP sfu_module_status SFU module status
+# TYPE sfu_module_status gauge
+sfu_module_status{module="core"} 1
+sfu_module_status{module="screenshare"} 1
+sfu_module_status{module="video"} 1
+sfu_module_status{module="audio"} 1
+sfu_module_status{module="fullaudio"} 1
+
+# HELP sfu_module_crashes Total SFU module crashes
+# TYPE sfu_module_crashes gauge
+sfu_module_crashes{module="core",signal="SIGABRT"} 1
 ```
 
 ## Exposed metrics: mcs-core
