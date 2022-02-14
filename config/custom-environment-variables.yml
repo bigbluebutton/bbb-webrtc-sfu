@@ -21,6 +21,10 @@ mcs-port: MCS_PORT
 mcs-host: MCS_HOST
 mcs-address: MCS_ADDRESS
 mcsUserEjectionTimer: MCS_USER_EJECTION_TIMER
+mcsRoomDestructionTimer: MCS_ROOM_DESTRUCTION_TIMER
+destroyRoomOnEject:
+  __name: DESTROY_ROOM_ON_EJECT
+  __format: json
 
 freeswitch:
     ip: FREESWITCH_CONN_IP
