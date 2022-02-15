@@ -276,7 +276,26 @@ prometheus:
     collectDefaultMetrics: false
 
 mediasoup:
+  # mediasoup.workers: "auto"|<Number>.
+  #   * The number of mediasoup workers for general use (media type agnostic, shared pool).
+  #   * "auto" matches the number of workers to the host's core count (os.cpus().length)
+  #   * Use a number if you want to override the number of workers. Strings other than auto
+  #     are ignored :).
+  #   * The default value is 8 workers.
   workers: "auto"
+  # mediasoup.dedicatedMediaTypeWorkers:
+  #   audio: "auto"|<Number>
+  #   main: "auto"|<Number>
+  #   content: "auto"|<Number>
+  #
+  #   * The number of mediasoup workers to use for a specific media type.
+  #     They are SEPARATED from the shared pool (mediasoup.workers). Streams
+  #     of a specific media type will always land in its dedicated pool if one is set.
+  #   * "auto" and Number semantics are the same as #mediasoup.workers.
+  dedicatedMediaTypeWorkers:
+    audio: 0
+    main: 0
+    content: 0
   worker:
     # "debug", "warn", "error", "none"
     logLevel: "error"

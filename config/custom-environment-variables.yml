@@ -163,6 +163,16 @@ prometheus:
 
 mediasoup:
   workers: MS_WORKERS
+  dedicatedMediaTypeWorkers:
+    audio:
+      __name: MS_AUDIO_WORKERS
+      __format: json
+    main:
+      __name: MS_MAIN_WORKERS
+      __format: json
+    content:
+      __name: MS_CONTENT_WORKERS
+      __format: json
   worker:
     rtcMinPort:
       __name: MS_RTC_MIN
