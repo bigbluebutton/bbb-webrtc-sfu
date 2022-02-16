@@ -162,7 +162,9 @@ prometheus:
       __format: json
 
 mediasoup:
-  workers: MS_WORKERS
+  workers:
+    __name: MS_WORKERS
+    __format: yaml
   dedicatedMediaTypeWorkers:
     audio:
       __name: MS_AUDIO_WORKERS
