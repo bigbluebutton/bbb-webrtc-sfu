@@ -132,7 +132,7 @@ environment variable (both are Booleans). Default is `false`.
 ```
 # HELP mcs_mediasoup_workers Active mediasoup workers
 # TYPE mcs_mediasoup_workers gauge
-mediasoup_workers 0
+mediasoup_workers{pool="shared"|"audio"|"main"|"content"} 0
 
 # HELP mcs_mediasoup_routers Active mediasoup routers
 # TYPE mcs_mediasoup_routers gauge
