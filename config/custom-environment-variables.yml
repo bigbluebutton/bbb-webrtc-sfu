@@ -166,13 +166,13 @@ mediasoup:
   dedicatedMediaTypeWorkers:
     audio:
       __name: MS_AUDIO_WORKERS
-      __format: json
+      __format: yaml
     main:
       __name: MS_MAIN_WORKERS
-      __format: json
+      __format: yaml
     content:
       __name: MS_CONTENT_WORKERS
-      __format: json
+      __format: yaml
   worker:
     rtcMinPort:
       __name: MS_RTC_MIN
