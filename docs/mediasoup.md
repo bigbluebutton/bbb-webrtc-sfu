@@ -19,13 +19,13 @@
 This configuration controls the number of mediasoup workers intended for general use (media type agnostic, shared pool).
 
 Accepted values are:
-   * "auto": creates #ceil((min(nproc,32) * 0.8) + (max(0, nproc - 32) / 2)) workers;
-   * "cores": creates workers up to the host's core count (as provided by os.cpus().length);
-   * <Number>: overrides the number of workers with a fixed value;
-   * The default and fallback values are "auto".
+   * `"auto"`: creates `ceil((min(nproc,32) * 0.8) + (max(0, nproc - 32) / 2))` workers;
+   * `"cores"`: creates workers up to the host's core count (as provided by os.cpus().length);
+   * \<Number\>: overrides the number of workers with a fixed value;
+   * The default and fallback values are `auto`.
 
 As always, this configuration should be set via the override file in `/etc/bigbluebutton/bbb-webrtc-sfu/production.yml`. For example:
-   * To set the number of workers to "cores": `yq w -i /etc/bigbluebutton/bbb-webrtc-sfu/production.yml mediasoup.workers "cores"`
+   * To set the number of workers to `cores`: `yq w -i /etc/bigbluebutton/bbb-webrtc-sfu/production.yml mediasoup.workers "cores"`
 
 ### mediasoup.dedicatedMediaTypeWorkers (default.example.yml, default.yml, production.yml)
 
@@ -48,5 +48,5 @@ The media types semantics are:
    * `content`: screen sharing streams (audio and video).
 
 As always, this configuration should be set via the override file in `/etc/bigbluebutton/bbb-webrtc-sfu/production.yml`. For example:
-   * To set the number of dedicated audio workers to "auto": `yq w -i /etc/bigbluebutton/bbb-webrtc-sfu/production.yml mediasoup.dedicatedMediaTypeWorkers.audio "auto"`
+   * To set the number of dedicated audio workers to `auto`: `yq w -i /etc/bigbluebutton/bbb-webrtc-sfu/production.yml mediasoup.dedicatedMediaTypeWorkers.audio "auto"`
 
