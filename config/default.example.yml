@@ -276,17 +276,18 @@ prometheus:
     collectDefaultMetrics: false
 
 mediasoup:
-  # mediasoup.workers: "auto"|<Number>.
+  # mediasoup.workers: "auto"|"cores"|<Number>.
   #   * The number of mediasoup workers for general use (media type agnostic, shared pool).
-  #   * "auto" matches the number of workers to the host's core count (os.cpus().length)
-  #   * Use a number if you want to override the number of workers. Strings other than auto
-  #     are ignored :).
-  #   * The default value is 8 workers.
+  #   * "auto" is: ceil((min(nproc,32) * 0.8) + (max(0, nproc - 32) / 2))
+  #   * "cores" is: nproc (the host's core count as in os.cpus().length)
+  #   * Use a number if you want to override the number of workers.
+  #   * Strings other than "auto" and "cores" are ignored :).
+  #   * The default value is "auto".
   workers: "auto"
   # mediasoup.dedicatedMediaTypeWorkers:
-  #   audio: "auto"|<Number>
-  #   main: "auto"|<Number>
-  #   content: "auto"|<Number>
+  #   audio: "auto"|"cores"|<Number>
+  #   main: "auto"|"cores"|<Number>
+  #   content: "auto"|"cores"|<Number>
   #
   #   * The number of mediasoup workers to use for a specific media type.
   #     They are SEPARATED from the shared pool (mediasoup.workers). Streams
