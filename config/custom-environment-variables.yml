@@ -13,6 +13,9 @@ clientHost: CLIENT_HOST
 wsStrictHeaderParsing:
   __name: WS_STRICT_HEADER_PARSING
   __format: json
+wsHeartbeatInterval:
+  __name: WS_HEARTBEAT_INTERVAL
+  __format: yaml
 wsServerOptions:
   __name: WS_SERVER_OPTIONS
   __format: json
