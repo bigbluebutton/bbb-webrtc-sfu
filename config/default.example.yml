@@ -37,6 +37,8 @@ clientHost: 127.0.0.1
 # Whether RPCs and WS conns should be rejected/shutdown on user info header
 # anomalies
 wsStrictHeaderParsing: true
+# Time (ms) between server-initiated ping-pong checks
+wsHeartbeatInterval: 20000
 mediaFlowTimeoutDuration: 30000
 mediaStateTimeoutDuration: 30000
 requestQueueTimeout: 30000
