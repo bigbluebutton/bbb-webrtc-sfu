@@ -1,5 +1,5 @@
 kurento:
-  - ip: ""
+  - ip: 0.0.0.0
     url: ws://127.0.0.1:8888/kurento
     # mediaType: (main|audio|content)
     ipClassMappings:
