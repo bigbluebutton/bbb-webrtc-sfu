@@ -61,7 +61,7 @@ videoSubscriberSpecSlave: false
 listenOnlyMediaServer: mediasoup
 videoMediaServer: mediasoup
 screenshareMediaServer: mediasoup
-fullAudioMediaServer: mediasoup
+audioMediaServer: mediasoup
 fullAudioProxyActiveDirection: true
 # RTP|WebRTC. Dictates how the FS <-> [audioMediaServer] bridge is established:
 # via plain RTP or via a WebRTC-backed RTP stream
@@ -146,16 +146,10 @@ modules:
     options:
       # inboundChannel: to-sfu-video
       # outboundChannel: from-sfu-video
-- path: ./lib/listen-only/listen-only-process.js
-  name: audio
-  dedicated: true
-  ipc:
-    mode: native
-    options:
-      # inboundChannel: to-sfu-audio
-      # outboundChannel: from-sfu-audio
 - path: ./lib/audio/FullAudioProcess.js
   name: fullaudio
+  routingAliases:
+    - audio
   dedicated: true
   ipc:
     mode: native
