@@ -146,7 +146,7 @@ modules:
     options:
       # inboundChannel: to-sfu-video
       # outboundChannel: from-sfu-video
-- path: ./lib/audio/FullAudioProcess.js
+- path: ./lib/audio/audio-process.js
   name: fullaudio
   routingAliases:
     - audio
