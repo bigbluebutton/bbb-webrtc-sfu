@@ -51,14 +51,13 @@ screenshareSubscriberSpecSlave: false
 screensharePlayStartEnabled: true
 screenshareServerSideAkkaBroadcast: true
 screenshareIgnoreMediaThresholds: false
-listenOnlyIgnoreMediaThresholds: true
+audioIgnoreMediaThresholds: true
 videoIgnoreMediaThresholds: false
 videoSubscriberSpecSlave: false
 
 # Following three configurations: see media-server-adapters config
 # to get a list of implemented adapters. The configuration values
 # here are the adapter's name of choice
-listenOnlyMediaServer: mediasoup
 videoMediaServer: mediasoup
 screenshareMediaServer: mediasoup
 audioMediaServer: mediasoup
@@ -67,7 +66,7 @@ fullAudioProxyActiveDirection: true
 # via plain RTP or via a WebRTC-backed RTP stream
 # WebRTC should be used for environments where the bridge is between external
 # servers AND when mediasoup is being used
-listenOnlyGlobalAudioMode: 'RTP'
+fsBridgeMode: 'RTP'
 
 # Whether to record screen raw files
 recordScreenSharing: true

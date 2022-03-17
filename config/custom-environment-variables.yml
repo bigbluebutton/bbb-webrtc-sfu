@@ -125,17 +125,16 @@ media-server-adapters:
   __name: MEDIA_SERVER_ADAPTERS
   __format: json
 
-listenOnlyMediaServer: LISTENONLY_MEDIA_SERVER
 videoMediaServer: VIDEO_MEDIA_SERVER
 screenshareMediaServer: SCREENSHARE_MEDIA_SERVER
-fullAudioMediaServer: FULL_AUDIO_MEDIA_SERVER
-listenOnlyGlobalAudioMode: GLOBAL_AUDIO_MODE
+audioMediaServer: AUDIO_MEDIA_SERVER
+fsBridgeMode: FS_BRIDGE_MODE
 fullAudioProxyActiveDirection:
   __name: FULL_AUDIO_ACTIVE_DIRECTION
   __format: json
 
-listenOnlyIgnoreMediaThresholds:
-  __name: LISTENONLY_IGNORE_MEDIA_THRESHOLDS
+audioIgnoreMediaThresholds:
+  __name: AUDIO_IGNORE_MEDIA_THRESHOLDS
   __format: json
 
 videoIgnoreMediaThresholds:
