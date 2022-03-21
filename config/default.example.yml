@@ -51,23 +51,23 @@ screenshareSubscriberSpecSlave: false
 screensharePlayStartEnabled: true
 screenshareServerSideAkkaBroadcast: true
 screenshareIgnoreMediaThresholds: false
-listenOnlyIgnoreMediaThresholds: true
+audioIgnoreMediaThresholds: true
 videoIgnoreMediaThresholds: false
 videoSubscriberSpecSlave: false
 
 # Following three configurations: see media-server-adapters config
 # to get a list of implemented adapters. The configuration values
 # here are the adapter's name of choice
-listenOnlyMediaServer: mediasoup
 videoMediaServer: mediasoup
 screenshareMediaServer: mediasoup
-fullAudioMediaServer: mediasoup
+audioMediaServer: mediasoup
+fullAudioEnabled: false
 fullAudioProxyActiveDirection: true
 # RTP|WebRTC. Dictates how the FS <-> [audioMediaServer] bridge is established:
 # via plain RTP or via a WebRTC-backed RTP stream
 # WebRTC should be used for environments where the bridge is between external
 # servers AND when mediasoup is being used
-listenOnlyGlobalAudioMode: 'RTP'
+fsBridgeMode: 'RTP'
 
 # Whether to record screen raw files
 recordScreenSharing: true
@@ -146,22 +146,17 @@ modules:
     options:
       # inboundChannel: to-sfu-video
       # outboundChannel: from-sfu-video
-- path: ./lib/listen-only/listen-only-process.js
-  name: audio
+- path: ./lib/audio/audio-process.js
+  name: fullaudio
+  routingAliases:
+    - audio
   dedicated: true
   ipc:
     mode: native
     options:
       # inboundChannel: to-sfu-audio
       # outboundChannel: from-sfu-audio
-#- path: ./lib/audio/FullAudioProcess.js
-#  name: fullaudio
-#  dedicated: true
-#  ipc:
-#    mode: native
-#    options:
-#      # inboundChannel: to-sfu-audio
-#      # outboundChannel: from-sfu-audio
+
 # media-server-adapters: path could refer to a npm module
 media-server-adapters:
 - path: kurento/kurento.js
