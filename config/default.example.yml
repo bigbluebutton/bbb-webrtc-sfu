@@ -61,6 +61,7 @@ videoSubscriberSpecSlave: false
 videoMediaServer: mediasoup
 screenshareMediaServer: mediasoup
 audioMediaServer: mediasoup
+fullAudioEnabled: false
 fullAudioProxyActiveDirection: true
 # RTP|WebRTC. Dictates how the FS <-> [audioMediaServer] bridge is established:
 # via plain RTP or via a WebRTC-backed RTP stream

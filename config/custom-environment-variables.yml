@@ -132,6 +132,9 @@ fsBridgeMode: FS_BRIDGE_MODE
 fullAudioProxyActiveDirection:
   __name: FULL_AUDIO_ACTIVE_DIRECTION
   __format: json
+fullAudioEnabled:
+  __name: FULL_AUDIO_ENANBLED
+  __format: json
 
 audioIgnoreMediaThresholds:
   __name: AUDIO_IGNORE_MEDIA_THRESHOLDS
