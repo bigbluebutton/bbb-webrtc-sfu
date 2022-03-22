@@ -133,7 +133,7 @@ fullAudioProxyActiveDirection:
   __name: FULL_AUDIO_ACTIVE_DIRECTION
   __format: json
 fullAudioEnabled:
-  __name: FULL_AUDIO_ENANBLED
+  __name: FULL_AUDIO_ENABLED
   __format: json
 
 audioIgnoreMediaThresholds:
