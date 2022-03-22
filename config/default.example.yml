@@ -215,7 +215,7 @@ conference-media-specs:
     as_content: "1500"
   OPUS:
     useinbandfec: "1"
-    maxaveragebitrate: "30000"
+    maxaveragebitrate: "64000"
     maxplaybackrate: "48000"
     ptime: "20"
     minptime: "10"
@@ -321,7 +321,11 @@ mediasoup:
         clockRate: 48000
         channels: 2
         parameters:
+          maxaveragebitrate: 64000
+          maxplaybackrate: 48000
+          ptime: 20
           minptime: 10
+          maxptime: 40
           useinbandfec: 1
         rtcpFeedback:
           - type: "transport-cc"
