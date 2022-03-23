@@ -25,7 +25,7 @@
     "uuid": "8.3.1",
     "winston": "2.4.5",
     "ws": "7.4.6",
-    "mediasoup": "3.9.6",
+    "mediasoup": "3.9.8",
     "mediasoup-client": "3.6.43",
     "bbb-sfurec-adapter": "git+https://github.com/mconf/bbb-sfurec-adapter.git#v1.0.0-dev.6"
   },
