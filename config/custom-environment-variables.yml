@@ -203,6 +203,9 @@ mediasoup:
     comedia:
       __name: MS_COMEDIA
       __format: json
+  webRtcHeaderExts:
+    __name: MS_HDR_EXTS
+    __format: json
   recorder:
     ffmpeg:
       prestartIntraframeInterval:
