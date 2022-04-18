@@ -30,12 +30,13 @@
     "sdp-transform": "2.13.0",
     "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.13",
     "uuid": "8.3.1",
-    "winston": "2.4.5",
+    "winston": "3.7.2",
     "ws": "8.4.2"
   },
   "devDependencies": {
     "eslint": "^8.2.0",
-    "nodemon": "2.0.14"
+    "nodemon": "2.0.14",
+    "safe-stable-stringify": "2.3.1"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.6",
