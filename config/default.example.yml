@@ -257,7 +257,7 @@ ejectOnUserLeft: true
 permissionProbes: true
 destroyRoomOnEject: true
 
-# Direct Prometheus instrumentation. EXPERIMENTAL, so disabled by default.
+# Direct Prometheus instrumentation. Disabled by default.
 prometheus:
   enabled: false
   # mcs-core specific metrics, top level of prometheus dictionary for now
@@ -269,6 +269,12 @@ prometheus:
   main:
     host: localhost
     port: 3016
+    path: '/metrics'
+    collectDefaultMetrics: false
+  # Video process metrics endpoint (video == webcam req handler, ...)
+  video:
+    host: localhost
+    port: 3018
     path: '/metrics'
     collectDefaultMetrics: false
 

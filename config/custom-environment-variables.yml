@@ -165,6 +165,13 @@ prometheus:
     collectDefaultMetrics:
       __name: MAIN_PROM_DEFAULT_MTS
       __format: json
+  video:
+    host: VIDEO_PROM_HOST
+    port: VIDEO_PROM_PORT
+    path: VIDEO_PROM_PATH
+    collectDefaultMetrics:
+      __name: VIDEO_PROM_DEFAULT_MTS
+      __format: json
 
 mediasoup:
   workers:
