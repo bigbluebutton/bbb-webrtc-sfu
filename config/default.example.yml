@@ -277,6 +277,11 @@ prometheus:
     port: 3018
     path: '/metrics'
     collectDefaultMetrics: false
+  screenshare:
+    host: localhost
+    port: 3022
+    path: '/metrics'
+    collectDefaultMetrics: false
 
 mediasoup:
   # mediasoup.workers: "auto"|"cores"|<Number>.

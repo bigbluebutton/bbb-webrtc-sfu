@@ -172,6 +172,13 @@ prometheus:
     collectDefaultMetrics:
       __name: VIDEO_PROM_DEFAULT_MTS
       __format: json
+  screenshare:
+    host: SCREEN_PROM_HOST
+    port: SCREEN_PROM_PORT
+    path: SCREEN_PROM_PATH
+    collectDefaultMetrics:
+      __name: SCREEN_PROM_DEFAULT_MTS
+      __format: json
 
 mediasoup:
   workers:
