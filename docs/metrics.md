@@ -36,7 +36,7 @@ prometheus:
   # Video process metrics endpoint (video == webcam req handler, ...)
   video:
     host: localhost
-    port: 3018
+    port: 3026
     path: '/metrics'
     collectDefaultMetrics: false
   # Screenshare process metrics endpoint
@@ -133,7 +133,7 @@ sfu_module_crashes{module="core",signal="SIGABRT"} 1
 ## Exposed metrics: video process
 
 The video process instrumentation can be enabled via the prometheus.video configuration object. Its metrics are exposed on a *separate* HTTP endpoint (path, host and port are configurable).
-Default is localhost:3018/metrics.
+Default is localhost:3026/metrics.
 
 Check the aforementioned environment variables or the inline comments in default.example.yml to get directions on how to enable this.
 

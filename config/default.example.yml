@@ -274,7 +274,7 @@ prometheus:
   # Video process metrics endpoint (video == webcam req handler, ...)
   video:
     host: localhost
-    port: 3018
+    port: 3026
     path: '/metrics'
     collectDefaultMetrics: false
   screenshare:
