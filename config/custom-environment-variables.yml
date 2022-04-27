@@ -179,6 +179,13 @@ prometheus:
     collectDefaultMetrics:
       __name: SCREEN_PROM_DEFAULT_MTS
       __format: json
+  audio:
+    host: AUDIO_PROM_HOST
+    port: AUDIO_PROM_PORT
+    path: AUDIO_PROM_PATH
+    collectDefaultMetrics:
+      __name: AUDIO_PROM_DEFAULT_MTS
+      __format: json
 
 mediasoup:
   workers:
