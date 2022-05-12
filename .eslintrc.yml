@@ -6,8 +6,8 @@ extends: eslint:recommended
 parserOptions:
   ecmaVersion: 13
 rules:
-  no-console: "error"
-  consistent-return: "error"
+  no-console: "warn"
+  consistent-return: "warn"
   no-trailing-spaces: "warn"
   no-whitespace-before-property: "warn"
   no-multiple-empty-lines: ["warn", { max: 1 }]
