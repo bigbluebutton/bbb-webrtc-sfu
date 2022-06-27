@@ -111,6 +111,7 @@ freeswitch:
   port: 5066
   esl_ip: 127.0.0.1
   esl_port: 8021
+  #esl_password: FOOBAR
   handleExternalConnections: false
   ipClassMappings:
     local:
