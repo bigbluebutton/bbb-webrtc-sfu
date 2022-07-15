@@ -19,7 +19,7 @@
     "ipaddr.js": "1.9.1",
     "js-yaml": "3.13.1",
     "kurento-client": "github:mconf/kurento-client-js#v6.18.0-mconf.1",
-    "mcs-js": "https://github.com/mconf/mcs-js#feat/restart-ice",
+    "mcs-js": "github:mconf/mcs-js#v0.0.16",
     "mediasoup": "3.10.3",
     "mediasoup-client": "3.6.43",
     "modesl": "1.2.1",
