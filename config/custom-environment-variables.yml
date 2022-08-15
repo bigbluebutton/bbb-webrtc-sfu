@@ -204,6 +204,16 @@ mediasoup:
     content:
       __name: MS_CONTENT_WORKERS
       __format: yaml
+  workerPriorities:
+    audio:
+      __name: MS_AUDIO_PRIO
+      __format: yaml
+    main:
+      __name: MS_MAIN_PRIO
+      __format: yaml
+    content:
+      __name: MS_CONTENT_PRIO
+      __format: yaml
   worker:
     rtcMinPort:
       __name: MS_RTC_MIN

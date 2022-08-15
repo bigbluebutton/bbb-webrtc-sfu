@@ -312,6 +312,18 @@ mediasoup:
     audio: 0
     main: 0
     content: 0
+  # mediasoup.workerPriorities:
+  #   audio: <os.constants.priority> | [19,-20]
+  #   main: <os.constants.priority> | [19,-20]
+  #   content: <os.constants.priority> | [19,-20]
+  #
+  #   * Sets the NICE level for each worker type. The app needs the correct user
+  #   caps to be effective
+  #
+  #workerPriorities:
+  #  audio: PRIORITY_HIGH
+  #  main: PRIORITY_NORMAL
+  #  content: PRIORITY_LOW
   worker:
     # "debug", "warn", "error", "none"
     logLevel: "error"
