@@ -1,6 +1,6 @@
 {
   "name": "bbb-webrtc-sfu",
-  "version": "2.9.2",
+  "version": "2.9.3",
   "private": true,
   "engines": {
     "npm": ">=6.0.0",
