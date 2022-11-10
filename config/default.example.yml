@@ -402,8 +402,6 @@ mediasoup:
     # candidate priority mangling; makes sense to keep this enabled
     # even more when ice-tcp is enabled as well
     preferUdp: true
-    # TODO: fetch from conference-media-specs
-    initialAvailableOutgoingBitrate: 100000
   plainRtp:
     # announcedIP => it's the host public IPv4 in case the machine is
     # behind a 1:1 NAT
@@ -419,6 +417,13 @@ mediasoup:
     rtcpMux: true
     # Port inference through COMEDIA
     comedia: true
+  bitrate:
+    # Default per transport max incoming bitrate (bps)
+    defaultMaxIncomingBitrate: 1500000
+    # Default per transport max outgoing bitrate (bps)
+    defaultMaxOutgoingBitrate: 1500000
+    # Default per transport initial available outgoing bitrate (bps)
+    defaultInitialAvailableOutgoingBitrate: 600000
   webRtcHeaderExts:
     - uri: 'urn:ietf:params:rtp-hdrext:toffset'
       id: 1
