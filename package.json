@@ -29,7 +29,7 @@
     "redis": "3.1.2",
     "sdp-transform": "2.13.0",
     "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.13",
-    "uuid": "8.3.1",
+    "uuid": "8.3.2",
     "winston": "3.7.2",
     "ws": "8.4.2"
   },
