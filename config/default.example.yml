@@ -91,6 +91,13 @@ recordingMediaProfile: WEBM_VIDEO_ONLY
 # The base recording container format.
 # webm|mp4
 recordingFormat: webm
+# bbb-webrtc-recorder integration configs
+bbbWebrtcRecorder:
+  channels:
+    # POV: bbb-webrtc-sfu
+    subscribe: from-bbb-webrtc-recorder
+    publish: to-bbb-webrtc-recorder
+
 # Recording event keys expiry time in Redis
 # 14 days is the default
 redisExpireTime: 1209600
