@@ -1,0 +1,82 @@
+## Running in a development environment
+
+### Pre-requisites
+  - Node.js >= 16
+  - npm >= 8.x
+  - gcc/g++ (>= 7.5.0)
+  - python3-pip
+
+### Installation
+
+```
+$ git clone https://github.com/bigbluebutton/bbb-webrtc-sfu.git`
+$ cd bbb-webrtc-sfu`
+$ npm install
+```
+
+### Configuration
+
+#### In a BigBlueButton instance
+
+A sample configuration file is located in ./config/default.example.yml.
+It contains all possible configurations used by this application - most of them
+with inline comments explaing what they do.
+
+The default configuration file _does not_ work out of the box since some of
+configuration values are environment-dependant. Thus, the recommended way is
+to setup this application in a BigBlueButton development instance and copy
+over the bbb-webrtc-sfu package config file.
+
+```bash
+cp /usr/local/bigbluebutton/bbb-webrtc-sfu/config/default.yml ./config/local.yml
+```
+
+After that, if necessary, create your own configuration file to override specific
+configs while developing.
+
+```bash
+touch ./config/development.yml
+```
+
+Keep in mind that values in `development.yml` file supersedes `./config/local.yml`
+(or `./config/default.yml`, for all that matters).
+When the configuration file is changed, the application *needs to be restarted*.
+
+After the configuration files are in place, disable the packaged bbb-webrtc-sfu
+to avoid conflicts. To do that:
+
+```bash
+sudo systemctl stop bbb-webrtc-sfu
+sudo systemctl disable bbb-webrtc-sfu
+```
+
+The packaged application can be re-enabled at any time by running:
+
+```bash
+sudo systemctl enable bbb-webrtc-sfu
+```
+
+### Running the application
+
+Stock running method:
+```bash
+npm start
+```
+
+To run the application with auto-reload on code changes:
+```bash
+npm run nodemon-start
+```
+
+To lint the application or specific files:
+```bash
+npm run lint
+npm run lint:file relative/path/to/file.js
+
+```
+
+Sending a stop signal is enough to stop the application.
+
+### Compatibility with BBB versions
+
+Check [BigBlueButton version compatibility](bbb-compatibility.md)

@@ -11,5 +11,6 @@ The following table depicts compatibility matches between different versions of 
 | BBB v2.2              | SFU v2.4                    | SFU: v2.3, v2.4, v2.5, v2.6         |
 | BBB v2.3              | SFU v2.5                    | SFU: v2.3, v2.4, v2.5, v2.6         |
 | BBB v2.4              | SFU v2.6                    | SFU: v2.6, v2.7                     |
-| BBB v2.5              | SFU v2.7                    | SFU: v2.7                           |
-| BBB branch: develop   | SFU branch: development     | -                                   |
+| BBB v2.5              | SFU v2.8                    | SFU: v2.8                           |
+| BBB v2.6              | SFU v2.9                    | SFU: v2.9, v2.10.0-alpha.x          |
+| BBB branch: develop   | SFU branch: development     | SFU: v2.9, v2.10.0-alpha.x          |
