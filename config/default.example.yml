@@ -74,13 +74,15 @@ fsBridgeMode: 'RTP'
 recordScreenSharing: true
 # Whether to record camera raw files
 recordWebcams: true
-# Base path where recording raw files will be stored
+# recordingBasePath (DEPRECATED): Base path where recording raw files will be stored
 # WARNING => THE FOLLOWING PARROT CEASED TO BE
 recordingBasePath: /var/kurento
-# Which adapter should be used to record live streams.
-# Possible values: 'native'|<adapter_name>|undefined
-# 'native' means whatever adapter the source media is using. Failover in case of
-# undefined is 'native'.
+# recordingAdapter: Adapter to be used to record live streams.
+# Possible values:
+#   - 'native': same adapter as the source's (eg.: Kurento -> Kurento)
+#   - Kurento: use Kurento for recording (eg.: mediasoup -> Kurento)
+#   - bbb-webrtc-recorder: use bbb-webrtc-recorder
+#     (e.g.: mediasoup -> bbb-webrtc-recorder). EXPERIMENTAL
 recordingAdapter: Kurento
 # Whether to generate timestamps when Recording event is fired (if false,
 # the flowing event is used)
