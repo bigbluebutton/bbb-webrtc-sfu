@@ -95,7 +95,6 @@ recordingMediaProfile: WEBM_VIDEO_ONLY
 recordingFormat: webm
 # bbb-webrtc-recorder integration configs
 bbbWebrtcRecorder:
-  recordingDir: /var/lib/bbb-webrtc-recorder
   channels:
     # POV: bbb-webrtc-sfu
     subscribe: from-bbb-webrtc-recorder
