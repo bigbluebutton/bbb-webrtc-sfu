@@ -31,7 +31,7 @@
     "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.13",
     "uuid": "9.0.0",
     "winston": "3.7.2",
-    "ws": "8.4.2"
+    "ws": "8.12.1"
   },
   "devDependencies": {
     "eslint": "^8.13.0",
