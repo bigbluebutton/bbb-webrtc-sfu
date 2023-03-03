@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "bbb-sfurec-adapter": "git+https://github.com/mconf/bbb-sfurec-adapter.git#v1.0.0-dev.6",
-    "config": "3.3.6",
+    "config": "^3.3.9",
     "ipaddr.js": "1.9.1",
     "js-yaml": "3.13.1",
     "kurento-client": "github:mconf/kurento-client-js#v6.18.0-mconf.1",
