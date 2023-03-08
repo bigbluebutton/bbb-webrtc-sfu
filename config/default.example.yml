@@ -74,6 +74,8 @@ fsBridgeMode: 'RTP'
 recordScreenSharing: true
 # Whether to record camera raw files
 recordWebcams: true
+# Fire a max of 3 PLIs over 6 seconds if recording stops flowing for 500 ms
+recordingPliOnNotFlowing: false
 # recordingBasePath (DEPRECATED): Base path where recording raw files will be stored
 # WARNING => THE FOLLOWING PARROT CEASED TO BE
 recordingBasePath: /var/kurento
