@@ -1,11 +1,10 @@
-#!bin/bash
+#!/bin/bash
 
 VIDEO_FILE=$1
 RTP_PORT=$2
 RTCP_PORT=$3
 
-ffmpeg -loglevel trace \
-  -re \
+ffmpeg -re \
   -v info \
   -stream_loop -1 \
   -i ${VIDEO_FILE} \

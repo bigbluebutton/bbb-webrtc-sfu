@@ -7,6 +7,11 @@ const MCS_PORT = config.get("mcs-port");
 
 const MCS_ROOM = 'aleph0';
 const MCS_USER_ID = 'scarlet';
+const FFMPEG_AUDIO_SSRC = 87654321;
+const FFMPEG_VIDEO_SSRC = 12345678;
+const FFMPEG_VIDEO_PORT = 3000;
+const FFMPEG_AUDIO_PORT = 3002;
+const CNAME = 'ff@mpeg';
 
 const mcs = new MCSWrapper();
 mcs.start(MCS_ADDRESS, MCS_PORT);
@@ -26,72 +31,111 @@ const join = () => {
     });
 }
 
-const generatePubOffer = () => {
+const generatePubOffer = ({
+  profiles,
+  mediaProfile = 'main',
+  adapter = 'mediasoup',
+  adapterOptions = {
+    transportOptions: {
+      rtcpMux: false,
+      comedia: true,
+    },
+    msHackStripSsrcs: true,
+    splitTransport: false,
+  }
+}) => {
   const options = {
     ignoreThresholds: true,
-    adapter: 'mediasoup',
-    profiles: {
-      video: 'sendonly',
-    },
-    mediaProfile: 'main',
-    adapterOptions: {
-      transportOptions: {
-        rtcpMux: false,
-        comedia: true,
-      },
-      msHackStripSsrcs: true,
-    },
+    adapter,
+    profiles,
+    mediaProfile,
+    adapterOptions,
   };
 
   return getMCSClient()
     .then((client) => client.publish(MCS_USER_ID, MCS_ROOM, 'RtpEndpoint', options));
 };
 
-const processPubAnswer = ({ pubId, answer }) => {
-  const options = {
-    mediaId: pubId,
-    descriptor: answer,
-    ignoreThresholds: true,
-    adapter: 'mediasoup',
+const generateVideoPubOffer = () => {
+  return generatePubOffer({
     profiles: {
       video: 'sendonly',
     },
-    mediaProfile: 'main',
+  });
+};
+
+const generateAVPubOffer = () => {
+  return generatePubOffer({
+    mediaProfile: 'content',
+    profiles: {
+      audio: 'sendonly',
+      content: 'sendonly',
+    },
     adapterOptions: {
       transportOptions: {
         rtcpMux: false,
         comedia: true,
       },
       msHackStripSsrcs: true,
-    },
+      splitTransport: true,
+    }
+  });
+};
+
+const processPubAnswer = ({ pubId, answer }) => {
+  const options = {
+    mediaId: pubId,
+    descriptor: answer,
   };
 
   return getMCSClient()
     .then((client) => client.publish(MCS_USER_ID, MCS_ROOM, 'RtpEndpoint', options));
 }
 
-const encodeVideo = ({ mediaId: pubId, answer: pubOffer }) => {
+const encode = ({ script, mediaId: pubId, answer: pubOffer }) => {
   return new Promise((resolve, reject) => {
-    console.debug("Publish offer", pubOffer);
     const sdpObject = transform.parse(pubOffer);
-    const videoMedia = sdpObject.media.find((media) => media.type === 'video');
+    const pVideoMedia = sdpObject.media.find((media) => media.type === 'video');
+    const pAudioMedia = sdpObject.media.find((media) => media.type === 'audio');
     const child = spawn('bash', [
-      `${process.cwd()}/ffmpeg-encode-video.sh`,
-      'v.mp4',
-      videoMedia.port.toString(),
-      videoMedia.rtcp.port.toString(),
+      `${process.cwd()}/${script}`,
+      'input.mp4',
+      pVideoMedia?.port.toString(),
+      pVideoMedia?.rtcp?.port.toString(),
+      pAudioMedia?.port.toString(),
+      pAudioMedia?.rtcp?.port.toString(),
     ]);
     child.stdout.setEncoding('utf8');
     child.stdout.on('data', (data) => {
       if (data.includes('SDP')) {
-        const answer =  data.replace(/SDP:/ig, '')
-          .replace(/RTP\/AVP/ig, 'RTP/AVPF')
-          .trim()
-          .concat('\r\na=ssrc:12345678 cname:ff@mpeg\r\n')
+        // This is a bogus SDP used to trick the remote end (mcs)
+        // Ports are actually the same. It's FFMPEG's view on the remote end's SDP.
+        // Doesn't matter, but should be fixed if a sendrecv scenario is implemented
+        const ffmpegSDP = data.replace(/SDP:/ig, '').trim();
+        const parsedAnswer = transform.parse(ffmpegSDP);
+        const aVideoMedia = parsedAnswer.media.find((media) => media.type === 'video');
+        const aAudioMedia = parsedAnswer.media.find((media) => media.type === 'audio');
+
+        if (aVideoMedia) {
+          aVideoMedia.protocol = 'RTP/AVPF';
+          aVideoMedia.port = FFMPEG_VIDEO_PORT;
+          aVideoMedia.rtcp = { port: FFMPEG_VIDEO_PORT + 1 };
+          aVideoMedia.ssrcs = [{ id: FFMPEG_VIDEO_SSRC, attribute: "cname", value: CNAME }];
+        }
+
+        if (aAudioMedia) {
+          aAudioMedia.protocol = 'RTP/AVPF';
+          aAudioMedia.port = FFMPEG_AUDIO_PORT;
+          aAudioMedia.rtcp = { port: FFMPEG_AUDIO_PORT + 1 };
+          aAudioMedia.ssrcs = [{ id: FFMPEG_AUDIO_SSRC, attribute: "cname", value: CNAME }];
+        }
+
+        const answer = transform.write(parsedAnswer);
         console.log("FFMPEG SDP", answer);
+
         return resolve({
           pubId,
-          answer
+          answer,
         });
       } else {
         console.debug(data);
@@ -99,13 +143,22 @@ const encodeVideo = ({ mediaId: pubId, answer: pubOffer }) => {
     });
     child.on('close', (code) => {
       console.log(`ffmpeg-encode-video.sh closed=${code}`);
-      if (code != 0) reject(code);
+      if (code != 0) {
+        reject(code);
+        throw new Error(`closed=${code}`);
+      }
     });
     child.on('error', reject);
   });
 }
 
+const encodeVideo = ({ mediaId, answer }) => {
+  return encode({ mediaId, answer, script: 'ffmpeg-encode-video.sh'} );
+};
 
+const encodeAV = ({ mediaId, answer }) => {
+  return encode({ mediaId, answer, script: 'ffmpeg-encode-av.sh'} );
+};
 
 module.exports = {
   MCS_ROOM,
@@ -114,6 +167,10 @@ module.exports = {
   getMCSClient,
   join,
   generatePubOffer,
+  generateVideoPubOffer,
+  generateAVPubOffer,
   processPubAnswer,
+  encode,
   encodeVideo,
+  encodeAV,
 };

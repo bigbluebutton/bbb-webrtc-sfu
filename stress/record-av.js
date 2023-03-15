@@ -6,17 +6,18 @@ const {
   MCS_USER_ID,
   MCS,
   join,
-  generatePubOffer,
+  generateAVPubOffer,
   processPubAnswer,
-  encodeVideo,
+  encodeAV,
 } = require('./common.js');
 
 const record = async ({ mediaId: pubId }) => {
   const nativeOptions = {
     profiles: {
-      video: 'sendrecv',
+      audio: 'sendrecv',
+      content: 'sendrecv',
     },
-    mediaProfile: 'main',
+    mediaProfile: 'content',
     adapter: 'mediasoup',
     ignoreThresholds: true,
     adapterOptions: {
@@ -24,6 +25,7 @@ const record = async ({ mediaId: pubId }) => {
         rtcpMux: false,
         comedia: false,
       },
+      splitTransport: true,
       msHackRTPAVPtoRTPAVPF: true,
     }
   };
@@ -37,9 +39,10 @@ const record = async ({ mediaId: pubId }) => {
     adapter: 'Kurento',
     ignoreThresholds: true,
     profiles: {
-      video: 'sendonly',
+      audio: 'sendonly',
+      content: 'sendonly',
     },
-    mediaProfile: 'main',
+    mediaProfile: 'content',
     adapterOptions: {
       kurentoRemoveRembRtcpFb: true,
     }
@@ -53,18 +56,19 @@ const record = async ({ mediaId: pubId }) => {
   nativeOptions.mediaId = nativeMediaId;
   await MCS.subscribe(MCS_USER_ID, pubId, 'RtpEndpoint', nativeOptions);
 
-  //`/var/kurento/tmp/${uuidv4()}.webm`;
-  const filename = '/dev/null';
+  const filename = `/var/kurento/tmp/${uuidv4()}.webm`;
+  //const filename = '/dev/null';
   await MCS.startRecording(
     MCS_USER_ID,
     hgaMediaId,
     filename,
-    { recordingProfile: 'WEBM_VIDEO_ONLY', ignoreThresholds: true, filename },
+    { recordingProfile: 'WEBM', ignoreThresholds: true, filename, mediaProfile: 'content' },
   );
 }
 
 join()
-  .then(generatePubOffer)
-  .then(encodeVideo)
+  .then(generateAVPubOffer)
+  .then(encodeAV)
   .then(processPubAnswer)
-  .then(record);
+  .then(record)
+  .catch(console.error);
