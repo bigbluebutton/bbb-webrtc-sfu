@@ -11,6 +11,12 @@ const {
   encodeVideo,
 } = require('./common.js');
 
+const INSTANCES = 100;
+const LIFESPAN = 120000;
+const RECORDING_SETS = { };
+const qty = () => Object.values(RECORDING_SETS).length;
+let up = 0;
+
 const record = async ({ mediaId: pubId }) => {
   const nativeOptions = {
     profiles: {
@@ -53,19 +59,64 @@ const record = async ({ mediaId: pubId }) => {
   nativeOptions.mediaId = nativeMediaId;
   await MCS.subscribe(MCS_USER_ID, pubId, 'RtpEndpoint', nativeOptions);
 
-  const filename = `/var/kurento/tmp/${uuidv4()}.webm`;
-  //const filename = '/dev/null';
-  await MCS.startRecording(
+  //const filename = `/var/kurento/tmp/${uuidv4()}.webm`;
+  const filename = '/dev/null';
+  const recordingId = await MCS.startRecording(
     MCS_USER_ID,
     hgaMediaId,
     filename,
     { recordingProfile: 'WEBM_VIDEO_ONLY', ignoreThresholds: true, filename },
   );
+  const recordingSet = {
+    nativeMediaId,
+    hgaMediaId,
+    recordingId,
+  }
+  RECORDING_SETS[recordingId] = recordingSet;
+  console.log(`[${qty()}/${INSTANCES}] Up=${qty()}`, up);
+  setTimeout(() => terminateRecordingSet(recordingSet), LIFESPAN);
+
+  return recordingId;
 }
+
+const terminateRecordingSet = async (recordingSet) => {
+  try {
+    up--;
+    MCS.unsubscribe(MCS_USER_ID, recordingSet.nativeMediaId);
+    MCS.unpublish(MCS_USER_ID, recordingSet.hgaMediaId);
+    MCS.stopRecording(MCS_USER_ID, recordingSet.recordingId);
+  } catch (error) {
+    console.error(error);
+  } finally {
+    delete RECORDING_SETS[recordingSet.recordingId]
+    console.log(`[${qty()}/${INSTANCES}] Ended=${recordingSet.recordingId}`, up);
+  }
+};
+
+process.on('SIGTERM', async () => {
+  Promise
+    .all(Object.values(RECORDING_SETS).map((set) => terminateRecordingSet(set)))
+    .then(() => {
+      process.exit(0);
+    });
+});
+
+process.on('SIGINT', async () => {
+  Promise
+    .all(Object.values(RECORDING_SETS).map((set) => terminateRecordingSet(set)))
+    .then(() => {
+      process.exit(0);
+    });
+});
+
 
 join()
   .then(generateVideoPubOffer)
   .then(encodeVideo)
   .then(processPubAnswer)
-  .then(record)
-  .catch(console.error);
+  .then((args) => {
+    while (up < INSTANCES) {
+      record(args).catch(console.error);
+      up++;
+    }
+  });

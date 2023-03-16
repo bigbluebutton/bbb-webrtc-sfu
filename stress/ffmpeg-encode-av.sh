@@ -12,5 +12,5 @@ ffmpeg -re \
   -i ${AV_FILE} \
   -c:a libopus -vn -ab 30k -ac 2 -ar 48000 \
   -f rtp -ssrc 87654321 -cname ff@mpeg rtp://127.0.0.1:${AUDIO_RTP_PORT}?rtcpport=${AUDIO_RTCP_PORT} \
-  -pix_fmt yuv420p -c:v libvpx -an -b:v 200k -deadline realtime -cpu-used 1 \
+  -pix_fmt yuv420p -an -c:v libvpx -b:v 100k -deadline realtime -cpu-used 1 -threads 1 \
   -f rtp -ssrc 12345678 -cname ff@mpeg rtp://127.0.0.1:${VIDEO_RTP_PORT}?rtcpport=${VIDEO_RTCP_PORT} \
