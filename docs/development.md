@@ -9,8 +9,8 @@
 ### Installation
 
 ```
-$ git clone https://github.com/bigbluebutton/bbb-webrtc-sfu.git`
-$ cd bbb-webrtc-sfu`
+$ git clone https://github.com/bigbluebutton/bbb-webrtc-sfu.git
+$ cd bbb-webrtc-sfu
 $ npm install
 ```
 
@@ -28,7 +28,7 @@ to setup this application in a BigBlueButton development instance and copy
 over the bbb-webrtc-sfu package config file.
 
 ```bash
-cp /usr/local/bigbluebutton/bbb-webrtc-sfu/config/default.yml ./config/local.yml
+cp /usr/local/bigbluebutton/bbb-webrtc-sfu/config/default.yml ./config/default.yml
 ```
 
 After that, if necessary, create your own configuration file to override specific
@@ -38,8 +38,7 @@ configs while developing.
 touch ./config/development.yml
 ```
 
-Keep in mind that values in `development.yml` file supersedes `./config/local.yml`
-(or `./config/default.yml`, for all that matters).
+Keep in mind that values in `development.yml` file supersedes `./config/default.yml`.
 When the configuration file is changed, the application *needs to be restarted*.
 
 After the configuration files are in place, disable the packaged bbb-webrtc-sfu
