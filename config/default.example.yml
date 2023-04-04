@@ -69,7 +69,13 @@ audioIceRestartEnabled: false
 # WebRTC should be used for environments where the bridge is between external
 # servers AND when mediasoup is being used
 fsBridgeMode: 'RTP'
-
+# pliOnConnect: whether to send a PLI when a new subscriber joins
+#  amount: max amount of PLIs to send. If 0, it won't send any PLIs (default)
+#  interval: interval between PLIs (in ms)
+#  (e.g.: amount: 3, interval: 2000 => send 3 PLIs every 2 seconds)
+pliOnConnect:
+  amount: 0
+  interval: 2000
 # Whether to record screen raw files
 recordScreenSharing: true
 # Whether to record camera raw files
