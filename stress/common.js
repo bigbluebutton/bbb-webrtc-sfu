@@ -5,8 +5,8 @@ const MCSWrapper = require('../lib/base/MCSAPIWrapper');
 const MCS_ADDRESS = config.get("mcs-address");
 const MCS_PORT = config.get("mcs-port");
 
-const MCS_ROOM = 'aleph0';
-const MCS_USER_ID = 'scarlet';
+const MCS_ROOM = 'aleph1';
+const MCS_USER_ID = 'scarlet1';
 const FFMPEG_AUDIO_SSRC = 87654321;
 const FFMPEG_VIDEO_SSRC = 12345678;
 const FFMPEG_VIDEO_PORT = 3000;
@@ -105,6 +105,11 @@ const encode = ({ script, mediaId: pubId, answer: pubOffer }) => {
       pAudioMedia?.port.toString(),
       pAudioMedia?.rtcp?.port.toString(),
     ]);
+    child.stderr.setEncoding('utf8');
+    child.stderr.on('data', function(data) {
+      process.stdout.write(data + '\r');
+    });
+
     child.stdout.setEncoding('utf8');
     child.stdout.on('data', (data) => {
       if (data.includes('SDP')) {
@@ -145,10 +150,13 @@ const encode = ({ script, mediaId: pubId, answer: pubOffer }) => {
       console.log(`ffmpeg-encode-video.sh closed=${code}`);
       if (code != 0) {
         reject(code);
-        throw new Error(`closed=${code}`);
       }
     });
-    child.on('error', reject);
+
+    child.on('error', (error) => {
+      console.error(error);
+      throw error;
+    });
   });
 }
 
