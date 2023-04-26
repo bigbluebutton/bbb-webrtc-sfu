@@ -11,8 +11,9 @@ const {
   encodeVideo,
 } = require('./common.js');
 
-const INSTANCES = 100;
-const LIFESPAN = 120000;
+const INSTANCES = process.env.INSTANCES || 1;
+const LIFESPAN = process.env.LIFESPAN || 15000;
+const INTERVAL = process.env.INTERVAL || 0;
 const RECORDING_SETS = { };
 const qty = () => Object.values(RECORDING_SETS).length;
 let up = 0;
@@ -80,17 +81,28 @@ const record = async ({ mediaId: pubId }) => {
 }
 
 const terminateRecordingSet = async (recordingSet) => {
+  up--;
+
   try {
-    up--;
-    MCS.unsubscribe(MCS_USER_ID, recordingSet.nativeMediaId);
+    await MCS.unsubscribe(MCS_USER_ID, recordingSet.nativeMediaId);
+  } catch (error) {
+    console.error(error);
+  }
+
+  try {
     MCS.unpublish(MCS_USER_ID, recordingSet.hgaMediaId);
+  } catch (error) {
+    console.error(error);
+  }
+
+  try {
     MCS.stopRecording(MCS_USER_ID, recordingSet.recordingId);
   } catch (error) {
     console.error(error);
-  } finally {
-    delete RECORDING_SETS[recordingSet.recordingId]
-    console.log(`[${qty()}/${INSTANCES}] Ended=${recordingSet.recordingId}`, up);
   }
+
+  delete RECORDING_SETS[recordingSet.recordingId]
+  console.log(`[${qty()}/${INSTANCES}] Ended=${recordingSet.recordingId}`, up);
 };
 
 process.on('SIGTERM', async () => {
@@ -109,14 +121,18 @@ process.on('SIGINT', async () => {
     });
 });
 
-
+console.log(`[${qty()}/${INSTANCES}] Spinning ${INSTANCES} recorders for ${LIFESPAN/1000}s`, up);
 join()
   .then(generateVideoPubOffer)
   .then(encodeVideo)
   .then(processPubAnswer)
   .then((args) => {
-    while (up < INSTANCES) {
-      record(args).catch(console.error);
-      up++;
-    }
+    let loop = setInterval(() => {
+      if (up < INSTANCES) {
+        record(args).catch(console.error);
+        up++;
+      } else {
+        clearInterval(loop);
+      }
+    }, INTERVAL);
   });
