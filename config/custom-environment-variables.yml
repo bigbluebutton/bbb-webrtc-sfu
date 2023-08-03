@@ -138,6 +138,9 @@ fullAudioEnabled:
 audioIceRestartEnabled:
   __name: AUDIO_ICE_RESTART
   __format: json
+transparentListenOnly:
+  __name: TRANSPARENT_LISTEN_ONLY
+  __format: json
 
 audioIgnoreMediaThresholds:
   __name: AUDIO_IGNORE_MEDIA_THRESHOLDS

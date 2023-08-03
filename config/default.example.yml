@@ -62,6 +62,7 @@ videoMediaServer: mediasoup
 screenshareMediaServer: mediasoup
 audioMediaServer: mediasoup
 fullAudioEnabled: true
+transparentListenOnly: false
 fullAudioProxyActiveDirection: true
 audioIceRestartEnabled: false
 # RTP|WebRTC. Dictates how the FS <-> [audioMediaServer] bridge is established:
