@@ -232,6 +232,9 @@ mediasoup:
   promExportWorkerResourceUsage:
     __name: MS_WORKER_RESOURCE_USAGE
     __format: json
+  promExportRtpScores:
+    __name: MS_EXPORT_RTP_SCORES
+    __format: json
   webrtc:
     listenIps:
       __name: MS_WEBRTC_LISTEN_IPS

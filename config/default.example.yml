@@ -361,6 +361,7 @@ mediasoup:
     #dtlsCertificateFile:
     #dtlsPrivateKeyFile:
   promExportWorkerResourceUsage: false
+  promExportRtpScores: false
   router:
     # TODO fetch from conference-media-specs
     mediaCodecs:
