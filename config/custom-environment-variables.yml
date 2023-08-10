@@ -192,7 +192,7 @@ prometheus:
     collectDefaultMetrics:
       __name: AUDIO_PROM_DEFAULT_MTS
       __format: json
-    collectDefaultMetrics:
+    holdHistograms:
       __name: AUDIO_HOLD_HIST
       __format: json
 
