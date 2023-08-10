@@ -307,6 +307,7 @@ prometheus:
     port: 3024
     path: '/metrics'
     collectDefaultMetrics: false
+    holdHistograms: false
 
 mediasoup:
   # mediasoup.workers: "auto"|"cores"|<Number>.
