@@ -108,6 +108,9 @@ bbbWebrtcRecorder:
     # POV: bbb-webrtc-sfu
     subscribe: from-bbb-webrtc-recorder
     publish: to-bbb-webrtc-recorder
+  heartbeatInterval: 5000
+  heartbeatDelay: 1000
+  connectionTimeout: 5000
 
 # Recording event keys expiry time in Redis
 # 14 days is the default
