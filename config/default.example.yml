@@ -95,6 +95,8 @@ recordingBasePath: /var/kurento
 recordingAdapter: Kurento
 # Adapter to be used if #recordingAdapter fails and #recordingUseFallbackAdapter is true
 recordingFallbackAdapter: bbb-webrtc-recorder
+# Whether to use the fallback adapter if the main adapter fails
+recordingFallbackOnFailure: false
 # Whether a recording copy should be created with #recordingFallbackAdapter
 # regardless of whether the main adapter fails or not
 # This is a development/test feature and should not be used in production
