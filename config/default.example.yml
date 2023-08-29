@@ -93,6 +93,14 @@ recordingBasePath: /var/kurento
 #   - bbb-webrtc-recorder: use bbb-webrtc-recorder
 #     (e.g.: mediasoup -> bbb-webrtc-recorder). EXPERIMENTAL
 recordingAdapter: Kurento
+# Adapter to be used if #recordingAdapter fails and #recordingUseFallbackAdapter is true
+recordingFallbackAdapter: bbb-webrtc-recorder
+# Whether a recording copy should be created with #recordingFallbackAdapter
+# regardless of whether the main adapter fails or not
+# This is a development/test feature and should not be used in production
+# environments. The generated copies will have a -copy suffix in their names,
+# won't have any recording metadata registered and should not be processed
+recordingCarbonCopy: false
 # Whether to generate timestamps when Recording event is fired (if false,
 # the flowing event is used)
 recordingGenerateTsOnRecEvt: true
