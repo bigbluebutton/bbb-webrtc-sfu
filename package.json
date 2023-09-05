@@ -20,7 +20,7 @@
     "js-yaml": "4.1.0",
     "kurento-client": "github:mconf/kurento-client-js#v6.18.0-mconf.1",
     "mcs-js": "github:mconf/mcs-js#v0.0.18",
-    "mediasoup": "github:mconf/mediasoup#3.12.8-bbb.1",
+    "mediasoup": "github:mconf/mediasoup#3.12.10-bbb.1",
     "mediasoup-client": "3.6.84",
     "modesl": "1.2.1",
     "pegjs": "0.8.0",
