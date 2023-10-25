@@ -90,13 +90,13 @@ const terminateRecordingSet = async (recordingSet) => {
   }
 
   try {
-    MCS.unpublish(MCS_USER_ID, recordingSet.hgaMediaId);
+    await MCS.unpublish(MCS_USER_ID, recordingSet.hgaMediaId);
   } catch (error) {
     console.error(error);
   }
 
   try {
-    MCS.stopRecording(MCS_USER_ID, recordingSet.recordingId);
+    await MCS.stopRecording(MCS_USER_ID, recordingSet.recordingId);
   } catch (error) {
     console.error(error);
   }
