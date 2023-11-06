@@ -147,9 +147,13 @@ freeswitch:
     private:
     public:
 log:
-  filename: /var/log/bbb-webrtc-sfu/bbb-webrtc-sfu.log
+  # trace|debug|info|warn|error
   level: info
+  # Whether to log to stdout
   stdout: true
+  # Whether to log to a file
+  file: true
+  filename: /var/log/bbb-webrtc-sfu/bbb-webrtc-sfu.log
 modules:
 - path: ./lib/mcs-core/process.js
   name: core
