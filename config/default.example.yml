@@ -103,6 +103,10 @@ recordingFallbackOnFailure: false
 # environments. The generated copies will have a -copy suffix in their names,
 # won't have any recording metadata registered and should not be processed
 recordingCarbonCopy: false
+# Recording dry-run mode: always record regardless of meeting state and
+# *do not* register any recording metadata.
+# This is a development/test feature and should not be used in production envs.
+recordingDryRun: false
 # The base recording profile for video and screen sharing
 # WEBM_VIDEO_ONLY|WEBM_AUDIO_ONLY|WEBM_FULL
 recordingMediaProfile: WEBM_VIDEO_ONLY
