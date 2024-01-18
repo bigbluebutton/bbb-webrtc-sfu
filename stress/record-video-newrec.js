@@ -22,6 +22,7 @@ const INTERVAL = process.env.INTERVAL || 0;
 const RECORDING_SETS = { };
 const qty = () => Object.values(RECORDING_SETS).length;
 const Recorder = new BBBWebRTCRecorder(DEFAULT_PUB_CHANNEL, DEFAULT_SUB_CHANNEL);
+Recorder.start();
 
 let up = 0;
 
@@ -116,7 +117,8 @@ process.on('SIGINT', async () => {
 });
 
 console.log(`[${qty()}/${INSTANCES}] Spinning ${INSTANCES} recorders for ${LIFESPAN/1000}s`, up);
-join()
+Recorder._waitForConnection()
+  .then(join)
   .then(generateVideoPubOffer)
   .then(encodeVideo)
   .then(processPubAnswer)
