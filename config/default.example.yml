@@ -471,14 +471,6 @@ mediasoup:
       id: 2
     - uri: 'http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01'
       id: 4
-    - uri: 'http://www.webrtc.org/experiments/rtp-hdrext/playout-delay'
-      id: 5
-    - uri: 'http://www.webrtc.org/experiments/rtp-hdrext/video-content-type'
-      id: 6
-    - uri: 'http://www.webrtc.org/experiments/rtp-hdrext/video-timing'
-      id: 7
-    - uri: 'http://www.webrtc.org/experiments/rtp-hdrext/color-space'
-      id: 8
     - uri: 'urn:ietf:params:rtp-hdrext:sdes:mid'
       id: 9
     - uri: 'urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id'
