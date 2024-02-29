@@ -274,43 +274,31 @@ mediasoup_transport_dtls_errors 0
 # TYPE mediasoup_transport_ice_errors counter
 mediasoup_transport_ice_errors 0
 
-# HELP mediasoup_worker_ru_idrss_total Integral unshared data size of all mediasoup workers (libuv)
-# TYPE mediasoup_worker_ru_idrss_total gauge
-mediasoup_worker_ru_idrss_total 0
-
-# HELP mediasoup_worker_ru_isrss_total Integral unshared stack size of all mediasoup workers (libuv)
-# TYPE mediasoup_worker_ru_isrss_total gauge
-mediasoup_worker_ru_isrss_total 0
-
-# HELP mediasoup_worker_ru_ixrss_total Integral shared memory size of all mediasoup workers (libuv)
-# TYPE mediasoup_worker_ru_ixrss_total gauge
-mediasoup_worker_ru_ixrss_total 0
-
-# HELP mediasoup_worker_ru_maxrss_total Maximum resident set size of all mediasoup workers (libuv)
-# TYPE mediasoup_worker_ru_maxrss_total gauge
-mediasoup_worker_ru_maxrss_total 0
-
-# HELP mediasoup_worker_ru_msgrcv_total IPC messages received by all mediasoup workers (libuv)
-# TYPE mediasoup_worker_ru_msgrcv_total counter
-mediasoup_worker_ru_msgrcv_total 0
-
-# HELP mediasoup_worker_ru_msgsnd_total IPC messages sent by all mediasoup workers (libuv)
-# TYPE mediasoup_worker_ru_msgsnd_total counter
-mediasoup_worker_ru_msgsnd_total 0
-
-# HELP mediasoup_worker_ru_nivcsw_total Involuntary context switches of all mediasoup workers (libuv)
+# HELP mediasoup_worker_ru_nivcsw_total Involuntary context switches of mediasoup workers
 # TYPE mediasoup_worker_ru_nivcsw_total counter
-mediasoup_worker_ru_nivcsw_total 0
+mediasoup_worker_ru_nivcsw_total{mediaType="shared",workerUID="shared-0"} 390
+mediasoup_worker_ru_nivcsw_total{mediaType="shared",workerUID="shared-1"} 307
+mediasoup_worker_ru_nivcsw_total{mediaType="audio",workerUID="audio-0"} 314
+mediasoup_worker_ru_nivcsw_total{mediaType="audio",workerUID="audio-1"} 154
 
-# HELP mediasoup_worker_ru_nvcsw_total Voluntary context switches of all mediasoup workers (libuv)
+# HELP mediasoup_worker_ru_nvcsw_total Voluntary context switches of mediasoup workers
 # TYPE mediasoup_worker_ru_nvcsw_total counter
-mediasoup_worker_ru_nvcsw_total 0
+mediasoup_worker_ru_nvcsw_total{mediaType="shared",workerUID="shared-0"} 1797
+mediasoup_worker_ru_nvcsw_total{mediaType="shared",workerUID="shared-1"} 1084
+mediasoup_worker_ru_nvcsw_total{mediaType="audio",workerUID="audio-0"} 1182
+mediasoup_worker_ru_nvcsw_total{mediaType="audio",workerUID="audio-1"} 1779
 
-# HELP mediasoup_worker_ru_stime_total System CPU time used by all mediasoup workers (libuv)
+# HELP mediasoup_worker_ru_stime_total System CPU time used by mediasoup workers (s)
 # TYPE mediasoup_worker_ru_stime_total counter
-mediasoup_worker_ru_stime_total 0
+mediasoup_worker_ru_stime_total{mediaType="shared",workerUID="shared-0"} 165
+mediasoup_worker_ru_stime_total{mediaType="shared",workerUID="shared-1"} 128
+mediasoup_worker_ru_stime_total{mediaType="audio",workerUID="audio-0"} 64
+mediasoup_worker_ru_stime_total{mediaType="audio",workerUID="audio-1"} 47
 
-# HELP mediasoup_worker_ru_utime_total User CPU time used by all mediasoup workers (libuv)
+# HELP mediasoup_worker_ru_utime_total User CPU time used by mediasoup workers (s)
 # TYPE mediasoup_worker_ru_utime_total counter
-mediasoup_worker_ru_utime_total 0
+mediasoup_worker_ru_utime_total{mediaType="shared",workerUID="shared-0"} 97
+mediasoup_worker_ru_utime_total{mediaType="shared",workerUID="shared-1"} 51
+mediasoup_worker_ru_utime_total{mediaType="audio",workerUID="audio-0"} 51
+mediasoup_worker_ru_utime_total{mediaType="audio",workerUID="audio-1"} 98
 ```
