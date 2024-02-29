@@ -241,30 +241,45 @@ Workers' resource usage metrics are _optionally_ exposed. They can be enabled vi
 the `mediasoup.promExportWorkerResourceUsage` flag or `MS_WORKER_RESOURCE_USAGE`
 environment variable (both are Booleans). Default is `false`.
 
+Producer and consumer RTP score histograms are _optionally_ exposed. They can be
+enabled via the `mediasoup.promExportRtpScores` flag or the `MS_EXPORT_RTP_SCORES`
+environment variable (both are Booleans). Default is `false`.
+
 ```
-# HELP mcs_mediasoup_workers Active mediasoup workers
-# TYPE mcs_mediasoup_workers gauge
-mediasoup_workers{pool="shared"|"audio"|"main"|"content"} 0
+# HELP mediasoup_workers Active mediasoup workers
+# TYPE mediasoup_workers gauge
+mediasoup_workers{pool="shared",workerUID="shared-0"} 1
+mediasoup_workers{pool="shared",workerUID="shared-1"} 1
+mediasoup_workers{pool="audio",workerUID="audio-0"} 1
+mediasoup_workers{pool="audio",workerUID="audio-1"} 1
 
-# HELP mcs_mediasoup_routers Active mediasoup routers
-# TYPE mcs_mediasoup_routers gauge
-mediasoup_routers 0
+# HELP mediasoup_routers Active mediasoup routers
+# TYPE mediasoup_routers gauge
+mediasoup_routers{workerUID="audio-0"} 1
+mediasoup_routers{workerUID="shared-0"} 1
+mediasoup_routers{workerUID="shared-1"} 1
 
-# HELP mcs_mediasoup_transports Number of active mediasoup transports
-# TYPE mcs_mediasoup_transports gauge
-mediasoup_transports{type="PlainTransport|WebRtcTransport|PipeTransport|DirectTransport"} 0
+# HELP mediasoup_transports Number of active mediasoup transports
+# TYPE mediasoup_transports gauge
+mediasoup_transports{type="PlainTransport",workerUID="audio-0"} 1
+mediasoup_transports{type="WebRtcTransport",workerUID="audio-0"} 2
+mediasoup_transports{type="WebRtcTransport",workerUID="shared-0"} 6
+mediasoup_transports{type="WebRtcTransport",workerUID="shared-1"} 4
 
-# HELP mcs_mediasoup_producers Number of active mediasoup producers
-# TYPE mcs_mediasoup_producers gauge
-mediasoup_producers{type="simple|simulcast|svc",kind="audio|video",transport_type="PlainTransport|WebRtcTransport|PipeTransport|DirectTransport"} 0
+# HELP mediasoup_producers Number of active mediasoup producers
+# TYPE mediasoup_producers gauge
+mediasoup_producers{type="simple",kind="audio",transport_type="PlainTransport",workerUID="audio-0"} 1
+mediasoup_producers{type="simple",kind="video",transport_type="WebRtcTransport",workerUID="shared-0"} 2
+mediasoup_producers{type="simple",kind="video",transport_type="WebRtcTransport",workerUID="shared-1"} 1
 
-# HELP mcs_mediasoup_consumers Number of active mediasoup consumers
-# TYPE mcs_mediasoup_consumers gauge
-mediasoup_consumers{type="simple|simulcast|svc",kind="audio|video",transport_type="PlainTransport|WebRtcTransport|PipeTransport|DirectTransport"} 0
+# HELP mediasoup_consumers Number of active mediasoup consumers
+# TYPE mediasoup_consumers gauge
+mediasoup_consumers{type="simple",kind="audio",transport_type="WebRtcTransport",workerUID="audio-0"} 2
+mediasoup_consumers{type="simple",kind="video",transport_type="WebRtcTransport",workerUID="shared-0"} 4
+mediasoup_consumers{type="simple",kind="video",transport_type="WebRtcTransport",workerUID="shared-1"} 3
 
 # HELP mediasoup_worker_crashes Detected mediasoup worker crashes
 # TYPE mediasoup_worker_crashes counter
-mediasoup_worker_crashes 0
 
 # HELP mediasoup_transport_dtls_errors mediasoup DTLS failures
 # TYPE mediasoup_transport_dtls_errors counter
@@ -274,31 +289,65 @@ mediasoup_transport_dtls_errors 0
 # TYPE mediasoup_transport_ice_errors counter
 mediasoup_transport_ice_errors 0
 
+# HELP mediasoup_ice_transport_protocol mediasoup ICE transport active tuples by protocol (udp/tcp)
+# TYPE mediasoup_ice_transport_protocol counter
+mediasoup_ice_transport_protocol{protocol="udp"} 12
+
+# HELP mediasoup_rtp_score mediasoup RTP score (producers and consumers)
+# TYPE mediasoup_rtp_score histogram
+mediasoup_rtp_score_bucket{le="1",mode="producer",type="simple",kind="audio",transport_type="PlainTransport"} 0
+mediasoup_rtp_score_bucket{le="2",mode="producer",type="simple",kind="audio",transport_type="PlainTransport"} 0
+mediasoup_rtp_score_bucket{le="3",mode="producer",type="simple",kind="audio",transport_type="PlainTransport"} 0
+mediasoup_rtp_score_bucket{le="4",mode="producer",type="simple",kind="audio",transport_type="PlainTransport"} 0
+mediasoup_rtp_score_bucket{le="5",mode="producer",type="simple",kind="audio",transport_type="PlainTransport"} 0
+mediasoup_rtp_score_bucket{le="6",mode="producer",type="simple",kind="audio",transport_type="PlainTransport"} 0
+mediasoup_rtp_score_bucket{le="7",mode="producer",type="simple",kind="audio",transport_type="PlainTransport"} 0
+mediasoup_rtp_score_bucket{le="8",mode="producer",type="simple",kind="audio",transport_type="PlainTransport"} 0
+mediasoup_rtp_score_bucket{le="9",mode="producer",type="simple",kind="audio",transport_type="PlainTransport"} 0
+mediasoup_rtp_score_bucket{le="10",mode="producer",type="simple",kind="audio",transport_type="PlainTransport"} 1
+mediasoup_rtp_score_bucket{le="+Inf",mode="producer",type="simple",kind="audio",transport_type="PlainTransport"} 1
+mediasoup_rtp_score_sum{mode="producer",type="simple",kind="audio",transport_type="PlainTransport"} 10
+mediasoup_rtp_score_count{mode="producer",type="simple",kind="audio",transport_type="PlainTransport"} 1
+mediasoup_rtp_score_bucket{le="1",mode="producer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="2",mode="producer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="3",mode="producer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="4",mode="producer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="5",mode="producer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="6",mode="producer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="7",mode="producer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="8",mode="producer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="9",mode="producer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="10",mode="producer",type="simple",kind="video",transport_type="WebRtcTransport"} 3
+mediasoup_rtp_score_bucket{le="+Inf",mode="producer",type="simple",kind="video",transport_type="WebRtcTransport"} 3
+mediasoup_rtp_score_sum{mode="producer",type="simple",kind="video",transport_type="WebRtcTransport"} 30
+mediasoup_rtp_score_count{mode="producer",type="simple",kind="video",transport_type="WebRtcTransport"} 3
+mediasoup_rtp_score_bucket{le="1",mode="consumer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="2",mode="consumer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="3",mode="consumer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="4",mode="consumer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="5",mode="consumer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="6",mode="consumer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="7",mode="consumer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="8",mode="consumer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="9",mode="consumer",type="simple",kind="video",transport_type="WebRtcTransport"} 0
+mediasoup_rtp_score_bucket{le="10",mode="consumer",type="simple",kind="video",transport_type="WebRtcTransport"} 2
+mediasoup_rtp_score_bucket{le="+Inf",mode="consumer",type="simple",kind="video",transport_type="WebRtcTransport"} 2
+mediasoup_rtp_score_sum{mode="consumer",type="simple",kind="video",transport_type="WebRtcTransport"} 20
+mediasoup_rtp_score_count{mode="consumer",type="simple",kind="video",transport_type="WebRtcTransport"} 2
+
 # HELP mediasoup_worker_ru_nivcsw_total Involuntary context switches of mediasoup workers
 # TYPE mediasoup_worker_ru_nivcsw_total counter
-mediasoup_worker_ru_nivcsw_total{mediaType="shared",workerUID="shared-0"} 390
-mediasoup_worker_ru_nivcsw_total{mediaType="shared",workerUID="shared-1"} 307
-mediasoup_worker_ru_nivcsw_total{mediaType="audio",workerUID="audio-0"} 314
-mediasoup_worker_ru_nivcsw_total{mediaType="audio",workerUID="audio-1"} 154
+mediasoup_worker_ru_nivcsw_total{pool="shared",workerUID="shared-0"} 1467
+mediasoup_worker_ru_nivcsw_total{pool="shared",workerUID="shared-1"} 826
+mediasoup_worker_ru_nivcsw_total{pool="audio",workerUID="audio-0"} 130
+mediasoup_worker_ru_nivcsw_total{pool="audio",workerUID="audio-1"} 11
 
 # HELP mediasoup_worker_ru_nvcsw_total Voluntary context switches of mediasoup workers
 # TYPE mediasoup_worker_ru_nvcsw_total counter
-mediasoup_worker_ru_nvcsw_total{mediaType="shared",workerUID="shared-0"} 1797
-mediasoup_worker_ru_nvcsw_total{mediaType="shared",workerUID="shared-1"} 1084
-mediasoup_worker_ru_nvcsw_total{mediaType="audio",workerUID="audio-0"} 1182
-mediasoup_worker_ru_nvcsw_total{mediaType="audio",workerUID="audio-1"} 1779
 
 # HELP mediasoup_worker_ru_stime_total System CPU time used by mediasoup workers (s)
 # TYPE mediasoup_worker_ru_stime_total counter
-mediasoup_worker_ru_stime_total{mediaType="shared",workerUID="shared-0"} 165
-mediasoup_worker_ru_stime_total{mediaType="shared",workerUID="shared-1"} 128
-mediasoup_worker_ru_stime_total{mediaType="audio",workerUID="audio-0"} 64
-mediasoup_worker_ru_stime_total{mediaType="audio",workerUID="audio-1"} 47
 
 # HELP mediasoup_worker_ru_utime_total User CPU time used by mediasoup workers (s)
 # TYPE mediasoup_worker_ru_utime_total counter
-mediasoup_worker_ru_utime_total{mediaType="shared",workerUID="shared-0"} 97
-mediasoup_worker_ru_utime_total{mediaType="shared",workerUID="shared-1"} 51
-mediasoup_worker_ru_utime_total{mediaType="audio",workerUID="audio-0"} 51
-mediasoup_worker_ru_utime_total{mediaType="audio",workerUID="audio-1"} 98
 ```
