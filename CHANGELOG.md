@@ -2,6 +2,10 @@
 
 All notable changes (from 2.13.0 onwards) will be documented in this file.
 
+### v2.13.1
+
+* fix: subprocesses fail to recover from multiple crashes
+
 ### v2.13.0
 
 * feat: add inbound queue size and job failure metrics
