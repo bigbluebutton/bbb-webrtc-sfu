@@ -5,6 +5,7 @@ All notable changes (from 2.13.0 onwards) will be documented in this file.
 ### UNRELEASED
 
 * feat: add incrementBy util to prometheus-agent
+* feat(core): add event callback and dispatch metrics
 
 ### v2.13.1
 
