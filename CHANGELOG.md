@@ -2,6 +2,10 @@
 
 All notable changes (from 2.13.0 onwards) will be documented in this file.
 
+### UNRELEASED
+
+* feat: add incrementBy util to prometheus-agent
+
 ### v2.13.1
 
 * fix: subprocesses fail to recover from multiple crashes
