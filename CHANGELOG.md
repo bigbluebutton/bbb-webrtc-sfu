@@ -2,10 +2,11 @@
 
 All notable changes (from 2.13.0 onwards) will be documented in this file.
 
-### UNRELEASED
+### v2.13.2
 
 * feat: add incrementBy util to prometheus-agent
 * feat(core): add event callback and dispatch metrics
+* fix: another edge case where subprocesses fail to recover
 
 ### v2.13.1
 
