@@ -1,6 +1,11 @@
 # CHANGELOG
 
 All notable changes (from 2.13.0 onwards) will be documented in this file.
+For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
+
+### UNRELEASED
+
+* build(mediasoup): 3.13.24
 
 ### v2.13.2
 
