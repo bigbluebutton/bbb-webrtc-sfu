@@ -349,6 +349,13 @@ mediasoup:
     audio: 0
     main: 0
     content: 0
+  # mediasoup.workerBalancing: defines the strategy to distribute mediasoup
+  # elements (transports, producers, consumers) among workers.
+  workerBalancing:
+    # strategy is one of:
+    #   - round-robin: (default) Distribute *producers* in a round-robin fashion.
+    #   - least-loaded: Distribute *producers* to the least loaded worker.
+    strategy: round-robin
   # mediasoup.workerPriorities:
   #   audio: <os.constants.priority> | [19,-20]
   #   main: <os.constants.priority> | [19,-20]
