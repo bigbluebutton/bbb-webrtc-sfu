@@ -3,7 +3,7 @@
 All notable changes (from 2.13.0 onwards) will be documented in this file.
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.13.3
 
 * fix(audio): user is deafened when transferring to breakout rooms
 * build(mediasoup): 3.13.24
