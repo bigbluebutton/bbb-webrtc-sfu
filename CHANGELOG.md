@@ -5,6 +5,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### UNRELEASED
 
+* fix(audio): user is deafened when transferring to breakout rooms
 * build(mediasoup): 3.13.24
 
 ### v2.13.2
