@@ -349,6 +349,9 @@ mediasoup:
     audio: 0
     main: 0
     content: 0
+  # mediasoup.enableWorkerTransposing: whether to enable worker transposing
+  # (ie: the ability to move a media stream from one worker to another).
+  enableWorkerTransposing: false
   # mediasoup.workerBalancing: defines the strategy to distribute mediasoup
   # elements (transports, producers, consumers) among workers.
   workerBalancing:
