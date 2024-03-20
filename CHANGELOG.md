@@ -7,6 +7,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 * feat(mediasoup): add least-loaded worker balancing strategy
 * feat(mediasoup): worker transposition (off by default)
+* feat(audio): dynamic global audio bridge mechanism
 * fix(audio): ignore TLO-incapable clients in hold/unhold metrics
 
 ### v2.13.3
