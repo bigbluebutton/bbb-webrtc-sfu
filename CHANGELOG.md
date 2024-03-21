@@ -3,7 +3,7 @@
 All notable changes (from 2.13.0 onwards) will be documented in this file.
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.14.0-beta.0
 
 * feat(mediasoup): add least-loaded worker balancing strategy
 * feat(mediasoup): worker transposition (off by default)
