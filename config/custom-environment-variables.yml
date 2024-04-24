@@ -1,3 +1,8 @@
+livekit:
+  tokenTTL: LIVEKIT_TOKEN_TTL
+  key: LIVEKIT_KEY
+  secret: LIVEKIT_SECRET
+
 kurento:
   __name: KURENTO
   __format: json
