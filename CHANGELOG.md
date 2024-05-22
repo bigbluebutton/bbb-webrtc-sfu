@@ -5,6 +5,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### UNRELEASED
 
+* !build(npm): set min Node.js version to >=18.0.0
 * build(mediasoup): 3.14.7
 
 ### v2.14.0-beta.0
