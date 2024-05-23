@@ -6,6 +6,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED
 
 * feat: livekit module, initial implementation
+* feat(audio): add signaling support for passive-sendrecv role
 * !build(npm): set min Node.js version to >=18.0.0
 * build(mediasoup): 3.14.7
 
