@@ -7,6 +7,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 * feat(freeswitch): overridable UA string
 * feat(audio): muteOnStart detection for conditional dialplans
+* feat(audio): mute passive-sendrecv clients on start
 
 ### v2.14.0-beta.1
 
