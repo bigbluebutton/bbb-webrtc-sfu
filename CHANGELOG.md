@@ -3,6 +3,10 @@
 All notable changes (from 2.13.0 onwards) will be documented in this file.
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* feat(freeswitch): overridable UA string
+
 ### v2.14.0-beta.1
 
 * feat: livekit module, initial implementation
