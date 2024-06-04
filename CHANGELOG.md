@@ -6,6 +6,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED
 
 * feat(freeswitch): overridable UA string
+* feat(audio): muteOnStart detection for conditional dialplans
 
 ### v2.14.0-beta.1
 
