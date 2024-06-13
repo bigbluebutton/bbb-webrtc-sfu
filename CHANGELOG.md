@@ -5,6 +5,8 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### v2.14.0-beta.2
 
+* feat(audio): support for mute-and-hold on start
+* fix(audio): mute/unmute stuck due to inconsistent hold status
 * feat(freeswitch): overridable UA string
 * feat(audio): muteOnStart detection for conditional dialplans
 * feat(audio): mute passive-sendrecv clients on start
