@@ -3,6 +3,10 @@
 All notable changes (from 2.13.0 onwards) will be documented in this file.
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* build: nodemon@3.1.3
+
 ### v2.14.0-beta.3
 
 * feat(audio): support for mute-and-hold on start
