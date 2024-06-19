@@ -6,6 +6,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED
 
 * build: nodemon@3.1.3
+* build: ws@8.17.1
 
 ### v2.14.0-beta.3
 
