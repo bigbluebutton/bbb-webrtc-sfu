@@ -5,6 +5,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### UNRELEASED
 
+* fix(audio): hold/unhold loop when there are multiple sessions per user
 * build: nodemon@3.1.3
 * build: ws@8.17.1
 
