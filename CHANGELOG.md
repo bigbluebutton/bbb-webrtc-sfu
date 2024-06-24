@@ -3,7 +3,7 @@
 All notable changes (from 2.13.0 onwards) will be documented in this file.
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.14.0-beta.4
 
 * fix(audio): hold/unhold loop when there are multiple sessions per user
 * build: nodemon@3.1.3
