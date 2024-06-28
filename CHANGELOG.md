@@ -3,7 +3,7 @@
 All notable changes (from 2.13.0 onwards) will be documented in this file.
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.14.0-beta.5
 
 fix(audio): muteOnStart sessions incorrectly muted on breakout transfers
 fix(audio): header-provided userName incorrectly decoded
