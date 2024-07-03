@@ -6,6 +6,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### v2.14.0-beta.6
 
 * fix(audio): stuck unmute due to borked callerIdNum
+* fix(audio): correctly decode user name space chars
 
 ### v2.14.0-beta.5
 
