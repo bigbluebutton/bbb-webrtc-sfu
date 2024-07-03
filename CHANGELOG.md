@@ -9,8 +9,8 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### v2.14.0-beta.5
 
-fix(audio): muteOnStart sessions incorrectly muted on breakout transfers
-fix(audio): header-provided userName incorrectly decoded
+* fix(audio): muteOnStart sessions incorrectly muted on breakout transfers
+* fix(audio): header-provided userName incorrectly decoded
 
 ### v2.14.0-beta.4
 
