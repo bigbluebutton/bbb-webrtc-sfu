@@ -1,52 +1,33 @@
 # CHANGELOG
 
 All notable changes (from 2.13.0 onwards) will be documented in this file.
+Intermediate pre-release changes will only be registered *separately* in their respective tag's CHANGELOG.
+Final releases will consolidate all intermediate changes in chronological order.
+
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
-
-* build(mediasoup): 3.14.8
-
-### v2.14.0-beta.6
-
-* fix(audio): stuck unmute due to borked callerIdNum
-* fix(audio): correctly decode user name space chars
-
-### v2.14.0-beta.5
-
-* fix(audio): muteOnStart sessions incorrectly muted on breakout transfers
-* fix(audio): header-provided userName incorrectly decoded
-
-### v2.14.0-beta.4
-
-* fix(audio): hold/unhold loop when there are multiple sessions per user
-* build: nodemon@3.1.3
-* build: ws@8.17.1
-
-### v2.14.0-beta.3
-
-* feat(audio): support for mute-and-hold on start
-* fix(audio): mute/unmute stuck due to inconsistent hold status
-
-### v2.14.0-beta.2
-
-* feat(freeswitch): overridable UA string
-* feat(audio): muteOnStart detection for conditional dialplans
-* feat(audio): mute passive-sendrecv clients on start
-
-### v2.14.0-beta.1
-
-* feat: livekit module, initial implementation
-* feat(audio): add signaling support for passive-sendrecv role
-* !build(npm): set min Node.js version to >=18.0.0
-* build(mediasoup): 3.14.7
-
-### v2.14.0-beta.0
+### v2.14.0
 
 * feat(mediasoup): add least-loaded worker balancing strategy
 * feat(mediasoup): worker transposition (off by default)
 * feat(audio): dynamic global audio bridge mechanism
+* feat: livekit module, initial implementation
+* feat(audio): add signaling support for passive-sendrecv role
+* feat(freeswitch): overridable UA string
+* feat(audio): muteOnStart detection for conditional dialplans
+* feat(audio): mute passive-sendrecv clients on start
+* feat(audio): support for mute-and-hold on start
 * fix(audio): ignore TLO-incapable clients in hold/unhold metrics
+* fix(audio): mute/unmute stuck due to inconsistent hold status
+* fix(audio): hold/unhold loop when there are multiple sessions per user
+* fix(audio): muteOnStart sessions incorrectly muted on breakout transfers
+* fix(audio): header-provided userName incorrectly decoded
+* fix(audio): stuck unmute due to borked callerIdNum
+* fix(audio): correctly decode user name space chars
+* !build(npm): set min Node.js version to >=18.0.0
+* build: nodemon@3.1.3
+* build: ws@8.17.1
+* build(mediasoup): 3.14.8
 
 ### v2.13.3
 
