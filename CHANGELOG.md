@@ -10,6 +10,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 * fix(screenshare): presenter/viewer stop logs on all scenarios
 * refactor(screenshare): add presenter data to viewer logs
+* refactor(video): add video negotiation and flowing logs
 
 ### v2.14.0
 
