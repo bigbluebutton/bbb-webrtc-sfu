@@ -6,7 +6,7 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.14.1
 
 * fix(screenshare): presenter/viewer stop logs on all scenarios
 * refactor(screenshare): add presenter data to viewer logs
