@@ -6,10 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.14.2
 
-- refactor(audio): set FLOWING logs to INFO level
-- build(mediasoup): v3.14.11
+* refactor(audio): set FLOWING logs to INFO level
+* build(mediasoup): v3.14.11
 
 ### v2.14.1
 
