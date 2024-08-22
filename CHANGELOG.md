@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* feat: add restartIce support for video/screenshare modules
+
 ### v2.14.2
 
 * refactor(audio): set FLOWING logs to INFO level
