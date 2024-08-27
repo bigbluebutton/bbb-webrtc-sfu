@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* refactor: rename ICE restart flag to `restartIce`, true by default
+
 ### v2.15.0-beta.0
 
 * feat: add restartIce support for video/screenshare modules
