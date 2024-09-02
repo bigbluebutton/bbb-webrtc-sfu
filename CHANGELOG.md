@@ -9,6 +9,8 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED
 
 * refactor: rename ICE restart flag to `restartIce`, true by default
+* build: pino@9.3.2
+* build: config@3.3.12
 
 ### v2.15.0-beta.0
 
