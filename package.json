@@ -22,7 +22,7 @@
     "livekit-server-sdk": "2.1.2",
     "mcs-js": "github:mconf/mcs-js#v0.0.20",
     "mediasoup": "github:mconf/mediasoup#3.14.11-bbb.1",
-    "mediasoup-client": "3.7.4",
+    "mediasoup-client": "3.7.16",
     "modesl": "1.2.1",
     "pegjs": "0.8.0",
     "pino": "^9.3.2",
