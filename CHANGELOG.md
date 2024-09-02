@@ -14,6 +14,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 * build: ws@8.18.0
 * build: bufferutil@4.0.8
 * build: mcs-js@0.0.20
+* build: uuid@10.0.0
 
 ### v2.15.0-beta.0
 
