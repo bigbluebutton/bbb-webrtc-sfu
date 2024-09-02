@@ -32,7 +32,7 @@
     "sdp-transform": "2.13.0",
     "sip.js": "git+https://github.com/mconf/sip.js.git#v0.7.5.13",
     "uuid": "9.0.0",
-    "ws": "8.17.1"
+    "ws": "8.18.0"
   },
   "devDependencies": {
     "eslint": "^8.13.0",
@@ -40,7 +40,7 @@
     "pino-pretty": "^10.2.3"
   },
   "optionalDependencies": {
-    "bufferutil": "^4.0.6",
+    "bufferutil": "^4.0.8",
     "utf-8-validate": "^5.0.8"
   }
 }
