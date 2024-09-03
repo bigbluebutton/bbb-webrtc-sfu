@@ -16,6 +16,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 * build: mcs-js@0.0.20
 * build: uuid@10.0.0
 * build: mediasoup-client@3.7.16
+* build: mediasoup@3.14.13
 
 ### v2.15.0-beta.0
 
