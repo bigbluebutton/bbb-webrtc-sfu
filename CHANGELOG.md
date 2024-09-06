@@ -17,6 +17,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 * build: uuid@10.0.0
 * build: mediasoup-client@3.7.16
 * build: mediasoup@3.14.13
+* build: SIP.js@v0.7.5.14
 
 ### v2.15.0-beta.0
 
