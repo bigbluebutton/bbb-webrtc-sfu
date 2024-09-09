@@ -21,7 +21,7 @@
     "kurento-client": "github:mconf/kurento-client-js#v6.18.0-mconf.1",
     "livekit-server-sdk": "2.1.2",
     "mcs-js": "github:mconf/mcs-js#v0.0.20",
-    "mediasoup": "github:mconf/mediasoup#3.14.13-bbb.1",
+    "mediasoup": "github:mconf/mediasoup#3.14.14-bbb.1",
     "mediasoup-client": "3.7.16",
     "modesl": "1.2.1",
     "pegjs": "0.8.0",
