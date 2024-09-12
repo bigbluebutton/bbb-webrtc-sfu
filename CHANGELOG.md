@@ -6,12 +6,9 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.15.0
 
-* build: mediasoup@3.14.14
-
-### v2.15.0-beta.1
-
+* feat: add restartIce support for video/screenshare modules
 * refactor: rename ICE restart flag to `restartIce`, true by default
 * build: pino@9.3.2
 * build: config@3.3.12
@@ -20,12 +17,8 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 * build: mcs-js@0.0.20
 * build: uuid@10.0.0
 * build: mediasoup-client@3.7.16
-* build: mediasoup@3.14.13
+* build: mediasoup@3.14.14
 * build: SIP.js@v0.7.5.14
-
-### v2.15.0-beta.0
-
-* feat: add restartIce support for video/screenshare modules
 
 ### v2.14.2
 
