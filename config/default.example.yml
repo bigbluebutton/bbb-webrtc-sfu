@@ -331,6 +331,8 @@ prometheus:
     holdHistograms: false
 
 mediasoup:
+  # pipeLogs: whether to pipe mediasoup logs to bbb-webrtc-sfu's logger
+  pipeLogs: true
   # mediasoup.workers: "auto"|"cores"|<Number>.
   #   * The number of mediasoup workers for general use (media type agnostic, shared pool).
   #   * "auto" is: ceil((min(nproc,32) * 0.8) + (max(0, nproc - 32) / 2))
@@ -376,7 +378,7 @@ mediasoup:
   #  content: PRIORITY_LOW
   worker:
     # "debug", "warn", "error", "none"
-    logLevel: "error"
+    logLevel: "warn"
     # + svc, simulcast, srtp, ...
     logTags:
       - "bwe"
