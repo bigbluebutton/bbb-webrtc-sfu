@@ -9,6 +9,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED
 
 * feat(mediasoup): pipe mediasoup logs to the application logger
+* refactor(mediasoup): review log levels and metadata
 
 ### v2.15.0
 
