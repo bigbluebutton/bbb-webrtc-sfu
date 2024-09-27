@@ -6,7 +6,7 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.16.0
 
 * feat(mediasoup): pipe mediasoup logs to the application logger
 * refactor(mediasoup): review log levels and metadata
