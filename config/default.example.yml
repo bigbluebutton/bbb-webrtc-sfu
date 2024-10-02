@@ -513,6 +513,8 @@ livekit:
   webhook:
     path: "/livekit-webhook"
     port: 3040
+  egress:
+    enabled: false
   sip:
     enabled: false
     inbound:
