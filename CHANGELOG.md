@@ -8,6 +8,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### UNRELEASED
 
+feat(livekit): webhooks module, server-side events and renamed token gen RPC
 build(livekit-server-sdk): v2.6.2
 
 ### v2.16.0

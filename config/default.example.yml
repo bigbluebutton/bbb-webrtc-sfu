@@ -506,6 +506,10 @@ mediasoup:
         - '-f webm'
         - '-flags +global_header'
 livekit:
-  tokenTTL: 3600
+  host: https://bbb-livekit.example.com/livekit
+  tokenTTL: 14400
   key: LIVEKIT_KEY
   secret: LIVEKIT_SECRET
+  webhook:
+    path: "/livekit-webhook"
+    port: 3040
