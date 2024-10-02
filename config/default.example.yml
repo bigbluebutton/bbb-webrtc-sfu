@@ -513,3 +513,12 @@ livekit:
   webhook:
     path: "/livekit-webhook"
     port: 3040
+  sip:
+    enabled: false
+    inbound:
+      # See https://docs.livekit.io/server-sdk-js/interfaces/CreateSipInboundTrunkOptions.html
+      options:
+        #allowed_addresses: []
+        #allowed_numbers: []
+        #auth_password: ''
+        #auth_username: ''

@@ -14,6 +14,7 @@ build(livekit-server-sdk): v2.6.2
 
 ### v2.16.0
 
+* feat(livekit): add support for SIP trunking
 * feat(mediasoup): pipe mediasoup logs to the application logger
 * refactor(mediasoup): review log levels and metadata
 
