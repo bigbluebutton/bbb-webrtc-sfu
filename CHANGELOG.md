@@ -6,14 +6,14 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.17.0-alpha.0
 
-feat(livekit): add track egress support
-feat(livekit): webhooks module
-feat(livekit): server side BBB <-> LiveKit event sync
-refactor(livekit): rename GenerateWebRtcToken* to GenerateLiveKitToken*
-feat: base-manager may opt out of connecting to mcs-core
-build(livekit-server-sdk): v2.6.2
+* feat(livekit): add track egress support
+* feat(livekit): webhooks module
+* feat(livekit): server side BBB <-> LiveKit event sync
+* refactor(livekit): rename GenerateWebRtcToken* to GenerateLiveKitToken*
+* feat: base-manager may opt out of connecting to mcs-core
+* build(livekit-server-sdk): v2.6.2
 
 ### v2.16.0
 
