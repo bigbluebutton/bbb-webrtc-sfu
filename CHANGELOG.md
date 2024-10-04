@@ -8,6 +8,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### UNRELEASED
 
+* feat: add `enabled` flag to SFU modules, default to true
 * fix(livekit): do not sync stale egress instances
 
 ### v2.17.0-alpha.0
