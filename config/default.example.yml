@@ -197,6 +197,15 @@ modules:
     options:
       # inboundChannel: to-sfu-audio
       # outboundChannel: from-sfu-audio
+- path: ./lib/livekit/livekit-process.js
+  enabled: false
+  name: livekit
+  dedicated: true
+  ipc:
+    mode: native
+    options:
+      # inboundChannel: to-livekit
+      # outboundChannel: from-livekit
 
 # media-server-adapters: path could refer to a npm module
 media-server-adapters:
