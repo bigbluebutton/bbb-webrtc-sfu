@@ -6,11 +6,11 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.17.0-alpha.1
 
 * feat: add `enabled` flag to SFU modules, default to true
-* build(livekit): add LiveKit submodule to base configuration'
 * fix(livekit): do not sync stale egress instances
+* build(livekit): add LiveKit submodule to base configuration
 
 ### v2.17.0-alpha.0
 
