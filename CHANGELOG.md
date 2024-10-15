@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* build: express@4.21.1
+
 ### v2.17.0-alpha.1
 
 * feat: add `enabled` flag to SFU modules, default to true
