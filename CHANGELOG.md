@@ -8,7 +8,9 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### UNRELEASED
 
+* fix(core): onEvent is not a transaction, treat is as such
 * build: express@4.21.1
+* build: mcs-js@0.0.21
 
 ### v2.17.0-alpha.1
 
