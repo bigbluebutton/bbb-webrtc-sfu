@@ -6,6 +6,11 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### v2.16.1
+
+* fix(core): onEvent is not a transaction, treat is as such
+* build: mcs-js@0.0.21
+
 ### v2.16.0
 
 * feat(mediasoup): pipe mediasoup logs to the application logger
