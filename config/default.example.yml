@@ -161,6 +161,7 @@ log:
   # Whether to log to a file
   file: true
   filename: /var/log/bbb-webrtc-sfu/bbb-webrtc-sfu.log
+moduleSpawnDelayMs: 1000
 modules:
 - path: ./lib/mcs-core/process.js
   name: core

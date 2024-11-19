@@ -5,6 +5,7 @@ const WebsocketConnectionManager = require('./lib/main/ws-connection-manager.js'
 const ConnectionManager = require('./lib/main/connection-manager.js');
 const SFUModuleManager = require('./lib/main/sfu-module-manager.js');
 const Janitor = require('./lib/main/janitor.js');
+const Logger = require('./lib/common/logger.js');
 
 const HTTP_SERVER_HOST = config.has('clientHost') ? config.get('clientHost') : '127.0.0.1';
 const HTTP_SERVER_PORT = config.get('clientPort');
@@ -21,7 +22,13 @@ const WSManager = new WebsocketConnectionManager(
 
 const CM = new ConnectionManager();
 
-SFUModuleManager.start();
-CM.setupModuleRouting(SFUModuleManager.modules);
-CM.addAdapter(WSManager);
-Janitor.clockIn();
+SFUModuleManager.start().then(() => {
+  CM.setupModuleRouting(SFUModuleManager.modules);
+  CM.addAdapter(WSManager);
+  Janitor.clockIn();
+}).catch((error) => {
+  Logger.error('Failed to start SFU Module Manager', error);
+  SFUModuleManager.stopModules().then(() => {
+    process.exit(1);
+  });
+});

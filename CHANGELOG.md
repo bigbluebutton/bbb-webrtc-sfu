@@ -10,6 +10,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 * feat(livekit): sync screen share state with BBB
 * fix(core): onEvent is not a transaction, treat is as such
+* fix: reorganize module forking to work around FIFO sched issues
 * build: express@4.21.1
 * build: mcs-js@0.0.21
 

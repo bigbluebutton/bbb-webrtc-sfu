@@ -65,6 +65,7 @@ recordingMediaProfile: RECORDING_MEDIA_PROFILE
 recordingFormat: RECORDING_FORMAT
 recordingAdapter: RECORDING_ADAPTER
 
+moduleSpawnDelayMs: MODULE_SPAWN_DELAY_MS
 modules:
   __name: SFU_MODULES
   __format: json
