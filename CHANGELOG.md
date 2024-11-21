@@ -13,6 +13,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 * fix: reorganize module forking to work around FIFO sched issues
 * build: express@4.21.1
 * build: mcs-js@0.0.21
+* build: bump cross-spawn from 7.0.3 to 7.0.6 (transitive)
 
 ### v2.17.0-alpha.1
 
