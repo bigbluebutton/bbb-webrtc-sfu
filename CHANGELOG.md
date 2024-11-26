@@ -12,6 +12,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 * feat: add state sync and recording RPCs for LiveKit
 * fix(core): onEvent is not a transaction, treat is as such
 * fix: reorganize module forking to work around FIFO sched issues
+* refactor(livekit): reorganize configs, add env var mappings
 * refactor(livekit): handle mute requests server-side
 * build: express@4.21.1
 * build: mcs-js@0.0.21

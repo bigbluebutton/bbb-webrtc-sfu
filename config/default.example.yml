@@ -199,7 +199,6 @@ modules:
       # inboundChannel: to-sfu-audio
       # outboundChannel: from-sfu-audio
 - path: ./lib/livekit/livekit-process.js
-  enabled: false
   name: livekit
   dedicated: true
   ipc:
@@ -516,10 +515,19 @@ mediasoup:
         - '-f webm'
         - '-flags +global_header'
 livekit:
-  host: https://bbb-livekit.example.com/livekit
+  # Whether to enable LiveKit integration
+  enabled: false
+  # LiveKit host URL
+  host: http://127.0.0.1:7880
   tokenTTL: 14400
   key: LIVEKIT_KEY
   secret: LIVEKIT_SECRET
+  systemParticipantsLimit: 10
+  rtcAgent:
+    enabled: false
+    autoSubscribe: false
+  audio:
+    unpublishOnMute: false
   webhook:
     path: "/livekit-webhook"
     port: 3040

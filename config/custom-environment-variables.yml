@@ -1,8 +1,48 @@
 livekit:
-  tokenTTL: LIVEKIT_TOKEN_TTL
+  enabled:
+    __name: LIVEKIT_ENABLED
+    __format: json
+  host: LIVEKIT_HOST
+  tokenTTL:
+    __name: LIVEKIT_TOKEN_TTL
+    __format: json
   key: LIVEKIT_KEY
   secret: LIVEKIT_SECRET
-
+  webhook:
+    path: LIVEKIT_WEBHOOK_PATH
+    port: LIVEKIT_WEBHOOK_PORT
+  systemParticipantsLimit:
+    __name: LIVEKIT_SYSTEM_PARTICIPANTS_LIMIT
+    __format: yaml
+  rtcAgent:
+    enabled:
+      __name: LIVEKIT_RTC_AGENT_ENABLED
+      __format: json
+    autoSubscribe:
+      __name: LIVEKIT_RTC_AGENT_AUTO_SUBSCRIBE
+      __format: json
+  audio:
+    unpublishOnMute:
+      __name: LIVEKIT_AUDIO_UNPUBLISH_ON_MUTE
+      __format: json
+  egress:
+    enabled:
+      __name: LIVEKIT_EGRESS_ENABLED
+      __format: json
+  sip:
+    enabled:
+      __name: LIVEKIT_SIP_ENABLED
+      __format: json
+    inbound:
+      options:
+        allowed_addresses:
+          __name: LIVEKIT_SIP_ALLOWED_ADDRESSES
+          __format: json
+        allowed_numbers:
+          __name: LIVEKIT_SIP_ALLOWED_NUMBERS
+          __format: json
+        auth_password: LIVEKIT_SIP_AUTH_PASSWORD
+        auth_username: LIVEKIT_SIP_AUTH_USERNAME
 kurento:
   __name: KURENTO
   __format: json
