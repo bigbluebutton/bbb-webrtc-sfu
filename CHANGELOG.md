@@ -9,6 +9,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED
 
 * feat(livekit): sync screen share state with BBB
+* fix(livekit): improve state sync and external user handling
 * feat: add state sync and recording RPCs for LiveKit
 * fix(core): onEvent is not a transaction, treat is as such
 * fix: reorganize module forking to work around FIFO sched issues
