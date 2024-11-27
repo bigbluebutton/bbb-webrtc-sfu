@@ -6,7 +6,7 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.17.0-alpha.2
 
 * feat(livekit): sync screen share state with BBB
 * fix(livekit): improve state sync and external user handling
