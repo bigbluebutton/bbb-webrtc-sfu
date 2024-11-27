@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* fix(livekit): treat screen share audio as separate tracks
+
 ### v2.17.0-alpha.2
 
 * feat(livekit): sync screen share state with BBB
