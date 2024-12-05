@@ -3,6 +3,7 @@ livekit:
     __name: LIVEKIT_ENABLED
     __format: json
   host: LIVEKIT_HOST
+  bbbDomain: LIVEKIT_BBB_DOMAIN
   tokenTTL:
     __name: LIVEKIT_TOKEN_TTL
     __format: json

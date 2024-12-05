@@ -519,6 +519,8 @@ livekit:
   enabled: false
   # LiveKit host URL
   host: http://127.0.0.1:7880
+  # Used as `domain` in LiveKit metadata
+  bbbDomain: BBB_DOMAIN
   tokenTTL: 14400
   key: LIVEKIT_KEY
   secret: LIVEKIT_SECRET
