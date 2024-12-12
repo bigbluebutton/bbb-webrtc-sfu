@@ -10,6 +10,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 * refactor: remove unused MuteUserCmdMsg processor in bbb-gw
 * fix(livekit): various adjustments to egress handling
+* build: livekit-server-sdk@v2.9.3 (up from v2.6.2)
 
 ### v2.17.0-alpha.5
 
