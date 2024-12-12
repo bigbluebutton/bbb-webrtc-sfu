@@ -6,7 +6,7 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.17.0-beta.0
 
 * refactor: remove unused MuteUserCmdMsg processor in bbb-gw
 * fix(livekit): various adjustments to egress handling
