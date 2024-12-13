@@ -11,6 +11,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 * fix(livekit): ignore participants other than STANDARD and SIP
 * fix(livekit): do not send audio events to BBB if bridge is unused
 * fix(livekit): clean up rooms on meeting end
+* fix(livekit): add error handling to ParticipantLeft callback
 
 ### v2.17.0-beta.0
 
