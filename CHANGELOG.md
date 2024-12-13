@@ -6,7 +6,7 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.17.0-beta.1
 
 * fix(livekit): ignore participants other than STANDARD and SIP
 * fix(livekit): do not send audio events to BBB if bridge is unused
