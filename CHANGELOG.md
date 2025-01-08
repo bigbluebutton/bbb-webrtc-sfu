@@ -9,6 +9,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED
 
 * fix(livekit): unhandled exception when recordFullDurationMedia=false
+* refactor(livekit): change screen_share_audio capture dir
 
 ### v2.17.0-beta.1
 
