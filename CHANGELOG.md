@@ -8,6 +8,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### UNRELEASED
 
+* feat(livekit): handle camera ejections
 * fix(livekit): unhandled exception when recordFullDurationMedia=false
 * refactor(livekit): change screen_share_audio capture dir
 
