@@ -239,7 +239,13 @@ prometheus:
     holdHistograms:
       __name: AUDIO_HOLD_HIST
       __format: json
-
+  livekit:
+    host: LIVEKIT_SFU_PROM_HOST
+    port: LIVEKIT_SFU_PROM_PORT
+    path: LIVEKIT_SFU_PROM_PATH
+    collectDefaultMetrics:
+      __name: LIVEKIT_SFU_PROM_DEFAULT_MTS
+      __format: json
 mediasoup:
   workers:
     __name: MS_WORKERS

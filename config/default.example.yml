@@ -338,6 +338,11 @@ prometheus:
     path: '/metrics'
     collectDefaultMetrics: false
     holdHistograms: false
+  livekit:
+    host: localhost
+    port: 6759
+    path: '/metrics'
+    collectDefaultMetrics: false
 
 mediasoup:
   # pipeLogs: whether to pipe mediasoup logs to bbb-webrtc-sfu's logger
