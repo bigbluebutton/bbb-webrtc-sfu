@@ -10,6 +10,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 * feat(livekit): add egress retry routines and Prometheus metrics
 * fix(livekit): retry egress regardless of error type
+* fix(livekit): handle egress shutdowns and assorted fixes
 
 ### v2.17.0-beta.2
 
