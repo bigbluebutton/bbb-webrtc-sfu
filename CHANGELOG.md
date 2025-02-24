@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* feat(livekit): add support for recordFullDurationMedia=false
+
 ### v2.17.0-beta.3
 
 * feat(livekit): add egress retry routines and Prometheus metrics
