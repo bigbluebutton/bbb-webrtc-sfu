@@ -540,6 +540,10 @@ livekit:
     port: 3040
   egress:
     enabled: false
+    # livekit.egress.startTimeout: #ms to wait for a response from LiveKit
+    # when starting an egress session. If elapsed, a retry will be attempted.
+    startTimeout: 5000
+    retryInterval: 1000
   sip:
     enabled: false
     inbound:
