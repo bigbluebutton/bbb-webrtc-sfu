@@ -10,6 +10,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 * feat(livekit): add support for recordFullDurationMedia=false
 * feat(livekit): make egress retry timers configurable
+* fix(livekit): temporarily disable custom maxParticipants limit
 
 ### v2.17.0-beta.3
 
