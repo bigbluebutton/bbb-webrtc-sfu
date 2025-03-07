@@ -9,6 +9,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED
 
 * fix(freeswitch): UA fails due to unescaped `"/"` or deviant URI user
+* refactor(livekit): bump some egress logs to info
 
 ### v2.17.0-beta.4
 
