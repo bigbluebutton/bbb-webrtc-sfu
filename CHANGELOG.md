@@ -6,7 +6,7 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.17.0-beta.6
 
 * fix(audio): TLO callerID matching is too strict
 * build: livekit-server-sdk@2.10.2 (pinned)
