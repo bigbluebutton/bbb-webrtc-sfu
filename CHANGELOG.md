@@ -6,7 +6,7 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.17.0-beta.5
 
 * fix(freeswitch): UA fails due to unescaped `"/"` or deviant URI user
 * refactor(livekit): bump some egress logs to info
