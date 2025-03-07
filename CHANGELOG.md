@@ -9,7 +9,8 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED
 
 * fix(audio): TLO callerID matching is too strict
-* build: livekit-server-sdk@v2.10.2 (pinned)
+* build: livekit-server-sdk@2.10.2 (pinned)
+* build: @livekit/rtc-node@0.13.6 (pinned)
 
 ### v2.17.0-beta.5
 
