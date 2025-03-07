@@ -8,6 +8,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### UNRELEASED
 
+* fix(audio): TLO callerID matching is too strict
 * fix(freeswitch): UA fails due to unescaped `"/"` or abnormal URI user
 
 ### v2.16.1
