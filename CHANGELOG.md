@@ -8,7 +8,8 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### UNRELEASED
 
-fix(audio): TLO callerID matching is too strict
+* fix(audio): TLO callerID matching is too strict
+* build: livekit-server-sdk@v2.10.2 (pinned)
 
 ### v2.17.0-beta.5
 

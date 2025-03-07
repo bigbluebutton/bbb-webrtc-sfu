@@ -21,7 +21,7 @@
     "ipaddr.js": "1.9.1",
     "js-yaml": "4.1.0",
     "kurento-client": "github:mconf/kurento-client-js#v6.18.0-mconf.1",
-    "livekit-server-sdk": "^2.9.3",
+    "livekit-server-sdk": "2.10.2",
     "mcs-js": "github:mconf/mcs-js#v0.0.21",
     "mediasoup": "github:mconf/mediasoup#3.14.14-bbb.1",
     "mediasoup-client": "3.7.16",
