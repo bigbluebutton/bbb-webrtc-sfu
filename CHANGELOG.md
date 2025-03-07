@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* fix(freeswitch): UA fails due to unescaped `"/"` or abnormal URI user
+
 ### v2.16.1
 
 * fix(core): onEvent is not a transaction, treat is as such
