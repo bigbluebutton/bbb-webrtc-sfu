@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* fix(freeswitch): UA fails due to unescaped `"/"` or deviant URI user
+
 ### v2.17.0-beta.4
 
 * feat(livekit): add support for recordFullDurationMedia=false
