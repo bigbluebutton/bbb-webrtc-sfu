@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* fix(audio): channel incorrectly muted when transferring to breakout room
+
 ### v2.17.0-beta.6
 
 * fix(audio): TLO callerID matching is too strict
