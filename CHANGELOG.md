@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* fix(audio): handle global audio bridge failures
+
 ### v2.17.0-beta.7
 
 * fix(audio): channel incorrectly muted when transferring to breakout room
