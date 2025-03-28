@@ -9,6 +9,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED
 
 * fix(audio): handle global audio bridge failures
+* chore(audio): add option to control when global audio restarts
 
 ### v2.17.0-beta.7
 

@@ -64,6 +64,9 @@ audioMediaServer: mediasoup
 fullAudioEnabled: true
 transparentListenOnly: true
 dynamicGlobalAudio: false
+# Whether global audio should be automatically restarted when it fails. If disabled,
+# the global audio will be restarted only when a new audio session is created.
+autoRestartGlobalAudio: false
 fullAudioProxyActiveDirection: true
 # restartIce: whether ICE restart signaling should be enabled.
 # If disabled, ICE restarts requests are considered invalid.
