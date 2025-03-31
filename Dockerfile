@@ -1,23 +1,46 @@
-FROM node:20-bullseye-slim
+# Building the WebRTC SFU
+FROM node:22-bookworm-slim AS builder
 
 RUN apt-get update && apt-get -y install \
   git \
   make \
   python3-pip \
-  g++ \
-  ffmpeg
+  g++
 
-ADD . app
+RUN useradd --uid 2004 --user-group webrtc-sfu 
 
-WORKDIR app
+# cache packages
+COPY /package.json /cache/package.json
+RUN cd /cache && npm install --unsafe-perm
+
+COPY / /app
 
 ENV NODE_ENV production
-ENV NODE_CONFIG_DIR /etc/bigbluebutton/bbb-webrtc-sfu/:/app/config/
 
-RUN cp config/default.example.yml config/default.yml \
+RUN cd /app \
+  && rm -rf /app/node_modules && cp -a /cache/node_modules /app/node_modules \
+ && cp config/default.example.yml config/production.yml \
  && npm install --unsafe-perm \
- && npm cache clear --force
+ && npm cache clear --force \
+ && rm -rf node_modules/mediasoup/worker/out/Release/subprojects \
+ && rm -rf node_modules/mediasoup/worker/out/Release/mediasoup-worker.p \
+ && rm -rf node_modules/mediasoup/worker/out/Release/deps
 
-EXPOSE 3008
 
+# Running the WebRTC SFU
+FROM node:22-bookworm-slim
+
+RUN useradd --uid 2004 --user-group webrtc-sfu 
+ENV NODE_ENV production
+
+COPY --from=builder /app /app
+RUN mkdir /home/webrtc-sfu && chown -R webrtc-sfu:webrtc-sfu /app/config /home/webrtc-sfu
+
+USER webrtc-sfu
+WORKDIR /app
+
+COPY config/default.example.yml /etc/bigbluebutton/bbb-webrtc-sfu/production.yml
+ENV NODE_ENV=production
+ENV NODE_CONFIG_DIR=/app/config/:/etc/bigbluebutton/bbb-webrtc-sfu/
+ENV ALLOW_CONFIG_MUTATIONS=true
 CMD [ "npm", "start" ]

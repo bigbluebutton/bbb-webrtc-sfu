@@ -5,6 +5,7 @@ Dockerfile
 ## git
 .git
 .gitignore
+.github
 
 ## Node.js, npm et al
 npm-debug.log*
