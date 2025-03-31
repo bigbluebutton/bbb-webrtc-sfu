@@ -6,6 +6,12 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* build(docker): Automatic build pipeline for docker images
+* build(docker): Update build environment and Use multi stage builds
+* build(docker): add .github folder to dockerignore
+
 ### v2.17.0-beta.8
 
 * feat(metrics): add counter for transceiver's consumer restarts
