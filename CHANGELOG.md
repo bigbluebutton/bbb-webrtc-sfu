@@ -11,6 +11,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 * build(docker): Automatic build pipeline for docker images
 * build(docker): Update build environment and Use multi stage builds
 * build(docker): add .github folder to dockerignore
+* build(docker): only push Docker images for release tags
 
 ### v2.17.0-beta.8
 
