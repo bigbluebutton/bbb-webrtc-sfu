@@ -6,106 +6,52 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
-
-* build(docker): Automatic build pipeline for docker images
-* build(docker): Update build environment and Use multi stage builds
-* build(docker): add .github folder to dockerignore
-* build(docker): only push Docker images for release tags
-
-### v2.17.0-beta.8
-
-* feat(metrics): add counter for transceiver's consumer restarts
-* fix(audio): handle global audio bridge failures
-* fix(audio): make fs-consumer-bridge disconn handler verify current IDs
-* chore(audio): add option to control when global audio restarts
-
-### v2.17.0-beta.7
-
-* fix(audio): channel incorrectly muted when transferring to breakout room
-
-### v2.17.0-beta.6
-
-* fix(audio): TLO callerID matching is too strict
-* build: livekit-server-sdk@2.10.2 (pinned)
-* build: @livekit/rtc-node@0.13.6 (pinned)
-
-### v2.17.0-beta.5
-
-* fix(freeswitch): UA fails due to unescaped `"/"` or deviant URI user
-* refactor(livekit): bump some egress logs to info
-
-### v2.17.0-beta.4
-
-* feat(livekit): add support for recordFullDurationMedia=false
-* feat(livekit): make egress retry timers configurable
-* fix(livekit): temporarily disable custom maxParticipants limit
-
-### v2.17.0-beta.3
-
-* feat(livekit): add egress retry routines and Prometheus metrics
-* fix(livekit): retry egress regardless of error type
-* fix(livekit): handle egress shutdowns and assorted fixes
-
-### v2.17.0-beta.2
-
-* feat(livekit): handle camera ejections
-* fix(livekit): unhandled exception when recordFullDurationMedia=false
-
-### v2.17.0-beta.1
-
-* fix(livekit): ignore participants other than STANDARD and SIP
-* fix(livekit): do not send audio events to BBB if bridge is unused
-* fix(livekit): clean up rooms on meeting end
-* fix(livekit): add error handling to ParticipantLeft callback
-
-### v2.17.0-beta.0
-
-* refactor: remove unused MuteUserCmdMsg processor in bbb-gw
-* fix(livekit): various adjustments to egress handling
-* build: livekit-server-sdk@v2.9.3 (up from v2.6.2)
-* build: @livekit/rtc-node@0.12.1 (up from 0.9.2)
-* build: express@4.21.2 (up from 4.21.1)
-
-### v2.17.0-alpha.5
-
-* feat(livekit): add server domain to metadata
-
-### v2.17.0-alpha.4
-
-* fix(livekit): muteOnStart state inconsistency
-
-### v2.17.0-alpha.3
-
-* fix(livekit): treat screen share audio as separate tracks
-
-### v2.17.0-alpha.2
-
-* feat(livekit): sync screen share state with BBB
-* fix(livekit): improve state sync and external user handling
-* feat: add state sync and recording RPCs for LiveKit
-* fix(core): onEvent is not a transaction, treat is as such
-* fix: reorganize module forking to work around FIFO sched issues
-* refactor(livekit): reorganize configs, add env var mappings
-* refactor(livekit): handle mute requests server-side
-* build: express@4.21.1
-* build: mcs-js@0.0.21
-* build: bump cross-spawn from 7.0.3 to 7.0.6 (transitive)
-
-### v2.17.0-alpha.1
-
-* feat: add `enabled` flag to SFU modules, default to true
-* fix(livekit): do not sync stale egress instances
-* build(livekit): add LiveKit submodule to base configuration
-
-### v2.17.0-alpha.0
+### v2.17.0
 
 * feat(livekit): add track egress support
 * feat(livekit): webhooks module
 * feat(livekit): server side BBB <-> LiveKit event sync
-* refactor(livekit): rename GenerateWebRtcToken* to GenerateLiveKitToken*
+* feat(livekit): add server domain to metadata
 * feat: base-manager may opt out of connecting to mcs-core
-* build(livekit-server-sdk): v2.6.2
+* feat: add `enabled` flag to SFU modules, default to true
+* feat: add state sync and recording RPCs for LiveKit
+* feat(livekit): sync screen share state with BBB
+* feat(livekit): handle camera ejections
+* feat(livekit): add egress retry routines and Prometheus metrics
+* feat(livekit): add support for recordFullDurationMedia=false
+* feat(livekit): make egress retry timers configurable
+* fix(livekit): do not sync stale egress instances
+* fix(livekit): improve state sync and external user handling
+* fix(core): onEvent is not a transaction, treat is as such
+* fix: reorganize module forking to work around FIFO sched issues
+* fix(livekit): treat screen share audio as separate tracks
+* fix(livekit): muteOnStart state inconsistency
+* fix(livekit): various adjustments to egress handling
+* fix(livekit): ignore participants other than STANDARD and SIP
+* fix(livekit): do not send audio events to BBB if bridge is unused
+* fix(livekit): clean up rooms on meeting end
+* fix(livekit): add error handling to ParticipantLeft callback
+* fix(livekit): unhandled exception when recordFullDurationMedia=false
+* fix(livekit): retry egress regardless of error type
+* fix(livekit): handle egress shutdowns and assorted fixes
+* fix(livekit): temporarily disable custom maxParticipants limit
+* fix(freeswitch): UA fails due to unescaped `"/"` or malformed URI user
+* fix(audio): TLO callerID matching is too strict
+* fix(audio): channel incorrectly muted when transferring to breakout room
+* fix(audio): handle global audio bridge failures
+* fix(audio): make fs-consumer-bridge disconn handler verify current IDs
+* chore(audio): add option to control when global audio restarts
+* refactor(livekit): rename GenerateWebRtcToken* to GenerateLiveKitToken*
+* build(livekit): add LiveKit submodule to base configuration
+* build: mcs-js@0.0.21
+* build: bump cross-spawn from 7.0.3 to 7.0.6 (transitive)
+* build: express@4.21.2 (up from 4.21.1)
+* build: livekit-server-sdk@2.10.2 (pinned)
+* build: @livekit/rtc-node@0.13.6 (pinned)
+* build(docker): Automatic build pipeline for docker images
+* build(docker): Update build environment and Use multi stage builds
+* build(docker): add .github folder to dockerignore
+* build(docker): only push Docker images for release tags
 
 ### v2.16.0
 
