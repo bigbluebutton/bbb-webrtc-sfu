@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* build(medisoup): 3.14.14 (without extra debug logs)
+
 ### v2.17.0
 
 * feat(livekit): add track egress support
