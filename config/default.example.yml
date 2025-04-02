@@ -547,6 +547,9 @@ livekit:
     # when starting an egress session. If elapsed, a retry will be attempted.
     startTimeout: 5000
     retryInterval: 1000
+  # livekit.recordingAdapter: recording adapter to use when LiveKit is enabled.
+  # Values: 'egress' (default), 'bbb-webrtc-recorder'
+  recordingAdapter: 'egress'
   sip:
     enabled: false
     inbound:
