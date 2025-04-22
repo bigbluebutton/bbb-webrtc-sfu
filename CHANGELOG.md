@@ -9,6 +9,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED (v2.18.x trunk)
 
 * feat(livekit): support recording LiveKit streams through bbb-webrtc-recorder
+* fix: restart loop on boot due to early requests
 
 ### v2.17.1
 

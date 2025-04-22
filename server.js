@@ -13,17 +13,20 @@ const WS_SERVER_OPTIONS = config.has('wsServerOptions')
   ? config.get('wsServerOptions')
   : { maxPayload: 51200 };
 
-const WSManager = new WebsocketConnectionManager(
-  HTTP_SERVER_HOST,
-  HTTP_SERVER_PORT,
-  '/bbb-webrtc-sfu',
-  WS_SERVER_OPTIONS
-);
 
 const CM = new ConnectionManager();
 
 SFUModuleManager.start().then(() => {
   CM.setupModuleRouting(SFUModuleManager.modules);
+  const globalEmitter = CM.getEmitter();
+  const WSManager = new WebsocketConnectionManager(
+    HTTP_SERVER_HOST,
+    HTTP_SERVER_PORT,
+    '/bbb-webrtc-sfu',
+    WS_SERVER_OPTIONS, {
+      eventEmitter: globalEmitter,
+    }
+  );
   CM.addAdapter(WSManager);
   Janitor.clockIn();
 }).catch((error) => {
