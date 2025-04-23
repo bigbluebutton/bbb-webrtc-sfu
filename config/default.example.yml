@@ -552,6 +552,8 @@ livekit:
   recordingAdapter: 'egress'
   sip:
     enabled: false
+    # livekit.sip.requirePin: whether to require a PIN for callers
+    requirePin: false
     inbound:
       # See https://docs.livekit.io/server-sdk-js/interfaces/CreateSipInboundTrunkOptions.html
       options:

@@ -41,6 +41,9 @@ livekit:
     enabled:
       __name: LIVEKIT_SIP_ENABLED
       __format: json
+    requirePin:
+      __name: LIVEKIT_SIP_REQUIRE_PIN
+      __format: json
     inbound:
       options:
         allowed_addresses:
