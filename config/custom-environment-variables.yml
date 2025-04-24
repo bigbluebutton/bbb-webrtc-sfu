@@ -44,7 +44,7 @@ livekit:
     requirePin:
       __name: LIVEKIT_SIP_REQUIRE_PIN
       __format: json
-    inbound:
+    trunk:
       options:
         allowed_addresses:
           __name: LIVEKIT_SIP_ALLOWED_ADDRESSES

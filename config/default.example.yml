@@ -554,10 +554,17 @@ livekit:
     enabled: false
     # livekit.sip.requirePin: whether to require a PIN for callers
     requirePin: false
-    inbound:
+    trunk:
       # See https://docs.livekit.io/server-sdk-js/interfaces/CreateSipInboundTrunkOptions.html
       options:
         #allowed_addresses: []
         #allowed_numbers: []
         #auth_password: ''
         #auth_username: ''
+    dispatch:
+      # See https://docs.livekit.io/reference/server-sdk-js/interfaces/CreateSipDispatchRuleOptions.html
+      options:
+        #attributes: {}
+        #hidePhoneNumber: false
+        #roomConfig: {}
+        #roomPreset: 'default'
