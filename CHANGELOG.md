@@ -9,7 +9,16 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED (v2.18.x trunk)
 
 * feat(livekit): support recording LiveKit streams through bbb-webrtc-recorder
+* feat(livekit): add webrtc-recorder status and error metrics to LK module
+* feat(livekit): add recorder reqs/resps counter metrics
+* fix(livekit): make dial-in pin requirement configurable (default: false)
+* fix(livekit): create inbound trunks based on voice bridge number
+* fix(livekit): clean trunks and dispatch rules on restarts
+* fix(livekit): attach room metadata to inbound trunks and dispatch rules
+* fix(livekit): link dispatch rules to respective inbound trunks
+* fix(livekit): expose inbound trunks and dispatch rules configs
 * fix: restart loop on boot due to early requests
+* fix(livekit): guarantee uniqueness of "external" LK users
 
 ### v2.17.1
 
