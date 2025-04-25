@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* chore(livekit): bbb-webrtc-recorder as the default recording adapter
+
 ### v2.18.0
 
 * feat(livekit): support recording LiveKit streams through bbb-webrtc-recorder
