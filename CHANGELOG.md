@@ -6,7 +6,7 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED (v2.18.x trunk)
+### v2.18.0
 
 * feat(livekit): support recording LiveKit streams through bbb-webrtc-recorder
 * feat(livekit): add webrtc-recorder status and error metrics to LK module
