@@ -6,6 +6,11 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### v2.18.3
+
+* fix(livekit): false positive in recording error metric
+* refactor(livekit): cleanup recordings directly on meeting end
+
 ### v2.18.2
 
 * fix(livekit): improvements to recording retry loop and event mgmt
