@@ -14,7 +14,7 @@
     "postinstall": "cd node_modules/sip.js/src/Grammar && mkdir -p dist && pegjs --extra-options-file peg.json src/Grammar.pegjs dist/Grammar.js"
   },
   "dependencies": {
-    "@livekit/rtc-node": "0.13.6",
+    "@livekit/rtc-node": "0.13.11",
     "bbb-sfurec-adapter": "git+https://github.com/mconf/bbb-sfurec-adapter.git#v1.0.0-dev.6",
     "config": "3.3.12",
     "express": "^4.21.2",

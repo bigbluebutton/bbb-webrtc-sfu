@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* build: @livekit/rtc-node@0.13.11
+
 ### v2.18.3
 
 * fix(livekit): false positive in recording error metric
