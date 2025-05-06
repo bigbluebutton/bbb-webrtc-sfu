@@ -536,6 +536,8 @@ livekit:
   rtcAgent:
     enabled: false
     autoSubscribe: false
+    # Additional configs (uncomment to enable):
+    #permissions: A Partial<ParticipantPermissions> object. Optional.
   audio:
     unpublishOnMute: false
   webhook:
