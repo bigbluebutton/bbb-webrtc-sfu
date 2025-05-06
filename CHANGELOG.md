@@ -8,6 +8,8 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### UNRELEASED
 
+* fix(livekit): guarantee internal RTC agent is hidden on BBB
+* fix(livekit): incorrect RTC agent config parsing
 * build: @livekit/rtc-node@0.13.11
 
 ### v2.18.3
