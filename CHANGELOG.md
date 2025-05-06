@@ -10,6 +10,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 * fix(livekit): guarantee internal RTC agent is hidden on BBB
 * fix(livekit): incorrect RTC agent config parsing
+* refactor(livekit): move RTC agent mgmt to its own module
 * build: @livekit/rtc-node@0.13.11
 
 ### v2.18.3
