@@ -6,8 +6,12 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.19.0-beta.0
 
+* feat(livekit): add manual subscription capabilities to internal RTC clients
+* fix(livekit): stop recording retry on track unavailable error
+* fix(livekit): track unretriable start failures in Prom as error
+* fix(livekit): add missing label to retry failure metric
 * fix(livekit): guarantee internal RTC agent is hidden on BBB
 * fix(livekit): incorrect RTC agent config parsing
 * refactor(livekit): move RTC agent mgmt to its own module
