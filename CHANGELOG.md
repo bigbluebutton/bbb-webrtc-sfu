@@ -6,9 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.19.0-beta.1
 
 * feat(livekit): token gen for breakout audio-only transfers
+* feat(screenshare): add userId to screenshare RPCs
 
 ### v2.19.0-beta.0
 

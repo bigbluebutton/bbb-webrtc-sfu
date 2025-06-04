@@ -141,6 +141,9 @@ screensharePlayStartEnabled:
 screenshareServerSideAkkaBroadcast:
   __name: SCREENSHARE_SERVER_AKKA_BROADCAST
   __format: json
+screenshareRpcAddUserId:
+  __name: SCREENSHARE_RPC_ADD_USER_ID
+  __format: json
 
 kurentoAllowedCandidateIps:
   __name: KURENTO_ALLOWED_CANDIDATE_IPS

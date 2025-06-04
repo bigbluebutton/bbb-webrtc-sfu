@@ -51,6 +51,9 @@ screenshareSubscriberSpecSlave: false
 screensharePlayStartEnabled: true
 screenshareServerSideAkkaBroadcast: true
 screenshareIgnoreMediaThresholds: false
+# Whether to add the userId to the screenshare RPCs (generateScreenshareRTMPBroadcastStartedEvent2x,
+# generateScreenshareRTMPBroadcastStoppedEvent2x). Here for backwards compat.
+screenshareRpcAddUserId: true
 audioIgnoreMediaThresholds: true
 videoIgnoreMediaThresholds: false
 videoSubscriberSpecSlave: false
