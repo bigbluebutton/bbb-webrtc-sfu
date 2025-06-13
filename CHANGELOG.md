@@ -9,6 +9,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED
 
 * build: livekit-server-sdk@2.13.0
+* build: @livekit/rtc-node@0.13.14
 
 ### v2.9.0-beta.2
 
