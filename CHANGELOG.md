@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* build: livekit-server-sdk@2.13.0
+
 ### v2.9.0-beta.2
 
 * feat: add support for camera recording consent flag
