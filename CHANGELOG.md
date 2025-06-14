@@ -8,6 +8,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### UNRELEASED
 
+* fix(livekit): recording fails due to incomplete track_publish event
 * build: livekit-server-sdk@2.13.0
 * build: @livekit/rtc-node@0.13.14
 
