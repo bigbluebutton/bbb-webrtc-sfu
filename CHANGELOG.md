@@ -6,7 +6,11 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### UNRELEAED
+
+* fix(livekit): don't create RTC clients for non-BBB meetings
+
+### v2.19.0-beta.3
 
 * fix(livekit): recording fails due to incomplete track_publish event
 * build: livekit-server-sdk@2.13.0
