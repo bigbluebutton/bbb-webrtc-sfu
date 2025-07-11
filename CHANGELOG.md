@@ -9,6 +9,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEAED
 
 * fix(livekit): don't create RTC clients for non-BBB meetings
+* fix(livekit): incorrect metadata override for external participants
 
 ### v2.19.0-beta.3
 
