@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* feat(livekit): add metric for track publish handler errors
+
 ### v2.19.0-beta.4
 
 * fix(livekit): don't create RTC clients for non-BBB meetings
