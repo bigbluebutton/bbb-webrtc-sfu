@@ -8,6 +8,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### UNRELEASED
 
+* feat(livekit): add flag to enable custom BBB permission checks
 * feat(livekit): add metric for track publish handler errors
 
 ### v2.19.0-beta.4
