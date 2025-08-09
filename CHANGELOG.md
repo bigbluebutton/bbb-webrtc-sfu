@@ -10,6 +10,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 * feat(livekit): add flag to enable custom BBB permission checks
 * feat(livekit): add metric for track publish handler errors
+* fix: bbb-webrtc-recorder stop requests have no timeout
 
 ### v2.19.0-beta.4
 
