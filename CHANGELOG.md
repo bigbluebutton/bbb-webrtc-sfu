@@ -8,6 +8,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### UNRELEASED
 
+* feat(livekit): DTMF handling
 * fix(livekit): incorrect parsing of dispatch and trunk rule options
 
 ### v2.19.0-beta.5

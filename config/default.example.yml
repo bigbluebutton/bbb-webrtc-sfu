@@ -570,3 +570,10 @@ livekit:
       # See https://docs.livekit.io/reference/server-sdk-js/interfaces/CreateSipDispatchRuleOptions.html
       options:
         hidePhoneNumber: true
+    # dtmfActions is a key-value map of actions to be performed when a DTMF
+    # sequence is received. Currently supported actions: 'toggleMute'.
+    # Format: {
+    #   ActionName: DTMFSequence | DTMFSequence[]
+    # }
+    dtmfActions:
+      toggleMute: ["*", "0"]
