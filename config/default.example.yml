@@ -569,7 +569,4 @@ livekit:
     dispatch:
       # See https://docs.livekit.io/reference/server-sdk-js/interfaces/CreateSipDispatchRuleOptions.html
       options:
-        #attributes: {}
-        #hidePhoneNumber: false
-        #roomConfig: {}
-        #roomPreset: 'default'
+        hidePhoneNumber: true
