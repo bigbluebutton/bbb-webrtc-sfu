@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* fix(livekit): incorrect parsing of dispatch and trunk rule options
+
 ### v2.19.0-beta.5
 
 * feat(livekit): add flag to enable custom BBB permission checks
