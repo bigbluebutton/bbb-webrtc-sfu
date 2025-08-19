@@ -11,6 +11,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 * feat(livekit): DTMF handling
 * fix(livekit): incorrect parsing of dispatch and trunk rule options
 * fix(livekit): SIP users have hardcoded `Phone ` prefix in their names
+* fix(livekit): unhandled EjectUserFromVoiceConfSysMsg
 
 ### v2.19.0-beta.5
 
