@@ -13,6 +13,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 * fix(livekit): incorrect parsing of dispatch and trunk rule options
 * fix(livekit): SIP users have hardcoded `Phone ` prefix in their names
 * fix(livekit): unhandled EjectUserFromVoiceConfSysMsg
+* build: @livekit/rtc-node@0.13.18
 
 ### v2.19.0-beta.5
 
