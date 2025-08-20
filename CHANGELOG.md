@@ -14,6 +14,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 * fix(livekit): SIP users have hardcoded `Phone ` prefix in their names
 * fix(livekit): unhandled EjectUserFromVoiceConfSysMsg
 * build: @livekit/rtc-node@0.13.18
+* build: transitive dep brace-expansion audit fix
 
 ### v2.19.0-beta.5
 
