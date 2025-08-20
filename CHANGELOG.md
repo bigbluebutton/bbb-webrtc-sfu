@@ -6,7 +6,7 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.19.0-beta.6
 
 * feat(livekit): DTMF handling
 * feat(livekit): implement SIP speaking detection
