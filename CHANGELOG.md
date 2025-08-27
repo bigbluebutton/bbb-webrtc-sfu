@@ -6,53 +6,33 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### v2.19.0-beta.6
-
-* feat(livekit): DTMF handling
-* feat(livekit): implement SIP speaking detection
-* fix(livekit): incorrect parsing of dispatch and trunk rule options
-* fix(livekit): SIP users have hardcoded `Phone ` prefix in their names
-* fix(livekit): unhandled EjectUserFromVoiceConfSysMsg
-* build: @livekit/rtc-node@0.13.18
-* build: transitive dep brace-expansion audit fix
-
-### v2.19.0-beta.5
-
-* feat(livekit): add flag to enable custom BBB permission checks
-* feat(livekit): add metric for track publish handler errors
-* fix: bbb-webrtc-recorder stop requests have no timeout
-* fix: camera and screen states in BBB become stale on broken stop calls
-
-### v2.19.0-beta.4
-
-* fix(livekit): don't create RTC clients for non-BBB meetings
-* fix(livekit): incorrect metadata override for external participants
-
-### v2.19.0-beta.3
-
-* fix(livekit): recording fails due to incomplete track_publish event
-* build: livekit-server-sdk@2.13.0
-* build: @livekit/rtc-node@0.13.14
-
-### v2.9.0-beta.2
-
-* feat: add support for camera recording consent flag
-
-### v2.19.0-beta.1
-
-* feat(livekit): token gen for breakout audio-only transfers
-* feat(screenshare): add userId to screenshare RPCs
-
-### v2.19.0-beta.0
+### v2.19.0
 
 * feat(livekit): add manual subscription capabilities to internal RTC clients
+* feat(livekit): token gen for breakout audio-only transfers
+* feat(screenshare): add userId to screenshare RPCs
+* feat: add support for camera recording consent flag
+* feat(livekit): add flag to enable custom BBB permission checks
+* feat(livekit): add metric for track publish handler errors
+* feat(livekit): DTMF handling
+* feat(livekit): implement SIP speaking detection
 * fix(livekit): stop recording retry on track unavailable error
 * fix(livekit): track unretriable start failures in Prom as error
 * fix(livekit): add missing label to retry failure metric
 * fix(livekit): guarantee internal RTC agent is hidden on BBB
 * fix(livekit): incorrect RTC agent config parsing
+* fix(livekit): recording fails due to incomplete track_publish event
+* fix(livekit): don't create RTC clients for non-BBB meetings
+* fix(livekit): incorrect metadata override for external participants
+* fix: bbb-webrtc-recorder stop requests have no timeout
+* fix: camera and screen states in BBB become stale on broken stop calls
+* fix(livekit): incorrect parsing of dispatch and trunk rule options
+* fix(livekit): SIP users have hardcoded `Phone ` prefix in their names
+* fix(livekit): unhandled EjectUserFromVoiceConfSysMsg
 * refactor(livekit): move RTC agent mgmt to its own module
-* build: @livekit/rtc-node@0.13.11
+* build: livekit-server-sdk@2.13.0
+* build: @livekit/rtc-node@0.13.18
+* build: transitive dep brace-expansion audit fix
 
 ### v2.18.3
 
