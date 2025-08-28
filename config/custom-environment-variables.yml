@@ -2,6 +2,7 @@ livekit:
   enabled:
     __name: LIVEKIT_ENABLED
     __format: json
+  eventSource: LIVEKIT_EVENT_SOURCE
   host: LIVEKIT_HOST
   bbbDomain: LIVEKIT_BBB_DOMAIN
   tokenTTL:

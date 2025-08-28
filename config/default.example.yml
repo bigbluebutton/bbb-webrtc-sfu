@@ -536,6 +536,8 @@ livekit:
   key: LIVEKIT_KEY
   secret: LIVEKIT_SECRET
   systemParticipantsLimit: 10
+  # Event source for LiveKit events. Possible values: 'webhook', 'agent'
+  eventSource: 'webhook'
   rtcAgent:
     enabled: false
     autoSubscribe: false
