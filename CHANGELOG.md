@@ -6,6 +6,12 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### v2.19.1
+
+* fix(livekit): forcefully unpublish screenshare when server ejects it
+* fix(screenshare): ignore eject requests in mediasoup module if using LiveKit
+* fix(livekit): discard camera/screen events if meeting is not using LiveKit
+
 ### v2.19.0
 
 * feat(livekit): add manual subscription capabilities to internal RTC clients
