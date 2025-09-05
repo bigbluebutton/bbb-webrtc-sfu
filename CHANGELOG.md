@@ -11,6 +11,12 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 * feat(livekit): RTC-based event source (alternative to webhooks)
 * build: livekit-server-sdk@2.13.2
 
+### v2.19.1
+
+* fix(livekit): forcefully unpublish screenshare when server ejects it
+* fix(screenshare): ignore eject requests in mediasoup module if using LiveKit
+* fix(livekit): discard camera/screen events if meeting is not using LiveKit
+
 ### v2.19.0
 
 * feat(livekit): add manual subscription capabilities to internal RTC clients
