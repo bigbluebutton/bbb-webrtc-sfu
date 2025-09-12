@@ -11,6 +11,10 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 * feat(livekit): RTC-based event source (alternative to webhooks)
 * build: livekit-server-sdk@2.13.2
 
+### v2.19.2
+
+fix: bbb-webrtc-recorder heartbeat generates inaccurate crash alerts
+
 ### v2.19.1
 
 * fix(livekit): forcefully unpublish screenshare when server ejects it

@@ -129,8 +129,11 @@ bbbWebrtcRecorder:
     subscribe: from-bbb-webrtc-recorder
     publish: to-bbb-webrtc-recorder
   heartbeatInterval: 5000
-  heartbeatDelay: 1000
   connectionTimeout: 5000
+  debug:
+    # For heartbeat testing: artificial delay for recorderStatus responses (in ms).
+    # 0 means disabled.
+    heartbeatResponseDelay: 0
 
 # Recording event keys expiry time in Redis
 # 14 days is the default
