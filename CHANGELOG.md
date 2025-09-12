@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+fix: bbb-webrtc-recorder heartbeat generates inaccurate crash alerts
+
 ### v2.19.1
 
 * fix(livekit): forcefully unpublish screenshare when server ejects it
