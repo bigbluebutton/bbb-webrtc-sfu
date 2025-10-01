@@ -10,6 +10,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 * feat(livekit): RTC-based event source (alternative to webhooks)
 * feat: getRecordings primitive in bbb-webrtc-recorder client
+* feat(livekit): add recording resync
 * build: livekit-server-sdk@2.13.2
 
 ### v2.19.2
