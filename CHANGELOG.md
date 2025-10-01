@@ -6,7 +6,7 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.20.0
 
 * feat(livekit): RTC-based event source (alternative to webhooks)
 * feat: getRecordings primitive in bbb-webrtc-recorder client
