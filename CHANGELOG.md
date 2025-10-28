@@ -6,6 +6,11 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* feat(livekit): add agent conn state and event metrics
+* build(deps): livekit-server-sdk@2.14.0
+
 ### v2.20.0
 
 * feat(livekit): RTC-based event source (alternative to webhooks)
