@@ -12,6 +12,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 * build(deps): livekit-server-sdk@2.14.0
 * build(deps): @livekit/rtc-node@0.13.20
 * build(deps): pino@10.1.0
+* build(deps): pino-pretty@13.1.2
 
 ### v2.20.0
 
