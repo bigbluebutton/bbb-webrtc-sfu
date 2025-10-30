@@ -9,6 +9,8 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED
 
 * feat(livekit): add agent conn state and event metrics
+* fix(livekit): add conn retry logic for RTC state sync agents
+* fix(livekit): BBB state sync stalls on idle rooms
 * build(deps): livekit-server-sdk@2.14.0
 * build(deps): @livekit/rtc-node@0.13.20
 * build(deps): pino@10.1.0
