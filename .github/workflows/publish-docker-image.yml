@@ -12,6 +12,11 @@ jobs:
     permissions:
       packages: write
       contents: read
+    strategy:
+      matrix:
+        platform:
+          - linux/amd64
+          - linux/arm64
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
