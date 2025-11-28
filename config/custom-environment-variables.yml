@@ -103,7 +103,9 @@ freeswitch:
 log:
   level: LOG_LEVEL
   filename: LOG_FILENAME
-  file: LOG_FILE_ENABLED
+  file:
+    __name: LOG_FILE_ENABLED
+    __format: json
   stdout:
     __name: LOG_STDOUT_ENABLED
     __format: json
