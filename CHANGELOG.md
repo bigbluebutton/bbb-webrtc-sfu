@@ -6,16 +6,20 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.21.0
 
 * feat(livekit): add agent conn state and event metrics
+* feat: add docker matrix build to support arm64
 * fix(livekit): add conn retry logic for RTC state sync agents
 * fix(livekit): BBB state sync stalls on idle rooms
 * fix(mediasoup): incorrect media direction causes tab sharing + audio to fail
+* build: add environment variable to disable file logging
+* build: remove QEMU setup from publish Docker workflow
 * build(deps): livekit-server-sdk@2.14.0
 * build(deps): @livekit/rtc-node@0.13.20
 * build(deps): pino@10.1.0
 * build(deps): pino-pretty@13.1.2
+* build(deps): bump actions/checkout from 4 to 5
 
 ### v2.20.0
 
