@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* fix(mediasoup): incorrect media direction causes tab sharing + audio to fail
+
 ### v2.16.2
 
 * fix(audio): TLO callerID matching is too strict
