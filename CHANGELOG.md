@@ -6,7 +6,7 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.21.1
 
 * fix(livekit): incorrect mute state with muteOnStart=false + eventSource=agent
 * fix(livekit): race condition on token generation (clients fail to connect)
