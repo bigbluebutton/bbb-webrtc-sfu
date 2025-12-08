@@ -9,6 +9,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED
 
 * fix(livekit): incorrect mute state with muteOnStart=false + eventSource=agent
+* fix(livekit): race condition on token generation (clients fail to connect)
 
 ### v2.21.0
 
