@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* build(deps): js-yaml@v4.1.1
+
 ### v2.21.1
 
 * fix(livekit): incorrect mute state with muteOnStart=false + eventSource=agent
