@@ -6,7 +6,7 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.21.2
 
 * fix(livekit): incorrect callerIdNum causes audio join failures
 * build(deps): js-yaml@v4.1.1
