@@ -8,6 +8,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### UNRELEASED
 
+* fix(livekit): incorrect callerIdNum causes audio join failures
 * build(deps): js-yaml@v4.1.1
 * build(deps): express@v4.22.1
 
