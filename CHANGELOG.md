@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* feat(livekit): add histogram metrics for mute/unmute duration
+
 ### v2.21.2
 
 * fix(livekit): incorrect callerIdNum causes audio join failures
