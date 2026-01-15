@@ -1,15 +1,17 @@
-kurento:
-  - ip: 0.0.0.0
-    url: ws://127.0.0.1:8888/kurento
-    # mediaType: (main|audio|content)
-    ipClassMappings:
-      local:
-      private:
-      public:
-    options:
-      failAfter: 5
-      request_timeout: 30000
-      response_timeout: 30000
+# kurento: array of Kurento configuration objects. Disabled (empty) by default.
+kurento: []
+  # Example:
+  #- ip: 0.0.0.0
+  #  url: ws://127.0.0.1:8888/kurento
+  #  # mediaType: (main|audio|content)
+  #  ipClassMappings:
+  #    local:
+  #    private:
+  #    public:
+  #  options:
+  #    failAfter: 5
+  #    request_timeout: 30000
+  #    response_timeout: 30000
 # Number of attemps of connecting to the configured kurento instances the first
 # time. Infinity means it tries forever until it's able to connect. Default is Infinity.
 kurentoStartupRetries: Infinity

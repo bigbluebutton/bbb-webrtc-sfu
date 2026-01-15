@@ -10,6 +10,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 * feat(livekit): add histogram metrics for mute/unmute duration
 * fix(livekit): honor user-scoped conditional recording flags
+* chore: disable Kurento by default in base/example config file
 
 ### v2.21.2
 
