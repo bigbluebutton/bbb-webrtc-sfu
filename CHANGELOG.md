@@ -9,6 +9,7 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED
 
 * feat(livekit): add histogram metrics for mute/unmute duration
+* fix(livekit): honor user-scoped conditional recording flags
 
 ### v2.21.2
 
