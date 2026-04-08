@@ -6,6 +6,15 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### v2.22.1
+
+* fix: memory leaks in BBBWebRTCRecorder's API module
+* fix(livekit): minor listener leaks in livekit-controller
+* build(deps): livekit-server-sdk@v2.15.1 (up from v2.14.0)
+* build(deps): @livekit/rtc-node@0.13.25 (up from 0.13.20)
+* build(deps): eslint@8.57.1 (dev), nodemon@3.1.14 (dev)
+* build(deps): npm audit fix
+
 ### v2.22.0
 
 * feat(livekit): add histogram metrics for mute/unmute duration
