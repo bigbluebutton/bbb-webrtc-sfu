@@ -6,6 +6,11 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### V2.22.2
+
+* fix(livekit): guarantee agent subscriptions are cleared up
+* fix(livekit): only create RTC agents when necessary
+
 ### v2.22.1
 
 * fix: memory leaks in BBBWebRTCRecorder's API module
