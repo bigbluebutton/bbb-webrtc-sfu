@@ -34,7 +34,7 @@
     "sdp-transform": "2.13.0",
     "sip.js": "github:mconf/sip.js#v0.7.5.14",
     "uuid": "^10.0.0",
-    "ws": "8.18.0"
+    "ws": "8.21.0"
   },
   "devDependencies": {
     "eslint": "8.57.1",
