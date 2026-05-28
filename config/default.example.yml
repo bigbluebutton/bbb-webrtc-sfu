@@ -562,6 +562,9 @@ livekit:
   # livekit.recordingAdapter: recording adapter to use when LiveKit is enabled.
   # Values: 'egress', 'bbb-webrtc-recorder'
   recordingAdapter: 'bbb-webrtc-recorder'
+  #captureOnExternalEvents:
+  #  enabled: false
+  #  events: []
   sip:
     enabled: false
     # livekit.sip.requirePin: whether to require a PIN for callers

@@ -6,6 +6,10 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* feat(livekit): add option to capture mic on external Redis triggers
+
 ### V2.22.2
 
 * fix(livekit): guarantee agent subscriptions are cleared up

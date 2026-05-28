@@ -28,6 +28,13 @@ livekit:
       __name: LIVEKIT_AUDIO_UNPUBLISH_ON_MUTE
       __format: json
   recordingAdapter: LIVEKIT_RECORDING_ADAPTER
+  captureOnExternalEvents:
+    enabled:
+      __name: LIVEKIT_CAPTURE_ON_EXTERNAL_EVENTS_ENABLED
+      __format: json
+    events:
+      __name: LIVEKIT_CAPTURE_ON_EXTERNAL_EVENTS
+      __format: json
   egress:
     enabled:
       __name: LIVEKIT_EGRESS_ENABLED
