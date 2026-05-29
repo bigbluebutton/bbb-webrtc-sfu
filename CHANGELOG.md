@@ -9,6 +9,11 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 ### UNRELEASED
 
 * feat(livekit): add option to capture mic on external Redis triggers
+* build(deps): bump uuid from 10.0.0 to 14.0.0
+* build(deps): bump qs from 6.14.2 to 6.15.2 (transitive)
+* build(deps): bump express from 4.22.1 to 4.22.2
+* build(deps): bump ws from 8.18.0 to 8.21.0
+* build: update publish-docker-image actions to latest and pin to SHAs
 
 ### V2.22.2
 
