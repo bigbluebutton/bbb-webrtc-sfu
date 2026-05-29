@@ -6,7 +6,7 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.23.0
 
 * feat(livekit): add option to capture mic on external Redis triggers
 * build(deps): bump uuid from 10.0.0 to 14.0.0
