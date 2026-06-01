@@ -1,5 +1,5 @@
 # Building the WebRTC SFU
-FROM node:22-bookworm-slim AS builder
+FROM node:26-bookworm-slim AS builder
 
 RUN apt-get update && apt-get -y install \
   git \
@@ -28,7 +28,7 @@ RUN cd /app \
 
 
 # Running the WebRTC SFU
-FROM node:22-bookworm-slim
+FROM node:26-bookworm-slim
 
 RUN useradd --uid 2004 --user-group webrtc-sfu 
 ENV NODE_ENV production
