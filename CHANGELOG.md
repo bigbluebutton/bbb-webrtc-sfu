@@ -6,6 +6,11 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### v2.24.0
+
+* feat(livekit): handle participant permission updates from akka
+* feat(livekit): ack participant permission and voice eject outcomes
+
 ### v2.23.0
 
 * feat(livekit): add option to capture mic on external Redis triggers
