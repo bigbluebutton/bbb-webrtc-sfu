@@ -8,9 +8,14 @@ For previous changes, see the [release notes](https://github.com/bigbluebutton/b
 
 ### UNRELEASED
 
-* refactor(livekit): drop breakout-specific token machinery
 * feat(livekit): multi-room token and participant management
 * fix(livekit): scope voice-conf emits to primary-purpose participants
+* refactor(livekit): drop breakout-specific token machinery
+* build: uuid@14.0.1 (up from 14.0.0)
+* build: js-yaml@4.3.1 (up from 4.1.1)
+* build: npm audit
+- build: @livekit/rtc-node@0.13.33 (up from 0.13.25)
+- build: livekit-server-sdk@2.15.5 (up from 2.15.1)
 
 ### v2.24.0
 
