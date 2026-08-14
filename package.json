@@ -33,7 +33,7 @@
     "redis": "3.1.2",
     "sdp-transform": "2.13.0",
     "sip.js": "github:mconf/sip.js#v0.7.5.14",
-    "uuid": "14.0.0",
+    "uuid": "14.0.1",
     "ws": "8.21.0"
   },
   "devDependencies": {
