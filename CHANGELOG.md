@@ -6,6 +6,12 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### UNRELEASED
+
+* refactor(livekit): drop breakout-specific token machinery
+* feat(livekit): multi-room token and participant management
+* fix(livekit): scope voice-conf emits to primary-purpose participants
+
 ### v2.24.0
 
 * feat(livekit): handle participant permission updates from akka
