@@ -6,7 +6,7 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### UNRELEASED
+### v2.25.0-beta.0
 
 * feat(livekit): multi-room token and participant management
 * fix(livekit): scope voice-conf emits to primary-purpose participants
