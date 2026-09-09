@@ -550,6 +550,9 @@ livekit:
     #permissions: A Partial<ParticipantPermissions> object. Optional.
   audio:
     unpublishOnMute: false
+  # livekit.camStopGraceMs: how long (ms) a web user's camera stop is held
+  # back after LiveKit unpublishes the track in reconnection scenarios. 0 = no grace.
+  camStopGraceMs: 15000
   webhook:
     path: "/livekit-webhook"
     port: 3040
