@@ -6,6 +6,14 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### v2.25.0-beta.1
+
+* fix(livekit): hold a web user's camera stop-on-unpublish across a reconnect
+* build(deps): bump docker/metadata-action from 6.1.0 to 6.2.0
+* build(deps): bump docker/login-action from 4.2.0 to 4.6.0
+* build(deps): bump actions/checkout from 6.0.2 to 7.0.1
+* chore: npm audit fix
+
 ### v2.25.0-beta.0
 
 * feat(livekit): multi-room token and participant management
