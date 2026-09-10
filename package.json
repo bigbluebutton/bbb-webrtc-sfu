@@ -3,8 +3,8 @@
   "version": "2.25.0-beta.1",
   "private": true,
   "engines": {
-    "npm": ">=6.0.0",
-    "node": ">=18.0.0"
+    "npm": ">=10.0.0",
+    "node": ">=22.0.0"
   },
   "scripts": {
     "start": "node server.js",
