@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@livekit/protocol": "1.51.0",
-    "@livekit/rtc-node": "0.13.33",
+    "@livekit/rtc-node": "1.1.0",
     "bbb-sfurec-adapter": "git+https://github.com/mconf/bbb-sfurec-adapter.git#v1.0.0-dev.6",
     "config": "3.3.12",
     "express": "4.22.2",
