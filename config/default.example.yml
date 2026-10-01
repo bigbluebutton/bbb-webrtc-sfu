@@ -541,6 +541,8 @@ livekit:
   key: LIVEKIT_KEY
   secret: LIVEKIT_SECRET
   systemParticipantsLimit: 10
+  # livekit.requestTimeout: seconds before a LiveKit server API call is aborted
+  requestTimeout: 60
   # Event source for LiveKit events. Possible values: 'webhook', 'agent'
   eventSource: 'webhook'
   rtcAgent:
