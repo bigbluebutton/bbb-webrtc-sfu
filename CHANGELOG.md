@@ -6,6 +6,16 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### v2.25.0-beta.3
+
+* feat(livekit): add the livekit.requestTimeout config
+* fix(livekit): name masked SIP callers that send no caller ID
+* fix(livekit): return 'unknown' when SDK track name conversion fails
+* fix(livekit): incorrect screen share track source check
+* build: livekit-server-sdk@2.19.1 (up from 2.15.5)
+* build: livekit-server-sdk@2.19.1 (up from 2.15.5)
+* chore: npm audit fix
+
 ### v2.25.0-beta.2
 
 * fix(livekit): guaratee width field on every screen share stop evt
