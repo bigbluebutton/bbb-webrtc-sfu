@@ -536,6 +536,7 @@ livekit:
   # LiveKit host URL
   host: http://127.0.0.1:7880
   # Used as `domain` in LiveKit metadata
+  # BBB_URL from /etc/bigbluebutton/bigbluebutton.env takes precedence (its host is used)
   bbbDomain: BBB_DOMAIN
   tokenTTL: 14400
   key: LIVEKIT_KEY
