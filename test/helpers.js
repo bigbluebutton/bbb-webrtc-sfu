@@ -149,6 +149,12 @@ const settle = async (rounds = 5) => {
   }
 };
 
+const shortRequestTimeout = (t) => {
+  const timeout = BBBWebRTCRecorder.REQUEST_TIMEOUT;
+  BBBWebRTCRecorder.REQUEST_TIMEOUT = 50;
+  t.after(() => { BBBWebRTCRecorder.REQUEST_TIMEOUT = timeout; });
+};
+
 const createManager = async (recorderOptions = {}) => {
   const fake = createFakeRecorder(recorderOptions);
   const gateway = new FakeGateway();
@@ -216,5 +222,6 @@ module.exports = {
   trackEvent,
   waitFor,
   settle,
+  shortRequestTimeout,
   dispose,
 };
