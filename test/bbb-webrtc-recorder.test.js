@@ -111,3 +111,41 @@ describe('BBBWebRTCRecorder session messages', () => {
     assert.deepEqual(sessionListeners(client), [0, 0, 0]);
   });
 });
+
+describe('BBBWebRTCRecorder attachSession', () => {
+  it('registers the session handlers of a recording it did not start', () => {
+    const client = connectedClient();
+    const calls = [];
+    client.attachSession(SESSION, {
+      recordingStoppedHdlr: (payload) => calls.push(['stopped', payload.reason]),
+      rtpStatusChangedHdlr: (payload) => calls.push(['rtp', payload.status]),
+      mediaStartedHdlr: (payload) => calls.push(['media', payload.mediaStartHR]),
+    });
+
+    client.deliver({ id: 'recordingRtpStatusChanged', recordingSessionId: SESSION, status: 'flowing' });
+    client.deliver({ id: 'recordingMediaStarted', recordingSessionId: SESSION, mediaStartUTC: 1, mediaStartHR: 2 });
+    client.deliver({ id: 'recordingStopped', recordingSessionId: SESSION, reason: 'closed' });
+    client.deliver({ id: 'recordingStopped', recordingSessionId: SESSION, reason: 'closed' });
+
+    assert.deepEqual(calls, [['rtp', 'flowing'], ['media', 2], ['stopped', 'closed']]);
+    assert.deepEqual(sessionListeners(client), [0, 0, 0]);
+  });
+
+  it('adds only the handlers a session lacks', async () => {
+    const client = connectedClient();
+    startLiveKit(client, {
+      recordingStoppedHdlr: () => {},
+      rtpStatusChangedHdlr: () => {},
+      mediaStartedHdlr: () => {},
+    }).catch(() => {});
+    await settle();
+
+    client.attachSession(SESSION, {
+      recordingStoppedHdlr: () => {},
+      rtpStatusChangedHdlr: () => {},
+      mediaStartedHdlr: () => {},
+    });
+
+    assert.deepEqual(sessionListeners(client), [1, 1, 1]);
+  });
+});
