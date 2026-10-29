@@ -274,6 +274,20 @@ describe('LiveKit recorder manager, recorder with mediaTimestamps', () => {
     assert.equal(ctx.fake.client.published.some((message) => message.id === 'stopRecording'), true);
     assert.deepEqual(ctx.gateway.writes, []);
   });
+
+  it('writes numeric Stop times for a lost recording with no crash time', async (t) => {
+    const ctx = await createManager(CAPABLE);
+    t.after(() => dispose(ctx.manager));
+    const recording = await publishTrack(ctx, 'camera');
+    ctx.fake.client.deliver(mediaStarted(recording.recordingSessionId, mediaTimes('mediaStart', 300)));
+    await settle();
+
+    ctx.manager._handleLostRecordings(new Map([[recording.trackId, recording]]));
+
+    const [stop] = ctx.gateway.events('StopWebRTCShareEvent');
+    assert.equal(typeof stop.timestamp, 'number');
+    assert.equal(typeof stop.timestampUTC, 'number');
+  });
 });
 
 describe('LiveKit recorder manager, stop request pending', () => {
