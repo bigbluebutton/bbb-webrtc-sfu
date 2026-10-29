@@ -1,0 +1,20 @@
+# Only the keys the modules under test read when they load.
+log:
+  level: silent
+  stdout: false
+  # A file target keeps pino's transport worker from stalling the exit.
+  file: true
+  filename: /dev/null
+redisHost: 127.0.0.1
+redisPort: 6379
+recordingDryRun: false
+bbbWebrtcRecorder:
+  channels:
+    subscribe: from-bbb-webrtc-recorder-test
+    publish: to-bbb-webrtc-recorder-test
+  heartbeatInterval: 0
+prometheus:
+  enabled: false
+  livekit:
+    host: 127.0.0.1
+    port: 0
