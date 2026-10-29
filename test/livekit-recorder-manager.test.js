@@ -378,6 +378,37 @@ describe('LiveKit recorder manager, recorder with mediaTimestamps', () => {
 
     assertNoStopBeforeStart(ctx);
   });
+
+  it('writes the Stop of a lost recording at the crash time', async (t) => {
+    const ctx = await createManager(CAPABLE);
+    t.after(() => dispose(ctx.manager));
+    const recording = await publishTrack(ctx, 'camera');
+    ctx.fake.client.deliver(mediaStarted(recording.recordingSessionId, mediaTimes('mediaStart', 300)));
+    await settle();
+    const before = now();
+    ctx.fake.client.recorderInstanceId = null;
+    const crashed = now();
+    await clockTick(crashed);
+
+    // A new instance that lists no recordings.
+    ctx.fake.client.deliver({ id: 'recorderStatus', instanceId: 'recorder-2', ...CAPABLE });
+    await waitFor(() => ctx.gateway.events('StopWebRTCShareEvent').length > 0, { what: 'Stop event' });
+
+    assertSfuTime(ctx.gateway.events('StopWebRTCShareEvent')[0], before, crashed);
+  });
+
+  it('writes the Stop of a lost recording with no crash time at the SFU time', async (t) => {
+    const ctx = await createManager(CAPABLE);
+    t.after(() => dispose(ctx.manager));
+    const recording = await publishTrack(ctx, 'camera');
+    ctx.fake.client.deliver(mediaStarted(recording.recordingSessionId, mediaTimes('mediaStart', 300)));
+    await settle();
+    const before = now();
+
+    ctx.manager._handleLostRecordings(new Map([[recording.trackId, recording]]));
+
+    assertSfuTime(ctx.gateway.events('StopWebRTCShareEvent')[0], before);
+  });
 });
 
 describe('LiveKit recorder manager, stop request pending', () => {
