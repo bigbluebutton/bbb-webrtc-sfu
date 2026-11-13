@@ -6,41 +6,28 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
-### v2.25.0-beta.3
+### v2.25.0
 
+* feat(livekit): multi-room token and participant management
 * feat(livekit): add the livekit.requestTimeout config
+* fix(livekit): scope voice-conf emits to primary-purpose participants
+* fix(livekit): hold a web user's camera stop-on-unpublish across a reconnect
+* fix(livekit): guaratee width field on every screen share stop evt
+* fix(livekit): guarantee voiceConf in the screenshare unpublish event
 * fix(livekit): name masked SIP callers that send no caller ID
 * fix(livekit): return 'unknown' when SDK track name conversion fails
 * fix(livekit): incorrect screen share track source check
-* build: livekit-server-sdk@2.19.1 (up from 2.15.5)
-* build: livekit-server-sdk@2.19.1 (up from 2.15.5)
-* chore: npm audit fix
-
-### v2.25.0-beta.2
-
-* fix(livekit): guaratee width field on every screen share stop evt
-* fix(livekit): guarantee voiceConf in the screenshare unpublish event
-* chore: bump Node (22) and npm (10.x) engine requirements
-* chore: bump .nvmrc to lts/jod (22)
-
-### v2.25.0-beta.1
-
-* fix(livekit): hold a web user's camera stop-on-unpublish across a reconnect
-* build(deps): bump docker/metadata-action from 6.1.0 to 6.2.0
-* build(deps): bump docker/login-action from 4.2.0 to 4.6.0
-* build(deps): bump actions/checkout from 6.0.2 to 7.0.1
-* chore: npm audit fix
-
-### v2.25.0-beta.0
-
-* feat(livekit): multi-room token and participant management
-* fix(livekit): scope voice-conf emits to primary-purpose participants
 * refactor(livekit): drop breakout-specific token machinery
 * build: uuid@14.0.1 (up from 14.0.0)
 * build: js-yaml@4.3.1 (up from 4.1.1)
+- build: @livekit/rtc-node@1.1.0 (up from 0.13.25)
+* build: livekit-server-sdk@2.19.1 (up from 2.15.1)
 * build: npm audit
-- build: @livekit/rtc-node@0.13.33 (up from 0.13.25)
-- build: livekit-server-sdk@2.15.5 (up from 2.15.1)
+* build(deps): bump docker/metadata-action from 6.1.0 to 6.2.0
+* build(deps): bump docker/login-action from 4.2.0 to 4.6.0
+* build(deps): bump actions/checkout from 6.0.2 to 7.0.1
+* chore: bump Node (22) and npm (10.x) engine requirements
+* chore: bump .nvmrc to lts/jod (22)
 
 ### v2.24.0
 
