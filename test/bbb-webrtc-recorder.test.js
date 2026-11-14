@@ -110,4 +110,16 @@ describe('BBBWebRTCRecorder session messages', () => {
     await assert.rejects(client.stopRecording(SESSION), /timeout/);
     assert.deepEqual(sessionListeners(client), [0, 0, 0]);
   });
+
+  it('drops every listener of a detached session, those of a start with no reply included', async () => {
+    const client = connectedClient();
+    startLiveKit(client);
+    await settle();
+    assert.equal(client.listenerCount(`startRecordingResponse:${SESSION}`), 1);
+
+    client.detachSession(SESSION);
+
+    assert.equal(client.listenerCount(`startRecordingResponse:${SESSION}`), 0);
+    assert.deepEqual(sessionListeners(client), [0, 0, 0]);
+  });
 });
