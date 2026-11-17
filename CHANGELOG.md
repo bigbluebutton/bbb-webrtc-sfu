@@ -6,6 +6,21 @@ Final releases will consolidate all intermediate changes in chronological order.
 
 For previous changes, see the [release notes](https://github.com/bigbluebutton/bbb-webrtc-sfu/releases).
 
+### v2.26.0
+
+* feat: support media timestamps in the bbb-webrtc-recorder client
+* feat(livekit): use recorder media times in recording events
+* fix(livekit): give each recorded file its own session id
+* fix(livekit): never write null times in a lost recording's Stop
+* fix(livekit): handle recorder events of resynced recordings
+* build: express@4.22.3 (up from 4.22.2)
+* build: js-yaml@4.3.2 (up from 4.3.1)
+* build: bump publish-docker-image actions to their latest releases
+* build: bump Node.js to 24 (LTS) in Docker, .nvmrc and engines
+* chore: npm audit fix
+* test: add a node:test harness for the LiveKit recorder manager
+* ci: run the tests on pull requests and on development
+
 ### v2.25.0
 
 * feat(livekit): multi-room token and participant management
